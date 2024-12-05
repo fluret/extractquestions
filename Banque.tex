@@ -1,0 +1,330 @@
+% !TeX TXS-program:pdflatex = pdflatex -synctex=1 -recorder -interaction=nonstopmode --shell-escape %.tex
+\documentclass[12pt,a4paper]{exam}%Documentation de la classe exam : https://mirrors.ircam.fr/pub/CTAN/macros/latex/contrib/exam/examdoc.pdf
+%\usepackage[abspath]{currfile}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel} 
+%\usepackage{amsmath,amssymb}
+\usepackage[explicit]{titlesec}
+\usepackage{graphicx}
+%\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{multirow}
+\usepackage{lastpage}
+\usepackage{macrolulu2}
+\usepackage{tikz}
+\usetikzlibrary{calc,shadows}
+
+%\newcommand{\cheminexo}{}
+%\newcommand{\cheminexo}{"Z:/Travail/Cours finis/Python/0001 cours perso/2024 2025/L3/Exercices/"}
+%\newcommand{\chemincode}{"Z:/Travail/Cours finis/Python/0001 cours perso/2024 2025/L3/Exercices/code/"}
+\newcommand{\chemincode}{code/}
+%\newcommand{\chemincode}{\currfileabsdir /code/}
+
+\renewcommand{\questionshook}{%
+    %\setlength{\leftmargin}{0pt}%
+    \setlength{\labelwidth}{-\labelsep}%
+    \setlength{\itemsep}{0.5cm}} 
+    
+    
+%En-tête et pied de page
+\pagestyle{headandfoot}
+\header{\includegraphics[scale=0.035]{python}}{\small\textbf{Série 2}}{\includegraphics[scale=0.035]{python}}
+
+%\headrule
+\footrule
+\footer{}{\scriptsize Page \thepage{} sur \pageref{LastPage}}{}
+
+\titleformat{\section}[display]
+  {\normalfont}
+  {}
+  {0pt}
+  {%
+    \begin{tikzpicture}
+    	\node[minimum width=\textwidth,anchor=west] (B) at (0,0) {};
+    	\node[font=\bfseries\large,
+    			rounded corners,
+    			draw=orange,
+    			fill=orange!10,
+    			inner sep=8pt,
+    			line width=2pt,
+    			anchor=west] (A) at (0,0) {\thesection \quad #1};
+    	\draw[orange] (A.east) -- (B.east);
+    	\foreach \x in {60,45,30,15}
+    		{\fill[orange!\x] ([xshift=- \x pt]B.east) circle [radius=10pt];}
+    \end{tikzpicture}%
+  }
+\titlespacing{\section}{0pt}{0pt}{0.5cm}
+
+
+
+%\qformat{\textbf{Exercice \thequestion~:}\hfill}
+\qformat{\begin{tikzpicture}
+    	\node[minimum width=\textwidth,anchor=west] (B) at (0,0) {};
+    	\node[font=\bfseries,
+    			rounded corners,
+    			draw=orange,
+    			fill=orange!10,
+    			inner sep=6pt,
+    			line width=2pt,
+    			anchor=west] (A) at (0,0) {Question \thequestion \quad};
+    	\draw[orange] (A.east) -- (B.east);
+    	\foreach \x in {60,45,30,15}
+    		{\fill[orange!\x, drop shadow] ([xshift=- \x pt]B.east) circle [radius=5pt];}
+    \end{tikzpicture}
+        \vrule depth 1em width 0pt}
+%\extrawidth{1cm}
+\renewcommand{\solutiontitle}{\noindent\textbf{Code python :}\par\noindent}
+%\newenvironment{\reqresult}[2][1]
+\newcommand{\img}[2][1]
+{
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[scale=\#1]{\chemincode \#2}
+	\end{center}
+\end{figure}
+}
+%baseline={([yshift=-1em] current bounding box.north)}
+%baseline=(label.base)
+\DeclareRobustCommand{\circled}[1]{%
+	\tikz[baseline={([yshift=-1em] current bounding box.north)}]{\node[scale=0.4,circle,
+		black, circular drop shadow={shadow xshift=0.2ex, yshift=0.1ex},font=\bfseries,fill= orange!30, draw=orange,inner sep=2pt,minimum size=2.5em] (label) {\#1};}}
+
+\setlist[enumerate,1]{
+	label =\circled{\Large\arabic*},
+	leftmargin=2cm, rightmargin=1cm,
+	itemsep=5pt
+}
+\newcommand*{\MyBall}{\tikz \draw [baseline, ball color=orange!70, draw=orange!20!white] circle (2pt);}
+%
+\setlist[itemize,1]{label ={\MyBall},leftmargin=2cm, rightmargin=1cm}
+
+%\definecolor{monjaune}{RGB}{255,196,12}
+%\definecolor{monjaune}{named}{orange!10}
+\colorlet{monjaune}{orange!10}
+\definecolor{monmauve}{RGB}{87,23,69}
+\definecolor{monnoir}{RGB}{51,51,51}
+
+\newlength{\xE}
+\setlength{\xE}{2cm}
+\newlength{\xA}
+\setlength{\xA}{4cm}
+\newlength{\xC}
+\setlength{\xC}{13cm}
+\newlength{\yE}
+\setlength{\yE}{18cm}
+\newlength{\yA}
+\setlength{\yA}{9cm}
+\newlength{\yC}
+\setlength{\yC}{6cm}
+\newlength{\carreE}
+\setlength{\carreE}{5cm}
+\newlength{\carreA}
+\setlength{\carreA}{12cm}
+\newlength{\carreC}
+\setlength{\carreC}{6cm}
+
+
+%http://portail.lyc-la-martiniere-diderot.ac-lyon.fr/srv1/html/cours_python_nsi/accueil_cours_python_nsi.html
+%https://theccoder.com/exercices-corriges-python\#Notions
+%https://www.9raytifclick.com/exercices/python-tp1/
+
+%https://kxs.fr/cours/python/exercices-boucles-fonctions
+%https://kxs.fr/cours/python/exercices-tuples
+%https://kxs.fr/cours/python/exercices-tableaux
+
+\printanswers					%Commenter cette ligne pour cacher les solutions.
+
+\newcommand{\nomfichier}{pascorrige.py}
+
+\begin{document}
+\thispagestyle{empty}
+		\begin{tikzpicture}[
+			remember picture,overlay,
+			inner sep=0pt,
+			outer sep=0pt,
+			]
+		\coordinate (A) at ([xshift=\xA,yshift=-\yA]current page.north west);
+		\coordinate (B) at ([xshift=\xA+\carreA,yshift=-(\yA+\carreA)]current page.north west);
+		\coordinate (AA) at ([xshift=\carreA-3.5cm,yshift=0]A);
+		\coordinate (BB) at ([xshift=0,yshift=\carreA-3.5cm]B);
+		\coordinate (AAA) at ([xshift=0,yshift=-\carreA+3.5cm]A);
+		\coordinate (BBB) at ([xshift=-\carreA+3.5cm,yshift=0]B);
+		\fill[monjaune,draw=orange,line width= 2pt] (A) -- (AA) -- (BB) -- (B) -- (BBB) -- (AAA) -- cycle;
+		
+		\coordinate (E) at ([xshift=\xE,yshift=-\yE]current page.north west);
+		\coordinate (F) at ([xshift=\xE+\carreE,yshift=-(\yE+\carreE)]current page.north west);
+		\coordinate (EE) at ([xshift=\carreE-3cm,yshift=0]E);
+		\coordinate (FF) at ([xshift=0,yshift=\carreE-3cm]F);
+		\coordinate (EEE) at ([xshift=0,yshift=-\carreE]E);
+		\fill[monnoir] (E) -- (EE) -- (FF) -- (F) -- (EEE)  -- cycle;
+		
+		\coordinate (C) at ([xshift=\xC,yshift=-\yC]current page.north west);
+		\coordinate (D) at ([xshift=\xC+\carreC,yshift=-(\yC+\carreC)]current page.north west);
+		\coordinate (CC) at ([xshift=0,yshift=-\carreC+3cm]C);
+		\coordinate (DD) at ([xshift=-\carreC+3cm,yshift=0]D);
+		\coordinate (CCC) at ([xshift=\carreC,yshift=0]C);
+		\fill[monnoir] (C) -- (CC) -- (DD) -- (D) -- (CCC)  -- cycle;
+		
+		%*****bas
+		\coordinate (G) at ([yshift=2.5cm]current page.south west);
+		\coordinate (H) at ([xshift=4cm,yshift=2.5cm]current page.south);
+		\coordinate (I) at ([xshift=3cm,yshift=0.5cm]current page.south);
+		\coordinate (J) at ([yshift=0.5cm]current page.south west);
+		\coordinate (K) at ([xshift=5cm,yshift=2.5cm]current page.south);
+		\coordinate (L) at ([yshift=2.5cm]current page.south east);
+		\coordinate (M) at ([yshift=0.5cm]current page.south east);
+		\coordinate (N) at ([xshift=4cm,yshift=0.5cm]current page.south);
+		\fill[monnoir] (G) -- (H) -- (I) -- (J) -- cycle;
+		\fill[orange] (K) -- (L) -- (M) -- (N) -- cycle;		
+										
+		%*****haut
+		\coordinate (GG) at ([yshift=-1cm]current page.north west);
+		\coordinate (HH) at ([xshift=-3cm,yshift=-1cm]current page.north);
+		\coordinate (II) at ([xshift=-4cm,yshift=-0.5cm]current page.north);
+		\coordinate (JJ) at ([yshift=-0.5cm]current page.north west);
+		\coordinate (KK) at ([xshift=-3cm,yshift=-1cm]current page.north);
+		\coordinate (LL) at ([yshift=-1cm]current page.north east);
+		\coordinate (MM) at ([yshift=-0.5cm]current page.north east);
+		\coordinate (NN) at ([xshift=-4cm,yshift=-0.5cm]current page.north);
+		\fill[monnoir] (GG) -- (HH) -- (II) -- (JJ) -- cycle;
+		\fill[orange] (KK) -- (LL) -- (MM) -- (NN) -- cycle;				
+
+		\node [scale=0.7,
+				align=center,
+				font=\sffamily\bfseries\huge,
+				text width=10cm
+				] at ([xshift=6cm,yshift=-6cm]A) {
+			\includegraphics[scale=0.15]{python}\par
+			\vspace{1cm}Python \par
+			Exercices série 2
+			};		
+		
+		\node [scale=0.6,
+				align=center,
+				font=\sffamily\bfseries\huge,
+				text width=10cm,
+				orange
+				] at ([xshift=6.5cm,yshift=-1cm]G) {
+			Université de TOURS
+			};							
+		\node [scale=0.5,
+				align=center,
+				font=\sffamily\bfseries\huge,
+				text width=5cm,
+				orange
+				] at ([xshift=3.5cm,yshift=-2.3cm]C) {
+			Frédéric \par LURET
+			};	
+		\node [scale=0.5,
+				align=center,
+				font=\sffamily\bfseries,
+				text width=10cm,
+				align= left,
+				anchor = west,
+				orange
+				] at ([xshift=0.2cm,yshift=0.3cm]EEE) {
+			Version du \today
+			};					
+	\end{tikzpicture}
+\clearpage
+%\section{Titre}
+%\shadedsolutions
+\unframedsolutions
+%\SolutionEmphasis{\itshape\small}
+%*********************************************
+\section{A trier}
+
+\begin{questions}
+
+\input{output.tex}
+
+\end{questions}
+
+%*********************************************
+\section{Fonctions notions avancées}
+
+
+\begin{questions}
+
+%----
+\question
+Question ?????????
+
+\renewcommand{\nomfichier}{pascorrige.py}
+\begin{solution}
+	\pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+\end{questions}
+%*********************************************
+\section{Les compréhensions}
+
+
+\begin{questions}
+
+%----
+\question
+Question ?????????
+
+\renewcommand{\nomfichier}{pascorrige.py}
+\begin{solution}
+	\pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+	
+	
+\end{questions}
+%*********************************************
+\section{Gestion des fichiers}
+
+\begin{questions}
+
+	
+\question
+Question ?????????
+
+\renewcommand{\nomfichier}{pascorrige.py}
+\begin{solution}
+	\pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+
+\end{questions}
+
+
+%*********************************************
+\section{Les exceptions}
+
+
+\begin{questions}
+
+%----
+\question
+Question ?????????
+
+\renewcommand{\nomfichier}{pascorrige.py}
+\begin{solution}
+	\pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+	
+\end{questions}
+%*********************************************
+\section{Les sets}
+
+\begin{questions}
+
+%----
+\question
+Question ?????????
+
+\renewcommand{\nomfichier}{pascorrige.py}
+\begin{solution}
+	\pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+
+\end{questions}
+
+\end{document}

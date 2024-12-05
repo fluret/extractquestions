@@ -1,6 +1,5 @@
 import os
 import re
-from googletrans import Translator
 
 
 def extract_questions(file_path):
@@ -12,30 +11,26 @@ def extract_questions(file_path):
     return questions
 
 
+# Liste des caractères spéciaux LaTeX à échapper
+special_chars = {
+    '\\': r'\textbackslash{}',
+    '#': r'\#',
+    '$': r'\$',
+    '%': r'\%',
+    '&': r'\&',
+    '_': r'\_',
+    '{': r'\{',
+    '}': r'\}',
+    '~': r'\textasciitilde{}',
+    '^': r'\textasciicircum{}',
+    
+}
+
 def escape_latex(text):
-    # Liste des caractères spéciaux LaTeX à échapper
-    special_chars = {
-        '\\': r'\textbackslash{}',
-        '#': r'\#',
-        '$': r'\$',
-        '%': r'\%',
-        '&': r'\&',
-        '_': r'\_',
-        '{': r'\{',
-        '}': r'\}',
-        '~': r'\textasciitilde{}',
-        '^': r'\textasciicircum{}',
-    }
     # Échapper les caractères spéciaux
     for char, escaped_char in special_chars.items():
         text = text.replace(char, escaped_char)
     return text
-
-
-def translate_text(text, dest_language='fr'):
-    translator = Translator()
-    translation = translator.translate(text, dest=dest_language)
-    return translation.text
 
 
 def parse_question(question_text):
@@ -43,24 +38,9 @@ def parse_question(question_text):
     hints_match = re.search(r'Hints:\s*(.*?)\s*Solution:', question_text, re.DOTALL)
     solution_match = re.search(r'Solution:\s*(.*)', question_text, re.DOTALL)
 
-    title = title_match.group(1).strip() if title_match else ''
-    hints = hints_match.group(1).strip() if hints_match else ''
+    title = escape_latex(title_match.group(1).strip()) if title_match else ''
+    hints = escape_latex(hints_match.group(1).strip()) if hints_match else ''
     solution = solution_match.group(1).strip() if solution_match else ''
-    
-    # Échapper les caractères spéciaux après la traduction
-    try:
-        title = translate_text(title)
-    except Exception as e:
-        print(f"Erreur de traduction pour le titre: {e}")
-
-    try:
-        hints = translate_text(hints)
-    except Exception as e:
-        print(f"Erreur de traduction pour les indices: {e}")
-    
-    # Échapper les caractères spéciaux après la traduction
-    title = escape_latex(title)
-    hints = escape_latex(hints)
 
     return title, hints, solution
 
