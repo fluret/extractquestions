@@ -1,10 +1,16 @@
-def putNumbers(n):
-    i = 0
-    while i<n:
-        j=i
-        i=i+1
-        if j%7==0:
-            yield j
+class DivisibleBySeven:
+    def __init__(self, n):
+        self.n = n
 
-for i in reverse(100):
-    print i
+    def generator(self):
+        for i in range(0, self.n + 1):
+            if i % 7 == 0:
+                yield i
+
+# Exemple d'utilisation
+n = int(input("Entrez la valeur de n : "))
+divisible_by_seven = DivisibleBySeven(n)
+
+for number in divisible_by_seven.generator():
+    print(number)
+

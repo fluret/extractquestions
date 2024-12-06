@@ -29,7 +29,7 @@
     
 %En-tête et pied de page
 \pagestyle{headandfoot}
-\header{\includegraphics[scale=0.035]{python}}{\small\textbf{Série 2}}{\includegraphics[scale=0.035]{python}}
+\header{\includegraphics[scale=0.035]{python}}{\small\textbf{Banque de questions}}{\includegraphics[scale=0.035]{python}}
 
 %\headrule
 \footrule
@@ -88,7 +88,7 @@
 %baseline=(label.base)
 \DeclareRobustCommand{\circled}[1]{%
 	\tikz[baseline={([yshift=-1em] current bounding box.north)}]{\node[scale=0.4,circle,
-		black, circular drop shadow={shadow xshift=0.2ex, yshift=0.1ex},font=\bfseries,fill= orange!30, draw=orange,inner sep=2pt,minimum size=2.5em] (label) {\#1};}}
+		black, circular drop shadow={shadow xshift=0.2ex, yshift=0.1ex},font=\bfseries,fill= orange!30, draw=orange,inner sep=2pt,minimum size=2.5em] (label) {#1};}}
 
 \setlist[enumerate,1]{
 	label =\circled{\Large\arabic*},
@@ -124,14 +124,6 @@
 \newlength{\carreC}
 \setlength{\carreC}{6cm}
 
-
-%http://portail.lyc-la-martiniere-diderot.ac-lyon.fr/srv1/html/cours_python_nsi/accueil_cours_python_nsi.html
-%https://theccoder.com/exercices-corriges-python\#Notions
-%https://www.9raytifclick.com/exercices/python-tp1/
-
-%https://kxs.fr/cours/python/exercices-boucles-fonctions
-%https://kxs.fr/cours/python/exercices-tuples
-%https://kxs.fr/cours/python/exercices-tableaux
 
 \printanswers					%Commenter cette ligne pour cacher les solutions.
 
@@ -237,7 +229,8 @@
 
 \begin{questions}
 
-\input{output.tex}
+\input{output1.tex}
+%\input{output2.tex}
 
 \end{questions}
 

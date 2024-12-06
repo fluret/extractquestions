@@ -3,10 +3,10 @@ class InputOutString(object):
         self.s = ""
 
     def getString(self):
-        self.s = raw_input()
+        self.s = input()
 
     def printString(self):
-        print self.s.upper()
+        print(self.s.upper())
 
 strObj = InputOutString()
 strObj.getString()

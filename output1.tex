@@ -1,0 +1,1089 @@
+%Question 1
+\question
+Écrivez un programme qui trouve tous les nombres qui multiples de 7 mais pas de 5,
+entre 2000 et 3200 (les deux inclus).
+Les nombres obtenus doivent être imprimés dans une séquence séparée par des virgules sur une seule ligne.
+\par
+\textbf{Indices : }Utilisez la méthode range(début, fin)
+\renewcommand{\nomfichier}{q001.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 2
+\question
+Écrivez un programme qui peut calculer la factorielle d'un nombre donné.
+
+Supposons que l'entrée suivante soit fournie au programme:\par
+
+8\newline
+Ensuite, la sortie doit être:\newline
+40320
+
+\renewcommand{\nomfichier}{q002.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 3
+\question
+Avec un nombre entier \textbf{n} donné, écrivez un programme pour générer un dictionnaire qui contient \textbf{(i, i*i)} tel que \textbf{i} est un nombre entier entre \textbf{1 et n} (les deux inclus). et ensuite le programme doit imprimer le dictionnaire.
+
+Supposons que l'entrée suivante soit fournie au programme :\newline
+8\newline
+La sortie devrait alors être :\newline
+\{1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64\}
+
+\renewcommand{\nomfichier}{q003.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 4
+\question
+Écrire un programme qui accepte une séquence de nombres séparés par des virgules à partir de la console et qui génère une liste et un tuple contenant chaque nombre.
+
+Supposons que l'entrée suivante soit fournie au programme :\newline
+34,67,55,33,12,98\newline
+Ensuite, la sortie doit être:\newline
+['34', '67', '55', '33', '12', '98']\newline
+('34', '67', '55', '33', '12', '98')
+\renewcommand{\nomfichier}{q004.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 5
+\question
+Définir une classe qui possède au moins deux méthodes :\newline
+getString : pour obtenir une chaîne de caractères à partir de l'entrée de la console\newline
+printString : pour imprimer la chaîne en majuscules.\newline
+Veuillez également inclure une fonction de test simple pour tester les méthodes de la classe.
+\par
+\textbf{Indices : }Utilisez la méthode \_\_init\_\_ pour construire certains paramètres
+\renewcommand{\nomfichier}{q005.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 6
+\question
+Écrivez un programme qui calcule et imprime la valeur selon la formule donnée :
+
+Q = Racine carrée de [(2 * C * D)/H]\newline
+
+Voici les valeurs fixes de C et H :\newline
+C est 50. H est égal à 30.\newline
+D est la variable dont les valeurs doivent être introduites dans votre programme dans une séquence séparée par des virgules.\newline
+Exemple\newline
+Supposons que le programme reçoive la séquence d'entrée suivante, séparée par des virgules :\newline
+100,150,180\newline
+La sortie du programme devrait être :\newline
+18,22,24
+\par
+\textbf{Indices : }Si la sortie reçue est sous forme décimale, elle doit être arrondi à sa valeur la plus proche (par exemple, si la sortie reçue est de 26,0, elle doit être imprimée comme 26)
+\renewcommand{\nomfichier}{q006.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 7
+\question
+Écrivez un programme qui prend 2 chiffres, X,Y en entrée et génère un tableau à 2 dimensions. La valeur de l'élément dans la i-ième ligne et la j-ième colonne du tableau doit être i*j.\newline
+Remarque : i = 0,1.., X-1 ; j = 0,1,¡Y-1.\newline
+Exemple\newline
+Supposons que les entrées suivantes soient données au programme :\newline
+3,5\newline
+La sortie du programme devrait alors être la suivante :\newline
+[[0, 0, 0, 0, 0], [0, 1, 2, 3, 4], [0, 2, 4, 6, 8]]\newline
+Puis un affichage sous la forme d'un tableau :\newline
+0 0 0 0 0\newline
+0 1 2 3 4\newline
+0 2 4 6 8
+\renewcommand{\nomfichier}{q007.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+\renewcommand{\nomfichier}{q007-01.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 8
+\question
+Écrivez un programme qui accepte une séquence de mots séparée par des virgules en entrée et imprime les mots dans une séquence séparée par des virgules après les avoir triés de manière alphabétique.\newline
+Supposons que l'entrée suivante soit fournie au programme:\newline
+sans, bonjour, sac, monde\newline
+Ensuite, la sortie doit être:\newline
+Sac, bonjour, sans, monde
+
+\renewcommand{\nomfichier}{q008.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 9
+\question
+Écrivez un programme qui accepte une séquence de lignes en entrée et imprime les lignes après avoir mis en majuscules tous les caractères de la phrase. La saisie d'une ligne vide lance votre traitement.\newline
+Supposons que l'entrée suivante soit fournie au programme :\newline
+Bonjour le monde\newline
+C'est en forgeant qu'on devient forgeron\newline
+La sortie devrait alors être :\newline
+BONJOUR AU MONDE\newline
+C'EST EN FORGEANT QU'ON DEVIENT FORGERON
+\renewcommand{\nomfichier}{q009.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 10
+\question
+Écrivez un programme qui accepte une séquence de mots séparés dans l'espace en entrée et imprime les mots après avoir retiré tous les mots en double et les tris de manière alphanumérique.\newline
+Supposons que l'entrée suivante soit fournie au programme:\newline
+Bonjour le monde et la pratique rend à nouveau le monde parfait et bonjour\newline
+La sortie doit être:\newline
+Bonjour bonjour et la le monde nouveau parfait pratique rend à
+\par
+\textbf{Indices : }
+Nous utilisons le conteneur \textbf{set} pour supprimer automatiquement les données dupliqués.
+\renewcommand{\nomfichier}{q010.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 11
+\question
+Écrivez un programme qui accepte une séquence de nombres binaires à 4 chiffres séparés par des virgules comme entrée, puis vérifiez s'ils sont divisibles par 5 ou non.Les nombres divisibles par 5 doivent être imprimés dans une séquence séparée par des virgules.\newline
+Exemple:\newline
+0100,0011,1010,1001\newline
+Qui correspondent respectivement à 4, 3, 10 et 9.\newline
+Alors la sortie doit être:\newline
+1010
+\renewcommand{\nomfichier}{q011.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 12
+\question
+Écrivez un programme, qui trouvera tous les chiffres entre 1000 et 3000 (tous deux inclus) pour lesquels chaque chiffre du nombre est pair.
+Les nombres obtenus doivent être imprimés dans une séquence séparée par des virgules sur une seule ligne.
+
+\renewcommand{\nomfichier}{q012.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+\renewcommand{\nomfichier}{q012-01.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+%Question 13
+\question
+Écrivez un programme qui accepte une phrase et qui calcule le nombre de lettres et de chiffres.\newline
+Supposons que l'entrée suivante soit fournie au programme:\newline
+Bonjour le monde!123\newline
+Ensuite, la sortie doit être:\newline
+Lettres 14\newline
+Chiffres 3
+\renewcommand{\nomfichier}{q013.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 14
+\question
+Écrivez un programme qui accepte une phrase et calculez le nombre de lettres en majuscules et de lettres minuscules.\newline
+Supposons que l'entrée suivante soit fournie au programme:\newline
+BonJour le Monde!\newline
+Ensuite, la sortie doit être:
+
+\renewcommand{\nomfichier}{q014.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 15
+\question
+Écrivez un programme qui calcule la valeur d'un a + aa + aaa + aaaa avec un chiffre donné comme valeur de a.\newline
+Supposons que l'entrée suivante soit fournie au programme:\newline
+9\newline
+Ensuite, la sortie doit être:\newline
+Le résultat de : 9 + 99 + 999 + 9999
+11106
+
+\renewcommand{\nomfichier}{q015.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 16
+\question
+Utilisez une compréhension de liste pour élever au carré chaque nombre impair d'une liste. La liste est introduite par une séquence de nombres séparés par des virgules.\newline
+Supposons que l'entrée suivante soit fournie au programme :\newline
+1,2,3,4,5,6,7,8,9\newline
+La sortie devrait alors être :\newline
+1,9,25,49,81
+
+\renewcommand{\nomfichier}{q016.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 17
+\question
+Écrivez un programme qui calcule le montant net d'un compte bancaire basé sur un journal de transaction à partir de l'entrée de la console
+
+Le format de journal des transactions est affiché comme suit:\newline
+D 100\newline
+W 200\newline
+
+D signifie dépôt et w retrait.\newline
+Supposons que l'entrée suivante soit fournie au programme:\newline
+D 300\newline
+D 300\newline
+W 200\newline
+D 100\newline
+Ensuite, la sortie doit être:\newline
+500
+\renewcommand{\nomfichier}{q017.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 18
+\question
+Un site Web oblige les utilisateurs à saisir le nom d'utilisateur et le mot de passe pour s'inscrire.Écrivez un programme pour vérifier la validité de la saisie du mot de passe par les utilisateurs.\newline
+Voici les critères de vérification du mot de passe:
+\begin{enumerate}
+	\item Au moins 1 lettre entre [a-z]
+	\item Au moins 1 nombre entre [0-9]
+	\item Au moins 1 lettre entre [A-Z]
+	\item Au moins 1 personnage de [\$ \# @]
+	\item Longueur minimal : 6
+	\item Longueur maximale : 12
+	\item Ne doit pas contenir d'espace
+\end{enumerate}
+Votre programme doit accepter une séquence de mots de passe séparés par des virgules et les vérifiera conformément aux critères ci-dessus.Les mots de passe qui correspondent aux critères doivent être imprimés, chacun séparé par une virgule.\newline
+Exemple\newline
+Si les mots de passe suivants sont donnés en entrée au programme:\newline
+AbD1234@1,Af1 \#,2W3E@,2WE3345b\newline
+Ensuite, la sortie du programme doit être:\newline
+AbD1234@1
+
+\renewcommand{\nomfichier}{q018.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 19
+\question
+Vous devez rédiger un programme pour trier les tuples (nom, âge, hauteur) par ordre croissant où le nom est une chaîne, l'âge et la taille sont des entiers.Les tuples sont entrés par console.\newline
+
+Les critères de tri sont:\newline
+\begin{enumerate}
+\item Trier basé sur le nom;
+\item puis trier en fonction de l'âge;
+\item Puis triez par la taille.
+\end{enumerate}
+
+Si les tuples suivants sont donnés comme entrée au programme:\newline
+Tom,19,80\newline
+John,20,90\newline
+Jony,17,91\newline
+Jony,17,93\newline
+Json,21,85
+Ensuite, la sortie du programme doit être:\newline
+[('John', '20', '90'), ('Jony', '17', '91'), ('Jony', '17', '93'), ('Json', '21', '85'), ('Tom', '19', '80')]
+
+\renewcommand{\nomfichier}{q019.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+\renewcommand{\nomfichier}{q019-01.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 20
+\question
+Définissez une classe avec un générateur qui peut itérer les nombres, qui sont divisibles par 7, entre une plage donnée 0 et n.
+
+\renewcommand{\nomfichier}{q020.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 21
+\question
+Un robot se déplace dans un avion à partir du point d'origine (0,0).Le robot peut se déplacer vers le haut, le bas, la gauche et la droite.\newline
+La trace du mouvement du robot est indiquée comme suit:\newline
+UP 5\newline
+DOWN 3\newline
+LEFT 3\newline
+RIGHT 2
+
+Les nombres qui suivent la direction sont des pas.\newline
+Veuillez écrire un programme pour calculer la distance entre la position actuelle après une séquence de mouvements et le point d'origine. Si la distance est un flottant, il suffit d'imprimer l'entier le plus proche.\newline
+Exemple:\newline
+Si les tuples suivants sont donnés comme entrée au programme:
+UP 5\newline
+DOWN 3\newline
+LEFT 3\newline
+RIGHT 2\newline
+Ensuite, la sortie du programme doit être:\newline
+2
+
+\renewcommand{\nomfichier}{q021.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 22
+\question
+Écrivez un programme pour calculer la fréquence des mots à partir de l'entrée.La sortie doit sortir après le tri de la clé de manière alphanumérique.\newline
+Supposons que l'entrée suivante soit fournie au programme:\newline
+Nouveau sur Python ou choisir entre Python 2 et Python 3 ? Lisez Python 2 ou Python 3.\newline
+Ensuite, la sortie doit être:\newline
+2:2\newline
+3:1\newline
+3.:1\newline
+?:1\newline
+Lisez:1\newline
+Nouveau:1\newline
+Python:5\newline
+choisir:1\newline
+entre:1\newline
+et:1\newline
+ou:2\newline
+sur:1
+
+\renewcommand{\nomfichier}{q022.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 23
+\question
+Écrire une fonction qui peut calculer la valeur carrée d'un nombre.
+
+\renewcommand{\nomfichier}{q023.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 24
+\question
+Python possède de nombreuses fonctions intégrées, il a une fonction de documentation intégrée pour toutes ses fonctions.
+Veuillez écrire un programme pour imprimer la documentation des fonctions suivantes :
+\begin{itemize}
+\item abs()
+\item int()
+\item input ()
+\end{itemize}
+Puis écrire une fonction qui peut calculer la valeur carrée d'un nombre
+et lui ajouter une documentation.
+
+\renewcommand{\nomfichier}{q024.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][q024.py]
+\end{solution}
+
+%Question 25
+\question
+    Définir une classe qui a un paramètre de classe et un même paramètre d'instance.
+    
+\par
+\textbf{Indices : }
+\begin{itemize}
+\item Pour définir un paramètre d'instance, il faut l'ajouter dans la méthode \_\_init\_\_.
+\item Vous pouvez initialiser un objet avec un paramètre de construction ou en définir la valeur ultérieurement.
+\end{itemize}
+\renewcommand{\nomfichier}{q025.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 26
+\question
+Définissez une fonction qui peut calculer la somme de deux nombres.
+\par
+\textbf{Indices : }Définissez une fonction avec deux nombres comme arguments.Vous pouvez calculer la somme dans la fonction et renvoyer la valeur.
+\renewcommand{\nomfichier}{q026.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 27
+\question
+Définissez une fonction qui peut convertir un entier en une chaîne et l'imprimer dans la console.
+\par
+\textbf{Indices : }Utilisez STR () pour convertir un nombre en chaîne.
+\renewcommand{\nomfichier}{q027.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 28
+\question
+Définir une fonction qui peut recevoir deux nombres entiers sous forme de chaîne de caractères et calculer leur somme, puis l'imprimer dans la console.
+\par
+\textbf{Indices : }Utilisez int() pour convertir une chaîne en entier.
+\renewcommand{\nomfichier}{q028.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 29
+\question
+Définissez une fonction qui peut accepter deux chaînes en entrée et les concaténer, puis l'imprimer dans la console.
+\par
+\textbf{Indices : }Utiliser + pour concaténer les chaines
+\renewcommand{\nomfichier}{q029.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 30
+\question
+Définir une fonction capable d'accepter deux chaînes de caractères en entrée et d'imprimer la chaîne de caractères de longueur maximale dans la console. Si les deux chaînes ont la même longueur, la fonction doit imprimer les deux une par ligne.
+\par
+\textbf{Indices : }Utilisez la fonction Len() pour obtenir la longueur d'une chaîne
+\renewcommand{\nomfichier}{q030.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 31
+\question
+Définir une fonction qui accepte un nombre entier en entrée et qui imprime "C'est un nombre pair" si le nombre est pair, sinon "C'est un nombre impair".
+\par
+\textbf{Indices : }Utilisez un opérateur \% pour vérifier si un nombre est pair ou impair.
+\renewcommand{\nomfichier}{q031.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 32
+\question
+Définir une fonction capable d'imprimer un dictionnaire dont les clés sont des nombres compris entre 1 et 3 (les deux inclus) et dont les valeurs sont des carrés des clés.
+\par
+\textbf{Indices : }
+\begin{itemize}
+	\item Utiliser le modèle dict[key]=value pour placer une entrée dans un dictionnaire.
+	\item Utiliser l'opérateur ** pour obtenir la puissance d'un nombre.
+\end{itemize}
+\renewcommand{\nomfichier}{q032.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+\renewcommand{\nomfichier}{q032-01.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+\renewcommand{\nomfichier}{q032-02.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 33
+\question
+Définir une fonction capable d'imprimer un dictionnaire dont les clés sont des nombres compris entre 1 et 20 (les deux inclus) et dont les valeurs sont des carrés de clés.
+\par
+\textbf{Indices : }
+\begin{itemize}
+\item Utiliser le modèle dict[key]=value pour placer une entrée dans un dictionnaire.
+\item Utiliser l'opérateur ** pour obtenir la puissance d'un nombre.
+\item Utiliser range() pour les boucles.
+\end{itemize}
+\renewcommand{\nomfichier}{q033.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+\renewcommand{\nomfichier}{q033-01.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 34
+\question
+Définir une fonction capable de générer un dictionnaire dont les clés sont des nombres compris entre 1 et 20 (les deux inclus) et dont les valeurs sont des carrés de clés. La fonction ne doit imprimer que les valeurs.
+\par
+\textbf{Indices : }
+\begin{itemize}
+	\item Utiliser le modèle dict[key]=value pour placer une entrée dans un dictionnaire.
+	\item Utiliser l'opérateur ** pour obtenir la puissance d'un nombre.
+	\item Utiliser range() pour les boucles.
+	\item Utiliser values() pour itérer les clés dans le dictionnaire. Nous pouvons également utiliser items() pour obtenir des paires clé/valeur.
+\end{itemize}
+
+\renewcommand{\nomfichier}{q034.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 35
+\question
+Définir une fonction capable de générer un dictionnaire dont les clés sont des nombres compris entre 1 et 20 (les deux inclus) et dont les valeurs sont des carrés de clés. La fonction ne doit imprimer que les clés.
+\par
+\textbf{Indices : }
+\begin{itemize}
+	\item Utiliser le modèle dict[key]=value pour placer une entrée dans un dictionnaire.
+	\item Utiliser l'opérateur ** pour obtenir la puissance d'un nombre.
+	\item Utiliser range() pour les boucles.
+	\item Utiliser keys() pour itérer les clés dans le dictionnaire. Nous pouvons également utiliser items() pour obtenir des paires clé/valeur.
+\end{itemize}
+\renewcommand{\nomfichier}{q035.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 36
+\question
+Définir une fonction capable de générer et d'imprimer une liste dont les valeurs sont des carrés de nombres compris entre 1 et 20 (les deux inclus).
+\par
+\textbf{Indices : }
+\begin{itemize}
+	\item Utilisez ** Opérateur pour obtenir la puissance d'un nombre.
+	\item Utilisez la range() pour les boucles.
+	\item Utilisez list.append() pour ajouter des valeurs dans une liste.
+\end{itemize}
+\renewcommand{\nomfichier}{q036.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 37
+\question
+Définir une fonction capable de générer une liste dont les valeurs sont des carrés de nombres compris entre 1 et 20 (les deux inclus). La fonction doit ensuite imprimer les 5 derniers éléments de la liste.
+\par
+\textbf{Indices : }
+\begin{itemize}
+	\item Utilisez ** Opérateur pour obtenir la puissance d'un nombre.
+	\item Utilisez la range() pour les boucles.
+	\item Utilisez list.append() pour ajouter des valeurs dans une liste.
+	\item Utilisez [N1: N2] pour slicer une liste
+\end{itemize}
+\renewcommand{\nomfichier}{q037.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 38
+\question
+Définir une fonction capable de générer et d'imprimer un tuple dont les valeurs sont des carrés de nombres compris entre 1 et 20 (les deux inclus).
+\par
+\textbf{Indices : }
+\begin{itemize}
+\item Utilisez ** Opérateur pour obtenir la puissance d'un nombre.
+\item Utilisez la range() pour les boucles.
+\item Utilisez list.append() pour ajouter des valeurs dans une liste.
+\item Utilisez tuple() pour obtenir un tuple d'une liste.
+\end{itemize}
+\renewcommand{\nomfichier}{q038.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 39
+\question
+Ecrivez un programme pour générer et imprimer un autre tuple dont les valeurs sont des nombres pairs dans le tuple donné (1,2,3,4,5,6,7,8,9,10).
+\par
+\textbf{Indices : }
+\begin{itemize}
+\item Utilisez "for" pour itérer le tuple
+\item Utilisez Tuple() pour générer un tuple à partir d'une liste.
+\end{itemize}
+\renewcommand{\nomfichier}{q039.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 40
+\question
+Écrire un programme qui accepte une chaîne de caractères en entrée pour imprimer "Oui" si la chaîne est "oui" ou "OUI" ou "Oui", sinon imprimer "Non".
+
+\renewcommand{\nomfichier}{q040.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 41
+\question
+Écrivez un programme qui peut filtrer les nombres pairs dans une liste en utilisant la fonction filter. 
+
+La liste est la suivante : [1,2,3,4,5,6,7,8,9,10].
+\par
+\textbf{Indices : }
+\begin{itemize}
+\item Utilisez filter() pour filtrer certains éléments dans une liste.
+\item Utilisez lambda pour définir des fonctions anonymes.
+\end{itemize}
+\renewcommand{\nomfichier}{q041.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 42
+\question
+Écrivez un programme qui peut utiliser map() pour créer une liste dont les éléments sont le carré des éléments de [1,2,3,4,5,6,7,8,9,10].
+\par
+\textbf{Indices : }
+\begin{itemize}
+\item Utilisez map() pour générer une liste.
+\item Utilisez lambda pour définir des fonctions anonymes.
+\end{itemize}
+\renewcommand{\nomfichier}{q042.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 43
+\question
+Écrivez un programme qui peut utiliser map() et filter() pour créer une liste dont les éléments sont les carrés des nombres pairs de la liste :
+
+[1,2,3,4,5,6,7,8,9,10].
+\par
+\textbf{Indices : }
+\begin{itemize}
+\item Utilisez map() pour générer une liste.
+\item Utilisez filter() pour filtrer les éléments d'une liste.
+\item Utilisez lambda pour définir des fonctions anonymes.
+\end{itemize}
+\renewcommand{\nomfichier}{q043.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 44
+\question
+Écrivez un programme qui peut filtrer() pour faire une liste dont les éléments sont des nombres pairs entre 1 et 20 (les deux inclus).
+\par
+\textbf{Indices : }
+Utilisez filter() pour filtrer les éléments d'une liste.
+Utilisez lambda pour définir des fonctions anonymes.
+\renewcommand{\nomfichier}{q044.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 45
+\question
+Écrivez un programme qui peut utiliser map() pour créer une liste dont les éléments sont des carrés de nombres compris entre 1 et 20 (les deux inclus).
+\par
+\textbf{Indices : }
+Utilisez map() pour générer une liste.
+Utilisez lambda pour définir des fonctions anonymes.
+\renewcommand{\nomfichier}{q045.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 46
+\question
+Définissez une classe nommée American qui possède une méthode statique appelée printNationality.
+\par
+\textbf{Indices : }
+Utilisez @StaticMethod Decorator pour définir la méthode statique de classe.
+\renewcommand{\nomfichier}{q046.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 47
+\question
+Définissez une classe nommée American et sa sous-classe Newyorker.
+
+\renewcommand{\nomfichier}{q047.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 48
+\question
+Définir une classe nommée Cercle qui peut être construite par un rayon. La classe Cercle possède une méthode qui permet de calculer la surface.
+\par
+\textbf{Indices : }
+Utilisez Def nom\_de\_le\_methode(Self) pour définir une méthode.
+\renewcommand{\nomfichier}{q048.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+
+\question
+En supposant que nous avons des adresses e-mail au format "username@companyname.com", veuillez écrire un programme pour imprimer le nom d'utilisateur d'une adresse e-mail donnée.Les noms d'utilisateurs et les noms d'entreprise sont composés de lettres uniquement.
+
+Exemple:
+Si l'adresse e-mail suivante est donnée comme entrée au programme:
+
+John@google.com
+
+Ensuite, la sortie du programme doit être:
+
+John
+
+En cas de données d'entrée fournies à la question, il doit être supposé être une entrée de console.
+\par
+\textbf{Indices : }Utilisez \textbackslash\{\} w pour faire correspondre les lettres.
+\renewcommand{\nomfichier}{q049.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+
+\question
+Écrivez un programme qui accepte une séquence de mots séparés par l'espace comme entrée pour imprimer les mots composés uniquement de chiffres.
+
+Exemple:
+Si les mots suivants sont donnés en entrée au programme:
+
+2 chats et 3 chiens.
+
+Ensuite, la sortie du programme doit être:
+
+['2', '3']
+
+En cas de données d'entrée fournies à la question, il doit être supposé être une entrée de console.
+\par
+\textbf{Indices : }Utilisez re.findall () pour trouver tous les sous-chaînes à l'aide de regex.
+\renewcommand{\nomfichier}{q050.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+
+\question
+Écrivez un commentaire spécial pour indiquer qu'un fichier de code source Python est dans Unicode.
+\par
+\textbf{Indices : }
+\renewcommand{\nomfichier}{q051.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+
+\question
+Écrivez un programme pour calculer:
+
+f (n) = f (n-1) +100 quand n> 0
+et f (0) = 1
+
+avec une entrée n donnée par console (n> 0).
+
+Exemple:
+Si le n suivant est donné en entrée au programme:
+
+5
+
+Ensuite, la sortie du programme doit être:
+
+500
+
+En cas de données d'entrée fournies à la question, il doit être supposé être une entrée de console.
+\par
+\textbf{Indices : }Nous pouvons définir une fonction récursive dans Python.
+\renewcommand{\nomfichier}{q052.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+
+\question
+La séquence Fibonacci est calculée en fonction de la formule suivante:
+
+
+f (n) = 0 si n = 0
+f (n) = 1 si n = 1
+f (n) = f (n-1) + f (n-2) si n> 1
+
+Veuillez écrire un programme pour calculer la valeur de F (n) avec une entrée N donnée par console.
+
+Exemple:
+Si le n suivant est donné en entrée au programme:
+
+7
+
+Ensuite, la sortie du programme doit être:
+
+13
+
+En cas de données d'entrée fournies à la question, il doit être supposé être une entrée de console.
+\par
+\textbf{Indices : }Nous pouvons définir une fonction récursive dans Python.
+\renewcommand{\nomfichier}{q053.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+
+\question
+La séquence Fibonacci est calculée en fonction de la formule suivante:
+
+
+f (n) = 0 si n = 0
+f (n) = 1 si n = 1
+f (n) = f (n-1) + f (n-2) si n> 1
+
+Veuillez écrire un programme en utilisant la compréhension de la liste pour imprimer la séquence Fibonacci sous forme de virgule séparée avec une entrée N donnée par console.
+
+Exemple:
+Si le n suivant est donné en entrée au programme:
+
+7
+
+Ensuite, la sortie du programme doit être:
+
+0,1,1,2,3,5,8,13
+\par
+\textbf{Indices : }Nous pouvons définir une fonction récursive dans Python.
+Utilisez la compréhension de la liste pour générer une liste à partir d'une liste existante.
+Utilisez String.Join () pour rejoindre une liste de chaînes.
+
+En cas de données d'entrée fournies à la question, il doit être supposé être une entrée de console.
+\renewcommand{\nomfichier}{q054.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+
+\question
+Veuillez écrire un programme à l'aide du générateur pour imprimer les nombres pair entre 0 et N sous forme de virgule séparée tandis que N est entré par console.
+
+Exemple:
+Si le n suivant est donné en entrée au programme:
+
+10
+
+Ensuite, la sortie du programme doit être:
+
+0,2,4,6,8,10
+\par
+\textbf{Indices : }Utilisez le rendement pour produire la valeur suivante dans le générateur.
+
+En cas de données d'entrée fournies à la question, il doit être supposé être une entrée de console.
+\renewcommand{\nomfichier}{q055.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+
+\question
+Veuillez écrire un programme à l'aide du générateur pour imprimer les nombres qui peuvent être divisibles par 5 et 7 entre 0 et N sous forme séparée de virgules tandis que N est entrée par console.
+
+Exemple:
+Si le n suivant est donné en entrée au programme:
+
+100
+
+Ensuite, la sortie du programme doit être:
+
+0,35,70
+\par
+\textbf{Indices : }Utilisez le rendement pour produire la valeur suivante dans le générateur.
+
+En cas de données d'entrée fournies à la question, il doit être supposé être une entrée de console.
+\renewcommand{\nomfichier}{q056.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+
+\question
+Veuillez rédiger des instructions d'affirmation pour vérifier que chaque numéro de la liste [2,4,6,8] est uniforme.
+\par
+\textbf{Indices : }Utilisez "Affirmer l'expression" pour faire l'affirmation.
+\renewcommand{\nomfichier}{q057.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+
+\question
+Veuillez écrire une fonction de recherche binaire qui recherche un élément dans une liste triée.La fonction doit renvoyer l'index de l'élément à rechercher dans la liste.
+\par
+\textbf{Indices : }Utilisez si / elif pour gérer les conditions.
+\renewcommand{\nomfichier}{q058.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+
+\question
+Veuillez générer un flotteur aléatoire où la valeur se situe entre 10 et 100 à l'aide du module mathon mathon.
+\par
+\textbf{Indices : }Utilisez random.random () pour générer un flotteur aléatoire dans [0,1].
+\renewcommand{\nomfichier}{q059.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+
+\question
+Veuillez écrire un programme pour produire un nombre pair aléatoire entre 0 et 10 inclus en utilisant le module aléatoire et la compréhension de la liste.
+\par
+\textbf{Indices : }Utilisez Random.CHOICE () à un élément aléatoire d'une liste.
+\renewcommand{\nomfichier}{q060.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+
+\question
+Veuillez rédiger un programme pour générer une liste avec 5 nombres aléatoires entre 100 et 200 inclusifs.
+\par
+\textbf{Indices : }Utilisez random.sample () pour générer une liste de valeurs aléatoires.
+\renewcommand{\nomfichier}{q061.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+
+\question
+Veuillez écrire un programme pour générer de manière aléatoire une liste avec 5 nombres, qui sont divisibles par 5 et 7, entre 1 et 1000 inclusifs.
+\par
+\textbf{Indices : }Utilisez random.sample () pour générer une liste de valeurs aléatoires.
+\renewcommand{\nomfichier}{q062.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+
+\question
+Veuillez écrire un programme pour imprimer au hasard un numéro entier entre 7 et 15 inclusif.
+\par
+\textbf{Indices : }Utilisez Random.RandRange () à un entier aléatoire dans une plage donnée.
+\renewcommand{\nomfichier}{q063.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+
+\question
+Veuillez écrire un programme pour comprimer et décompresser la chaîne "Hello World! Hello World! Hello World! Hello World!".
+\par
+\textbf{Indices : }Utilisez zlib.compress () et zlib.decompress () pour compresser et décompresser une chaîne.
+\renewcommand{\nomfichier}{q064.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+
+\question
+Veuillez rédiger un programme pour mélanger et imprimer la liste [3,6,7,8].
+\par
+\textbf{Indices : }Utilisez la fonction Shuffle () pour mélanger une liste.
+\renewcommand{\nomfichier}{q065.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+
+\question
+Veuillez écrire un programme pour générer toutes les phrases où le sujet se trouve dans ["I", "vous"] et le verbe est dans ["Play", "Love"] et l'objet est dans ["hockey", "football"].
+\par
+\textbf{Indices : }Utilisez la notation de la liste [index] pour obtenir un élément d'une liste.
+\renewcommand{\nomfichier}{q066.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+
+\question
+En utilisant la compréhension de la liste, veuillez écrire un programme pour imprimer la liste après avoir supprimé les numéros de suppression qui sont divisibles par 5 et 7 dans [12,24,35,70,88,120,155].
+\par
+\textbf{Indices : }Utilisez la compréhension de la liste pour supprimer un tas d'éléments d'une liste.
+\renewcommand{\nomfichier}{q067.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+
+\question
+En utilisant la compréhension de la liste, veuillez écrire un programme générer un tableau 3 * 5 * 8 3D dont chaque élément est 0.
+\par
+\textbf{Indices : }Utilisez la compréhension de la liste pour faire un tableau.
+\renewcommand{\nomfichier}{q068.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+
+\question
+En utilisant la compréhension de la liste, veuillez écrire un programme pour imprimer la liste après avoir supprimé la valeur 24 dans [12,24,35,24,88,120,155].
+\par
+\textbf{Indices : }Utilisez la méthode de suppression de la liste pour supprimer une valeur.
+\renewcommand{\nomfichier}{q069.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+
+\question
+Définissez une personne de classe et ses deux classes enfants: hommes et femmes.Toutes les classes ont une méthode "Getgender" qui peut imprimer "masculin" pour la classe masculine et "féminine" pour la classe féminine.
+\par
+\textbf{Indices : }Utilisez la sous-classe (parentClass) pour définir une classe d'enfants.
+\renewcommand{\nomfichier}{q070.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+
+\question
+Veuillez écrire un programme qui accepte une chaîne de la console et l'imprimez dans l'ordre inverse.
+
+Exemple:
+Si la chaîne suivante est donnée en entrée au programme:
+
+Rise pour voter Sir
+
+Ensuite, la sortie du programme doit être:
+
+ris etov ot esir
+\par
+\textbf{Indices : }Utilisez la liste [:: - 1] pour itérer une liste dans un ordre inverse.
+\renewcommand{\nomfichier}{q071.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+
+\question
+Veuillez écrire un programme qui accepte une chaîne de la console et imprime les caractères qui ont même des index.
+
+Exemple:
+Si la chaîne suivante est donnée en entrée au programme:
+
+H1E2L3L4O5W6O7R8L9D
+
+Ensuite, la sortie du programme doit être:
+
+Bonjour le monde
+\par
+\textbf{Indices : }Utilisez la liste [:: 2] pour itérer une liste par étape 2.
+\renewcommand{\nomfichier}{q072.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+
+\question
+Veuillez écrire un programme qui imprime toutes les permutations de [1,2,3]
+\par
+\textbf{Indices : }Utilisez itertools.permutations () pour obtenir des permutations de liste.
+\renewcommand{\nomfichier}{q073.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+
+\question
+Écrivez un programme pour résoudre un ancien puzzle chinois classique:
+Nous comptons 35 têtes et 94 jambes parmi les poulets et les lapins dans une ferme.Combien de lapins et combien de poulets avons-nous?
+\par
+\textbf{Indices : }Utilisez pour la boucle pour itérer toutes les solutions possibles.
+\renewcommand{\nomfichier}{q074.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+

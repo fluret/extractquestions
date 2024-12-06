@@ -1,7 +1,8 @@
 def printDict():
 	d = {}
-	for i in range(1, 4):
-		d[i] = i**2
+	d[1] = 1
+	d[2] = 2**2
+	d[3] = 3**2
 	print(d)
 		
 

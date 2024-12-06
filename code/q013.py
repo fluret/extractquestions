@@ -1,11 +1,12 @@
-s = raw_input()
-d={"DIGITS":0, "LETTERS":0}
+s = input()
+d = {"Chiffres": 0, "Lettres": 0}
 for c in s:
     if c.isdigit():
-        d["DIGITS"]+=1
+        d["Chiffres"] += 1
     elif c.isalpha():
-        d["LETTERS"]+=1
+        d["Lettres"] += 1
     else:
         pass
-print "LETTERS", d["LETTERS"]
-print "DIGITS", d["DIGITS"]
+
+print("Lettres", d["Lettres"])
+print("Chiffres", d["Chiffres"])

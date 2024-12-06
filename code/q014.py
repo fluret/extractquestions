@@ -1,11 +1,12 @@
-s = raw_input()
-d={"UPPER CASE":0, "LOWER CASE":0}
+s = input()
+d = {"Majuscules": 0, "Minuscules": 0}
 for c in s:
     if c.isupper():
-        d["UPPER CASE"]+=1
+        d["Majuscules"] += 1
     elif c.islower():
-        d["LOWER CASE"]+=1
+        d["Minuscules"] += 1
     else:
         pass
-print "UPPER CASE", d["UPPER CASE"]
-print "LOWER CASE", d["LOWER CASE"]
+
+print("Majuscules", d["Majuscules"])
+print("Minuscules", d["Minuscules"])

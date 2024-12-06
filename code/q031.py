@@ -1,8 +1,9 @@
 def checkValue(n):
-	if n%2 == 0:
-		print "It is an even number"
+	if n % 2 == 0:
+		print("C'est un nombre pair")
 	else:
-		print "It is an odd number"
-		
+		print("C'est un nombre impair")
+
 
 checkValue(7)
+checkValue(8)

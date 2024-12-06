@@ -1,5 +1,5 @@
-s= raw_input()
-if s=="yes" or s=="YES" or s=="Yes":
-    print "Yes"
+s = input()
+if s.upper() == "YES":
+    print("Yes")
 else:
-    print "No"
+    print("No")

@@ -1,3 +1,4 @@
 import re
-s = raw_input()
-print re.findall("\d+",s)
+
+s = input()
+print(re.findall("\d+", s))

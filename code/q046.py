@@ -1,7 +1,7 @@
 class American(object):
     @staticmethod
     def printNationality():
-        print "America"
+        print("America")
 
 anAmerican = American()
 anAmerican.printNationality()

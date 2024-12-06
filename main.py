@@ -65,11 +65,27 @@ def parse_question(question_text):
     return title, hints, solution
 
 
+def get_next_question_number(code_dir):
+    if not os.path.exists(code_dir):
+        return 1
+
+    max_number = 0
+    for file_name in os.listdir(code_dir):
+        match = re.match(r'q(\d{3})\.py', file_name)
+        if match:
+            number = int(match.group(1))
+            if number > max_number:
+                max_number = number
+
+    return max_number + 1
+
+
 def save_solution(solution, question_number):
     code_dir = 'code'
     if not os.path.exists(code_dir):
         os.makedirs(code_dir)
 
+    question_number = get_next_question_number(code_dir)
     file_name = f'q{question_number:03d}.py'
     file_path = os.path.join(code_dir, file_name)
 
@@ -79,15 +95,15 @@ def save_solution(solution, question_number):
     return file_name
 
 
-def generate_latex(title, question, hints, solution_file):
+def generate_latex(title, hints, solution_file):
     latex = f"""
 \\question
 {title}
 \\par
-\\textbf{{{hints + ':'}}}
+\\textbf{{Indices : }}{hints}
 \\renewcommand{{\\nomfichier}}{{{solution_file}}}
 \\begin{{solution}}
-    \\pythonfile{{\\chemincode \\nomfichier}}[][{solution_file}]
+    \\pythonfile{{\\chemincode \\nomfichier}}[][\\nomfichier]
 \\end{{solution}}
 """
     return latex
@@ -103,11 +119,12 @@ def main():
     for i, question_text in enumerate(questions, start=1):
         title, hints, solution = parse_question(question_text)
         solution_file = save_solution(solution, i)
-        latex = generate_latex(title, question_text, hints, solution_file)
+        latex = generate_latex(title, hints, solution_file)
         latex_content.append(latex)
 
-    with open(output_file, 'w', encoding='utf-8') as file:
+    with open(output_file, 'a', encoding='utf-8') as file:
         file.write('\n'.join(latex_content))
+        file.write('\n')
 
 if __name__ == '__main__':
     main()

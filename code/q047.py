@@ -1,10 +1,22 @@
-class American(object):
-    pass
+class American:
+    def __init__(self, name):
+        self.name = name
+
+    def describe(self):
+        return f"{self.name} is an American."
+
 
 class NewYorker(American):
-    pass
+    def describe(self):
+        parent_description = super().describe()
+        return f"{parent_description} Specifically, {self.name} is a New Yorker."
 
-anAmerican = American()
-aNewYorker = NewYorker()
-print anAmerican
-print aNewYorker
+
+# Exemple d'utilisation
+anAmerican = American("John")
+aNewYorker = NewYorker("Jane")
+
+print(anAmerican.describe())  # Affichera "John is an American."
+print(
+    aNewYorker.describe()
+)  # Affichera "Jane is an American. Specifically, Jane is a New Yorker."
