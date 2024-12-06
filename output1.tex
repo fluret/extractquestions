@@ -749,35 +749,34 @@ Ensuite, la sortie du programme doit être:\newline
     \pythonfile{\chemincode \nomfichier}[][\nomfichier]
 \end{solution}
 
+%%Question 51
+%\question
+%Écrivez un commentaire spécial pour indiquer qu'un fichier de code source Python est dans Unicode.
+%\par
+%\textbf{Indices : }
+%\renewcommand{\nomfichier}{q051.py}
+%\begin{solution}
+%    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+%\end{solution}
 
-\question
-Écrivez un commentaire spécial pour indiquer qu'un fichier de code source Python est dans Unicode.
-\par
-\textbf{Indices : }
-\renewcommand{\nomfichier}{q051.py}
-\begin{solution}
-    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
-\end{solution}
-
-
+%Question 51
 \question
 Écrivez un programme pour calculer:
 
-f (n) = f (n-1) +100 quand n> 0
-et f (0) = 1
+f (n) = f (n - 1) +100 quand n> 0\newline
+et f (0) = 1\newline
 
 avec une entrée n donnée par console (n> 0).
 
-Exemple:
-Si le n suivant est donné en entrée au programme:
+Exemple:\newline
+Si le n suivant est donné en entrée au programme:\newline
 
 5
 
-Ensuite, la sortie du programme doit être:
+Ensuite, la sortie du programme doit être:\newline
 
 500
 
-En cas de données d'entrée fournies à la question, il doit être supposé être une entrée de console.
 \par
 \textbf{Indices : }Nous pouvons définir une fonction récursive dans Python.
 \renewcommand{\nomfichier}{q052.py}
@@ -785,177 +784,181 @@ En cas de données d'entrée fournies à la question, il doit être supposé êt
     \pythonfile{\chemincode \nomfichier}[][\nomfichier]
 \end{solution}
 
-
+%Question 52
 \question
 La séquence Fibonacci est calculée en fonction de la formule suivante:
 
+f (n) = 0 si n = 0\newline
+f (n) = 1 si n = 1\newline
+f (n) = f (n - 1) + f (n - 2) si n> 1\newline
 
-f (n) = 0 si n = 0
-f (n) = 1 si n = 1
-f (n) = f (n-1) + f (n-2) si n> 1
+Veuillez écrire un programme pour calculer la valeur de F (n) avec une entrée N donnée par console.\newline
 
-Veuillez écrire un programme pour calculer la valeur de F (n) avec une entrée N donnée par console.
-
-Exemple:
-Si le n suivant est donné en entrée au programme:
+Exemple:\newline
+Si le n suivant est donné en entrée au programme:\newline
 
 7
 
-Ensuite, la sortie du programme doit être:
+Ensuite, la sortie du programme doit être:\newline
 
 13
 
-En cas de données d'entrée fournies à la question, il doit être supposé être une entrée de console.
 \par
 \textbf{Indices : }Nous pouvons définir une fonction récursive dans Python.
 \renewcommand{\nomfichier}{q053.py}
 \begin{solution}
     \pythonfile{\chemincode \nomfichier}[][\nomfichier]
 \end{solution}
+\renewcommand{\nomfichier}{q053-01.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+\renewcommand{\nomfichier}{q053-02.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
 
-
+%Question 53
 \question
 La séquence Fibonacci est calculée en fonction de la formule suivante:
 
 
-f (n) = 0 si n = 0
-f (n) = 1 si n = 1
-f (n) = f (n-1) + f (n-2) si n> 1
+f (n) = 0 si n = 0\newline
+f (n) = 1 si n = 1\newline
+f (n) = f (n - 1) + f (n - 2) si n> 1\newline
 
-Veuillez écrire un programme en utilisant la compréhension de la liste pour imprimer la séquence Fibonacci sous forme de virgule séparée avec une entrée N donnée par console.
+Veuillez écrire un programme en utilisant la compréhension de la liste pour imprimer la séquence Fibonacci sous forme de virgule séparée avec une entrée N donnée par console.\newline
 
-Exemple:
-Si le n suivant est donné en entrée au programme:
+Exemple:\newline
+Si le n suivant est donné en entrée au programme:\newline
 
 7
 
-Ensuite, la sortie du programme doit être:
+Ensuite, la sortie du programme doit être:\newline
 
 0,1,1,2,3,5,8,13
 \par
-\textbf{Indices : }Nous pouvons définir une fonction récursive dans Python.
-Utilisez la compréhension de la liste pour générer une liste à partir d'une liste existante.
-Utilisez String.Join () pour rejoindre une liste de chaînes.
-
-En cas de données d'entrée fournies à la question, il doit être supposé être une entrée de console.
+\textbf{Indices : }
+\begin{itemize}
+\item Nous pouvons définir une fonction récursive dans Python.
+\item Utilisez la compréhension de la liste pour générer une liste à partir d'une liste existante.
+\item Utilisez <string>.Join() pour concaténer une liste de chaînes.
+\end{itemize}
 \renewcommand{\nomfichier}{q054.py}
 \begin{solution}
     \pythonfile{\chemincode \nomfichier}[][\nomfichier]
 \end{solution}
 
-
+%Question 54
 \question
-Veuillez écrire un programme à l'aide du générateur pour imprimer les nombres pair entre 0 et N sous forme de virgule séparée tandis que N est entré par console.
+Écrire un programme à l'aide du générateur pour imprimer les nombres pair entre 0 et N sous forme d'une suite de valeur séparées par des virgules. La valeur N est fournie par l'utilisateur.\newline
 
-Exemple:
-Si le n suivant est donné en entrée au programme:
+Exemple:\newline
+Si la valeur de N est :\newline
 
 10
 
-Ensuite, la sortie du programme doit être:
+La sortie du programme doit être:\newline
 
 0,2,4,6,8,10
 \par
-\textbf{Indices : }Utilisez le rendement pour produire la valeur suivante dans le générateur.
+\textbf{Indices : }Utilisez yield pour produire la valeur suivante dans le générateur.
 
-En cas de données d'entrée fournies à la question, il doit être supposé être une entrée de console.
 \renewcommand{\nomfichier}{q055.py}
 \begin{solution}
     \pythonfile{\chemincode \nomfichier}[][\nomfichier]
 \end{solution}
 
-
+%Question 55
 \question
-Veuillez écrire un programme à l'aide du générateur pour imprimer les nombres qui peuvent être divisibles par 5 et 7 entre 0 et N sous forme séparée de virgules tandis que N est entrée par console.
+Veuillez écrire un programme utilisant un générateur pour imprimer les nombres divisibles par 5 et 7 entre 0 et n sous la forme d'une liste séparée par des virgules. La valeur n est fournie par l'utilisateur.\newline
 
-Exemple:
-Si le n suivant est donné en entrée au programme:
+Exemple:\newline
+Si le n suivant est donné en entrée au programme:\newline
 
 100
 
-Ensuite, la sortie du programme doit être:
+Ensuite, la sortie du programme doit être:\newline
 
 0,35,70
 \par
-\textbf{Indices : }Utilisez le rendement pour produire la valeur suivante dans le générateur.
-
-En cas de données d'entrée fournies à la question, il doit être supposé être une entrée de console.
+\textbf{Indices : }Utilisez le yield pour produire la valeur suivante dans le générateur.
 \renewcommand{\nomfichier}{q056.py}
 \begin{solution}
     \pythonfile{\chemincode \nomfichier}[][\nomfichier]
 \end{solution}
 
-
+%Question 56
 \question
-Veuillez rédiger des instructions d'affirmation pour vérifier que chaque numéro de la liste [2,4,6,8] est uniforme.
+Écrire un code pour vérifier que tous les nombres de la liste [2,4,6,8] sont pairs.
 \par
-\textbf{Indices : }Utilisez "Affirmer l'expression" pour faire l'affirmation.
+\textbf{Indices : }Utilisez "assert expression" pour effectuer l'opération.
 \renewcommand{\nomfichier}{q057.py}
 \begin{solution}
     \pythonfile{\chemincode \nomfichier}[][\nomfichier]
 \end{solution}
 
-
+%Question 57
 \question
-Veuillez écrire une fonction de recherche binaire qui recherche un élément dans une liste triée.La fonction doit renvoyer l'index de l'élément à rechercher dans la liste.
+Veuillez écrire une fonction de recherche binaire qui recherche un élément dans une liste triée. La fonction doit renvoyer l'index de l'élément à rechercher dans la liste.
 \par
-\textbf{Indices : }Utilisez si / elif pour gérer les conditions.
+\textbf{Indices : }Utilisez if / elif pour gérer les conditions.
 \renewcommand{\nomfichier}{q058.py}
 \begin{solution}
     \pythonfile{\chemincode \nomfichier}[][\nomfichier]
 \end{solution}
 
-
+%Question 58
 \question
-Veuillez générer un flotteur aléatoire où la valeur se situe entre 10 et 100 à l'aide du module mathon mathon.
+Veuillez générer un flottant aléatoire où la valeur se situe entre 10 et 100 à l'aide du module math.
 \par
-\textbf{Indices : }Utilisez random.random () pour générer un flotteur aléatoire dans [0,1].
+\textbf{Indices : }Utilisez random.random () pour générer un flottant aléatoire dans [0,1].
 \renewcommand{\nomfichier}{q059.py}
 \begin{solution}
     \pythonfile{\chemincode \nomfichier}[][\nomfichier]
 \end{solution}
 
-
+%Question 59
 \question
 Veuillez écrire un programme pour produire un nombre pair aléatoire entre 0 et 10 inclus en utilisant le module aléatoire et la compréhension de la liste.
 \par
-\textbf{Indices : }Utilisez Random.CHOICE () à un élément aléatoire d'une liste.
+\textbf{Indices : }Utilisez random.choice() à un élément aléatoire d'une liste.
 \renewcommand{\nomfichier}{q060.py}
 \begin{solution}
     \pythonfile{\chemincode \nomfichier}[][\nomfichier]
 \end{solution}
 
-
+%Question 60
 \question
 Veuillez rédiger un programme pour générer une liste avec 5 nombres aléatoires entre 100 et 200 inclusifs.
 \par
-\textbf{Indices : }Utilisez random.sample () pour générer une liste de valeurs aléatoires.
+\textbf{Indices : }Utilisez random.sample() pour générer une liste de valeurs aléatoires.
 \renewcommand{\nomfichier}{q061.py}
 \begin{solution}
     \pythonfile{\chemincode \nomfichier}[][\nomfichier]
 \end{solution}
 
-
+%Question 61
 \question
 Veuillez écrire un programme pour générer de manière aléatoire une liste avec 5 nombres, qui sont divisibles par 5 et 7, entre 1 et 1000 inclusifs.
 \par
-\textbf{Indices : }Utilisez random.sample () pour générer une liste de valeurs aléatoires.
+\textbf{Indices : }Utilisez random.sample() pour générer une liste de valeurs aléatoires.
 \renewcommand{\nomfichier}{q062.py}
 \begin{solution}
     \pythonfile{\chemincode \nomfichier}[][\nomfichier]
 \end{solution}
 
-
+%Question 62
 \question
 Veuillez écrire un programme pour imprimer au hasard un numéro entier entre 7 et 15 inclusif.
 \par
-\textbf{Indices : }Utilisez Random.RandRange () à un entier aléatoire dans une plage donnée.
+\textbf{Indices : }Utilisez random.randrange()
 \renewcommand{\nomfichier}{q063.py}
 \begin{solution}
     \pythonfile{\chemincode \nomfichier}[][\nomfichier]
 \end{solution}
 
-
+%Question 63
 \question
 Veuillez écrire un programme pour comprimer et décompresser la chaîne "Hello World! Hello World! Hello World! Hello World!".
 \par
@@ -965,49 +968,46 @@ Veuillez écrire un programme pour comprimer et décompresser la chaîne "Hello 
     \pythonfile{\chemincode \nomfichier}[][\nomfichier]
 \end{solution}
 
-
+%Question 64
 \question
-Veuillez rédiger un programme pour mélanger et imprimer la liste [3,6,7,8].
+Rédiger un programme pour mélanger et imprimer la liste [3,6,7,8].
 \par
-\textbf{Indices : }Utilisez la fonction Shuffle () pour mélanger une liste.
+\textbf{Indices : }Utilisez la fonction Shuffle() pour mélanger une liste.
 \renewcommand{\nomfichier}{q065.py}
 \begin{solution}
     \pythonfile{\chemincode \nomfichier}[][\nomfichier]
 \end{solution}
 
-
+%Question 65
 \question
-Veuillez écrire un programme pour générer toutes les phrases où le sujet se trouve dans ["I", "vous"] et le verbe est dans ["Play", "Love"] et l'objet est dans ["hockey", "football"].
-\par
-\textbf{Indices : }Utilisez la notation de la liste [index] pour obtenir un élément d'une liste.
+Écrire un programme pour générer toutes les phrases où le sujet est dans ["I", "You"] et le verbe est dans ["Play", "Love"] et l'objet est dans ["Hockey", "Football"].
+
 \renewcommand{\nomfichier}{q066.py}
 \begin{solution}
     \pythonfile{\chemincode \nomfichier}[][\nomfichier]
 \end{solution}
 
-
+%Question 66
 \question
-En utilisant la compréhension de la liste, veuillez écrire un programme pour imprimer la liste après avoir supprimé les numéros de suppression qui sont divisibles par 5 et 7 dans [12,24,35,70,88,120,155].
-\par
-\textbf{Indices : }Utilisez la compréhension de la liste pour supprimer un tas d'éléments d'une liste.
+En utilisant la compréhension de liste, veuillez écrire un programme pour imprimer la liste après avoir supprimé les nombres divisibles par 5 et 7 dans [12,24,35,70,88,120,155].
+
 \renewcommand{\nomfichier}{q067.py}
 \begin{solution}
     \pythonfile{\chemincode \nomfichier}[][\nomfichier]
 \end{solution}
 
-
+%Question 67
 \question
-En utilisant la compréhension de la liste, veuillez écrire un programme générer un tableau 3 * 5 * 8 3D dont chaque élément est 0.
-\par
-\textbf{Indices : }Utilisez la compréhension de la liste pour faire un tableau.
+En utilisant la compréhension de liste, écrivez un programme qui génère un tableau 3D 3*5*8 dont chaque élément est 0.
+.
 \renewcommand{\nomfichier}{q068.py}
 \begin{solution}
     \pythonfile{\chemincode \nomfichier}[][\nomfichier]
 \end{solution}
 
-
+%Question 68
 \question
-En utilisant la compréhension de la liste, veuillez écrire un programme pour imprimer la liste après avoir supprimé la valeur 24 dans [12,24,35,24,88,120,155].
+En utilisant la compréhension de liste, veuillez écrire un programme pour imprimer la liste après avoir enlevé la valeur 24 dans [12,24,35,24,88,120,155].
 \par
 \textbf{Indices : }Utilisez la méthode de suppression de la liste pour supprimer une valeur.
 \renewcommand{\nomfichier}{q069.py}
@@ -1015,47 +1015,46 @@ En utilisant la compréhension de la liste, veuillez écrire un programme pour i
     \pythonfile{\chemincode \nomfichier}[][\nomfichier]
 \end{solution}
 
-
+%Question 69
 \question
-Définissez une personne de classe et ses deux classes enfants: hommes et femmes.Toutes les classes ont une méthode "Getgender" qui peut imprimer "masculin" pour la classe masculine et "féminine" pour la classe féminine.
+Définissez une classe Personne et ses deux classes enfants : Homme et Femme. Toutes les classes ont une méthode "getGenre" qui peut afficher "Homme" pour la classe Homme et "Femme" pour la classe Femme.
 \par
-\textbf{Indices : }Utilisez la sous-classe (parentClass) pour définir une classe d'enfants.
+\textbf{Indices : }Utilisez la subclass(parentClass) pour définir une classe d'enfants.
 \renewcommand{\nomfichier}{q070.py}
 \begin{solution}
     \pythonfile{\chemincode \nomfichier}[][\nomfichier]
 \end{solution}
 
-
+%Question 70
 \question
-Veuillez écrire un programme qui accepte une chaîne de la console et l'imprimez dans l'ordre inverse.
+Veuillez écrire un programme qui accepte une chaîne de la console et l'imprimez dans l'ordre inverse.\newline
 
-Exemple:
-Si la chaîne suivante est donnée en entrée au programme:
+Exemple:\newline
+Si la chaîne suivante est donnée en entrée au programme:\newline
 
-Rise pour voter Sir
+Rise pour voter Sir\newline
 
-Ensuite, la sortie du programme doit être:
+Ensuite, la sortie du programme doit être:\newline
 
-ris etov ot esir
-\par
-\textbf{Indices : }Utilisez la liste [:: - 1] pour itérer une liste dans un ordre inverse.
+riS retov ruop esiR
+
 \renewcommand{\nomfichier}{q071.py}
 \begin{solution}
     \pythonfile{\chemincode \nomfichier}[][\nomfichier]
 \end{solution}
 
-
+%Question 71
 \question
-Veuillez écrire un programme qui accepte une chaîne de la console et imprime les caractères qui ont même des index.
+Veuillez écrire un programme qui accepte une chaîne de caractères de la console et qui imprime les caractères qui ont des index pairs.\newline
 
-Exemple:
-Si la chaîne suivante est donnée en entrée au programme:
+Exemple:\newline
+Si la chaîne suivante est donnée en entrée au programme:\newline
 
 H1E2L3L4O5W6O7R8L9D
 
-Ensuite, la sortie du programme doit être:
+Ensuite, la sortie du programme doit être:\newline
 
-Bonjour le monde
+HELLOWORLD
 \par
 \textbf{Indices : }Utilisez la liste [:: 2] pour itérer une liste par étape 2.
 \renewcommand{\nomfichier}{q072.py}
@@ -1063,20 +1062,20 @@ Bonjour le monde
     \pythonfile{\chemincode \nomfichier}[][\nomfichier]
 \end{solution}
 
-
+%Question 72
 \question
 Veuillez écrire un programme qui imprime toutes les permutations de [1,2,3]
 \par
-\textbf{Indices : }Utilisez itertools.permutations () pour obtenir des permutations de liste.
+\textbf{Indices : }Utilisez itertools.permutations() pour obtenir des permutations de liste.
 \renewcommand{\nomfichier}{q073.py}
 \begin{solution}
     \pythonfile{\chemincode \nomfichier}[][\nomfichier]
 \end{solution}
 
-
+%Question 73
 \question
-Écrivez un programme pour résoudre un ancien puzzle chinois classique:
-Nous comptons 35 têtes et 94 jambes parmi les poulets et les lapins dans une ferme.Combien de lapins et combien de poulets avons-nous?
+Écrire un programme pour résoudre un casse-tête classique de la Chine ancienne :
+Nous comptons 35 têtes et 94 pattes parmi les poulets et les lapins d'une ferme. Combien de lapins et de poulets avons-nous ?
 \par
 \textbf{Indices : }Utilisez pour la boucle pour itérer toutes les solutions possibles.
 \renewcommand{\nomfichier}{q074.py}

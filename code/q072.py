@@ -1,3 +1,3 @@
-s=raw_input()
+s = input()
 s = s[::2]
-print s
+print(s)
