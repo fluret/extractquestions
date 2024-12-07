@@ -96,16 +96,27 @@ def save_solution(solution, question_number):
 
 
 def generate_latex(title, hints, solution_file):
-    latex = f"""
-\\question
-{title}
-\\par
-\\textbf{{Indices : }}{hints}
-\\renewcommand{{\\nomfichier}}{{{solution_file}}}
-\\begin{{solution}}
-    \\pythonfile{{\\chemincode \\nomfichier}}[][\\nomfichier]
-\\end{{solution}}
-"""
+    if hints:
+            latex = f"""
+        \\question
+        {title}
+        \\par
+        \\textbf{{Indices : }}{hints}
+        \\renewcommand{{\\nomfichier}}{{{solution_file}}}
+        \\begin{{solution}}
+            \\pythonfile{{\\chemincode \\nomfichier}}[][\\nomfichier]
+        \\end{{solution}}
+        """
+    else:
+        latex = f"""
+        \\question
+        {title}
+        \\par
+        \\renewcommand{{\\nomfichier}}{{{solution_file}}}
+        \\begin{{solution}}
+            \\pythonfile{{\\chemincode \\nomfichier}}[][\\nomfichier]
+        \\end{{solution}}
+        """
     return latex
 
 

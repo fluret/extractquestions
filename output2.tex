@@ -1,0 +1,943 @@
+
+%Question 1
+\question
+	Écrivez une fonction \textbf{precedent\_suivant()} qui lit un numéro entier et renvoie ses numéros précédents et suivants.
+	
+	Exemple d'entrée:
+	
+	precedent\_suivant(179)
+	
+	Exemple de sortie:
+	
+	(178, 180)
+  \par
+  \renewcommand{\nomfichier}{q075.py}
+  \begin{solution}
+      \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+  \end{solution}       
+%Question 2
+  \question
+  N étudiants prennent K pommes et les distribuent entre eux uniformément.La partie restante (indivisible) reste dans le panier.Combien de pommes aura chaque étudiante et combien resteront dans le panier ?
+  
+  La fonction lit les nombres n et k et renvoie les deux réponses pour les questions ci-dessus.
+
+	Exemple d'entrée:
+	
+	Apple\_sharing(6, 50)
+	
+	Exemple de sortie:
+	
+	(8, 2)
+  \par
+  \renewcommand{\nomfichier}{q076.py}
+  \begin{solution}
+      \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+  \end{solution}
+    
+%Question 3
+  \question
+  Écrivez une fonction appelée \textbf{carre()} qui calcule la valeur du carré d'un nombre.
+
+	Exemple d'entrée:
+	
+	carre(6)
+	
+	Exemple de sortie:
+	
+	36
+  \par
+  \renewcommand{\nomfichier}{q077.py}
+  \begin{solution}
+      \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+  \end{solution}
+        
+%Question 4
+  \question
+  Écrire la fonction \textbf{heures\_minutes()} pour transformer le nombre donné en secondes en heures et minutes.
+	
+	Exemple 1:
+	
+	heures\_minutes(3900)\newline
+	sortie : (1, 5)
+	
+	Exemple 2:
+	
+	heures\_minutes(60)\newline
+	sortie : (0, 1)
+        \par
+        \renewcommand{\nomfichier}{q078.py}
+        \begin{solution}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+        \end{solution}
+        
+%Question 5
+    \question
+    Étant donné deux horodatages du même jour.
+    Chaque horodatage est représenté par un nombre :
+    \begin{itemize}
+    \item d'heures
+    \item de minutes
+    \item de secondes
+    \end{itemize}
+    
+    L'instant du premier horodatage s'est produit avant l'instant du second. Calculez le nombre de secondes qui se sont écoulées entre les deux.
+
+		Exemple 1:
+		
+		two\_timestamp(1,1,1,2,2,2)\newline
+		Sortie : 3661
+		
+		Exemple 2:
+		
+		two\_timestamp(1,2,30,1,3,20)\newline
+		Sortie : 50
+        \par
+        \renewcommand{\nomfichier}{q079.py}
+        \begin{solution}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+        \end{solution}
+        
+%Question 6
+    \question
+    Créez une fonction nommée two\_digits().
+    
+    Étant donné un entier à deux chiffres, two\_digits() renvoie son chiffre gauche (le chiffre des dizaines) puis son chiffre droit (le chiffre des unités).
+
+		Exemple d'entrée:
+		
+		two\_digits(79)
+		
+		Exemple de sortie:
+		
+		(7, 9)
+    \par
+    \renewcommand{\nomfichier}{q080.py}
+    \begin{solution}
+        \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+    \end{solution}
+        
+%Question 7
+    \question
+    Écrire la fonction nommée swap\_digits().
+    
+    Étant donné un entier à deux chiffres, swap\_digits() échange ses chiffres et imprimez le résultat.
+
+		Exemple d'entrée:
+		
+		swap\_digits(79)
+		
+		Exemple de sortie:
+		
+		97
+    \par
+    \renewcommand{\nomfichier}{q081.py}
+    \begin{solution}
+        \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+    \end{solution}
+        
+%Question 8
+    \question
+    Écrire la fonction last\_two\_digits().Étant donné un entier supérieur à 9, last\_two\_digits() imprime ses deux derniers chiffres.
+
+		Exemple d'entrée:
+		
+		last\_two\_digits(1234)
+		
+		Exemple de sortie:
+		
+		34
+    \par
+    \renewcommand{\nomfichier}{q082.py}
+    \begin{solution}
+        \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+    \end{solution}
+        
+%Question 9
+    \question
+    Écrire la fonction tens\_digit().
+    
+    Étant donné un entier, tens\_digit() renvoie son chiffre de dizaines.
+
+		Exemple 1:
+		
+		tens\_digit(1234)\newline
+		Sortie : 3
+		
+		Exemple 2:
+		
+		tens\_digit(179)\newline
+		Sortie : 7
+    \par
+    \renewcommand{\nomfichier}{q083.py}
+    \begin{solution}
+        \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+    \end{solution}
+        
+%Question 10
+    \question
+    Écrire la fonction digits\_sum().
+    
+    Étant donné un numéro à trois chiffres, digits\_sum() trouve la somme de ses chiffres.
+
+		Exemple d'entrée:
+		
+		digits\_sum(123)
+		
+		Exemple de sortie:
+		
+		6
+    \par
+    \renewcommand{\nomfichier}{q084.py}
+    \begin{solution}
+        \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+    \end{solution}
+        
+
+        \question
+        Complétez la fonction first\_digit ().Étant donné un nombre réel positif, First\_digit () renvoie son premier chiffre (à droite du point décimal).
+
+Exemple d'entrée:
+
+first\_digit (1.79)
+
+Exemple de sortie:
+
+7
+        \par
+        \renewcommand{\nomfichier}{q085.py}
+        \begin{solution}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+        \end{solution}
+        
+
+        \question
+        Une voiture peut couvrir une distance de N kilomètres par jour.Combien de jours faudra-t-il pour couvrir un itinéraire de longueur m kilomètres?
+Instructions:
+
+Écrivez une fonction car\_route () qui, compte tenu de la distance, il peut conduire en une journée en tant que premier paramètre et la distance à conduire comme deuxième paramètre, calcule le nombre de jours qu'il faudra pour conduire cette distance.
+
+Exemple d'entrée:
+
+car\_route (20, 40)
+
+Exemple de sortie:
+
+2
+        \par
+        \renewcommand{\nomfichier}{q086.py}
+        \begin{solution}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+        \end{solution}
+        
+
+        \question
+        Écrivez une fonction Century ().Étant donné une année (en tant qu'entier positif), Century () trouve le nombre respectif du siècle.
+
+Exemple d'entrée:
+
+Century (2001)
+
+Exemple de sortie:
+
+21
+        \par
+        \renewcommand{\nomfichier}{q087.py}
+        \begin{solution}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+        \end{solution}
+        
+
+        \question
+        Un cupcake coûte des dollars et des centimes.Écrivez une fonction qui détermine le nombre de dollars et de cents que quelqu'un devrait payer pour N Cupcakes.La fonction obtient trois nombres: D, C, N et il devrait retourner deux chiffres: le coût total en dollars et en cents.
+
+Exemple d'entrée:
+
+Total\_cost (10,15,2)
+        \par
+        \renewcommand{\nomfichier}{q088.py}
+        \begin{solution}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+        \end{solution}
+        
+
+        \question
+        Écrivez une fonction day\_of\_week ().Étant donné un entier K dans la plage 1 à 365, day\_of\_week () trouve le nombre de jours de semaine pour le jour du K -th du jour de l'année, à condition que cette année le 1er janvier soit jeudi.
+
+Les jours de la semaine sont numérotés comme:
+
+0 - Dimanche
+1 - Lundi
+2 - Mardi, ...
+6 - Samedi
+
+Exemple d'entrée:
+
+day\_of\_week (1)
+
+Exemple de sortie:
+
+4
+        \par
+        \renewcommand{\nomfichier}{q089.py}
+        \begin{solution}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+        \end{solution}
+        
+
+        \question
+        Compte tenu de l'Intier N - le nombre de minutes qui se sont écoulées depuis minuit, combien d'heures et de minutes sont affichées sur l'horloge numérique 24h?Écrivez une fonction numérique\_clock () pour le calculer.La fonction doit imprimer deux nombres: le nombre d'heures (entre 0 et 23) et le nombre de minutes (entre 0 et 59).
+
+Exemple d'entrée:
+
+Digital\_clock (150)
+
+Exemple de sortie:
+
+(2, 30)
+        \par
+        \renewcommand{\nomfichier}{q090.py}
+        \begin{solution}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+        \end{solution}
+        
+
+        \question
+        Créez une fonction nommée factorial (), qui reçoit un nombre en tant que paramètre et renvoie le numéro factoriel du numéro donné.
+
+Exemple d'entrée:
+
+factorielle (8)
+
+Exemple de sortie:
+
+40320
+        \par
+        \renewcommand{\nomfichier}{q091.py}
+        \begin{solution}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+        \end{solution}
+        
+
+        \question
+        Créez une fonction nommée carré\_root (), qui reçoit un nombre en tant que paramètre et renvoie la racine carrée du numéro donné.
+
+Si le nombre résultant a des décimales, veuillez ne garder que les 2 premiers.
+
+Exemple d'entrée:
+
+Square\_root (50)
+
+Exemple de sortie:
+
+7.07
+        \par
+        \renewcommand{\nomfichier}{q092.py}
+        \begin{solution}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+        \end{solution}
+        
+
+        \question
+        Créez une fonction appelée squares\_dictionary ().La fonction reçoit un nombre n et devrait générer un dictionnaire qui contient des paires de la forme (n: n * n) pour chaque nombre dans la plage de 1 à n, inclus.
+
+Imprimez le dictionnaire résultant.
+
+Exemple d'entrée:
+
+squares\_dictionary (8)
+
+Exemple de sortie:
+
+\{1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64\}
+        \par
+        \renewcommand{\nomfichier}{q093.py}
+        \begin{solution}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+        \end{solution}
+        
+
+        \question
+        Créez une fonction appelée list\_and\_tuple (), qui donné une entrée de n nombres renvoie une liste et un tuple de ces nombres et transforme chacun d'eux en une chaîne.
+
+Imprimez la liste et dans la ligne suivante, imprimez le tuple.
+
+Exemple d'entrée:
+
+list\_and\_tuple (34,67,55,33,12,98)
+
+Exemple de sortie:
+
+['34', '67', '55', '33', '12', '98']
+('34', '67', '55', '33', '12', '98')
+        \par
+        \renewcommand{\nomfichier}{q094.py}
+        \begin{solution}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+        \end{solution}
+        
+
+        \question
+        Définissez une classe appelée InputOutString qui a au moins deux méthodes:
+
+get\_string pour obtenir une chaîne à partir de l'entrée de la console.
+print\_string pour imprimer la chaîne dans le haut du boîtier.
+
+Testez les méthodes de votre classe.
+        \par
+        \renewcommand{\nomfichier}{q095.py}
+        \begin{solution}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+        \end{solution}
+        
+
+        \question
+        Écrivez une fonction print\_formula (), avec un paramètre qui calcule et imprime la valeur en fonction de la formule donnée:
+
+Q = racine carrée de (2 * c * d) / h
+
+Voici les valeurs fixes de C et H:
+
+C est de 50.
+H est 30.
+D serait le paramètre de la fonction.
+
+Exemple d'entrée:
+
+print\_formula (150)
+
+Exemple de sortie:
+
+22
+        \par
+        \renewcommand{\nomfichier}{q096.py}
+        \begin{solution}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+        \end{solution}
+        
+
+        \question
+        Écrivez une fonction Two\_dimensional\_List (), qui prend 2 chiffres (x, y) en entrée et génère une liste ou une matrice en 2 dimensions.
+
+La valeur de l'élément dans la colonne I Row et J de la liste doit être i * j (leurs valeurs d'index).
+
+Exemple d'entrée:
+
+Two\_dimensional\_list (3,5)
+
+Exemple de sortie:
+
+[[0, 0, 0, 0, 0], [0, 1, 2, 3, 4], [0, 2, 4, 6, 8]]
+        \par
+        \renewcommand{\nomfichier}{q097.py}
+        \begin{solution}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+        \end{solution}
+        
+
+        \question
+        Écrivez une fonction Function\_OF\_WORDS, qui accepte une séquence de mots séparée par des virgules en entrée (une chaîne).
+
+Imprimez les mots dans une séquence séparée par des virgules après les avoir triés de manière alphabétique.
+
+Exemple d'entrée:
+
+Sequence\_of\_words ("sans, bonjour, sac, monde")
+
+Exemple de sortie:
+
+Sac, bonjour, sans, monde
+        \par
+        \renewcommand{\nomfichier}{q098.py}
+        \begin{solution}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+        \end{solution}
+        
+
+        \question
+        Écrivez une fonction appelée supprimer\_duplicate\_words () qui accepte une séquence de mots séparés en espace en espace en entrée et renvoie les mots après avoir supprimé tous les mots en double et les tri de manière alphanumériquement.
+
+Exemple d'entrée:
+
+retire\_duplicate\_words ("Hello World and Practice rend à nouveau parfait et bonjour le monde")
+
+Exemple de sortie:
+
+Encore une fois et bonjour fait un monde de pratique parfait
+        \par
+        \renewcommand{\nomfichier}{q099.py}
+        \begin{solution}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+        \end{solution}
+        
+
+        \question
+        Écrivez une fonction Divisible\_Binary () qui prend une séquence de numéros binaires à 4 chiffres séparés par des virgules en entrée et vérifie si elles sont divisibles par 5. Imprimez les nombres divisibles par 5 dans une séquence séparée par des virgules.
+
+Exemple d'entrée:
+
+Divisible\_binary ("0100,0011,1010,1001")
+
+Exemple de sortie:
+
+1010
+        \par
+        \renewcommand{\nomfichier}{q100.py}
+        \begin{solution}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+        \end{solution}
+        
+
+        \question
+        Définissez une fonction nommée all\_digits\_even () pour identifier et imprimer tous les nombres entre 1000 et 3000 (inclus) où chaque chiffre est un nombre pair.Affichez les numéros résultants dans une séquence séparée par des virgules sur une seule ligne.
+        \par
+        \renewcommand{\nomfichier}{q101.py}
+        \begin{solution}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+        \end{solution}
+        
+
+        \question
+        Écrivez une fonction nommée Letters\_and\_digits () qui prend une phrase en entrée et calcule le nombre de lettres et de chiffres qui y sont présents.
+
+Exemple d'entrée:
+
+Letters\_and\_digits ("Hello World! 123")
+
+Exemple de sortie:
+
+Lettres 10
+Chiffres 3
+        \par
+        \renewcommand{\nomfichier}{q102.py}
+        \begin{solution}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+        \end{solution}
+        
+
+        \question
+        Écrivez un programme numéro\_of\_uppercase () qui accepte une phrase et calcule le nombre de lettres majuscules et minuscules.
+
+Exemple d'entrée:
+
+Number\_of\_upperCase ("Hello World!")
+
+Exemple de sortie:
+
+Majuscule 1
+Minuscule 9
+        \par
+        \renewcommand{\nomfichier}{q103.py}
+        \begin{solution}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+        \end{solution}
+        
+
+        \question
+        Écrivez un programme calculé\_value () pour calculer la somme d'un + aa + aaa + aaaa, où «a» est un chiffre donné.
+
+Exemple d'entrée:
+
+calculé\_value (9)
+
+Exemple de sortie:
+
+11106
+        \par
+        \renewcommand{\nomfichier}{q104.py}
+        \begin{solution}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+        \end{solution}
+        
+
+        \question
+        Écrivez une fonction nommée carré\_odd\_numbers () qui accepte une chaîne de nombres séparés par des virgules en entrée, ne plonge que les nombres impairs et renvoie les résultats en tant que liste.
+
+Exemple d'entrée:
+
+Square\_ODD\_NUMBERS ("1,2,3,4,5,6,7,8,9")
+
+Exemple de sortie:
+
+[1, 9, 25, 49, 81]
+        \par
+        \renewcommand{\nomfichier}{q105.py}
+        \begin{solution}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+        \end{solution}
+        
+
+        \question
+        Écrivez une fonction nommée net\_amount () qui calcule le montant net d'un compte bancaire en fonction d'un journal de transaction à partir de l'entrée.Le format de journal des transactions est affiché comme suit:
+
+D 100
+W 200
+
+D signifie dépôt tandis que w signifie le retrait.
+Exemple d'entrée:
+
+net\_amount ("D 300 D 300 W 200 D 100")
+
+Exemple de sortie:
+
+500
+        \par
+        \renewcommand{\nomfichier}{q106.py}
+        \begin{solution}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+        \end{solution}
+        
+
+        \question
+        Un site Web oblige les utilisateurs à saisir un nom d'utilisateur et un mot de passe pour s'inscrire.Écrivez une fonction nommée valid\_password () pour vérifier la validité de l'entrée de mot de passe par les utilisateurs.Voici les critères de vérification du mot de passe:
+
+Au moins 1 lettre entre [A-Z].
+Au moins 1 nombre entre [0-9].
+Au moins 1 lettre entre [A-Z].
+Au moins 1 caractère de [\$ \# @].
+Longueur minimale du mot de passe: 6.
+Longueur maximale du mot de passe: 12.
+
+Votre programme doit accepter un mot de passe et le vérifier en fonction des critères précédents.Si le mot de passe est validé avec succès, la fonction renvoie la chaîne suivante "Mot de passe valide".Sinon, il renvoie "mot de passe non valide. Veuillez réessayer".
+Exemple d'entrée:
+
+valid\_password ("ABD1234 @ 1")
+
+Exemple de sortie:
+
+"Mot de passe valide"
+        \par
+        \renewcommand{\nomfichier}{q107.py}
+        \begin{solution}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+        \end{solution}
+        
+
+        \question
+        Écrivez une fonction sort\_tuples\_ascendant () pour trier les tuples (nom, âge, score) par ordre croissant, où le nom, l'âge et le score sont tous des chaînes.Les critères de tri sont:
+
+Trier basé sur le nom.
+Puis trier en fonction de l'âge.
+Puis trier par score.
+
+La priorité est le nom> Age> Score.
+Exemple d'entrée:
+
+SORT\_TUPLES\_ASCENCE ([«Tom, 19,80», «John, 20,90», «Jony, 17,91», «Jony, 17,93», «Jason, 21,85»])
+
+Exemple de sortie:
+
+[('Jason', '21', '85'), ('John', '20', '90'), ('Jony', '17', '91'), ('Jony', '17',' 93 '), (' Tom ',' 19 ',' 80 ')]]
+        \par
+        \renewcommand{\nomfichier}{q108.py}
+        \begin{solution}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+        \end{solution}
+        
+
+        \question
+        Définissez une classe avec une fonction de générateur qui peut itérer les nombres divisibles par 7 entre une plage donnée 0 et n.
+        \par
+        \renewcommand{\nomfichier}{q109.py}
+        \begin{solution}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+        \end{solution}
+        
+
+        \question
+        Un robot se déplace dans un avion à partir du point d'origine (0,0).Le robot peut se déplacer vers le haut, le bas, la gauche et la droite avec des étapes données.La trace du mouvement du robot est montrée comme une liste comme celle suivante:
+
+["Up 5", "Down 3", "gauche 3", "droite 2"]
+
+Les nombres après la direction sont des étapes.Veuillez écrire un programme nommé Compute\_Robot\_Distance () pour calculer la distance finale après une séquence de mouvements du point d'origine.Si la distance est un flotteur, imprimez simplement l'entier le plus proche.
+Exemple d'entrée:
+
+calcul\_robot\_distance (["up 5", "down 3", "gauche 3", "droite 2"])
+
+Exemple de sortie:
+
+2
+        \par
+        \renewcommand{\nomfichier}{q110.py}
+        \begin{solution}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+        \end{solution}
+        
+
+        \question
+        Écrivez une fonction appelée calcul\_word\_frequency () pour calculer la fréquence des mots à partir d'une entrée de chaîne.
+
+Mettez chaque mot séparé par un espace dans un dictionnaire et comptez sa fréquence.
+
+Triez le dictionnaire de manière alphanumérique et imprimez dans la console chaque clé d'une nouvelle ligne.
+
+Exemple d'entrée:
+
+calcul\_word\_frequency ("Nouveau sur Python ou choisissant entre Python 2 et Python 3? Lire Python 2 ou Python 3.")
+
+Exemple de sortie:
+
+2: 2
+3.: 1
+3 ?: 1
+Nouveau: 1
+Python: 5
+Lire: 1
+et: 1
+Entre: 1
+Choisir: 1
+ou: 2
+à: 1
+        \par
+        \renewcommand{\nomfichier}{q111.py}
+        \begin{solution}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+        \end{solution}
+        
+
+        \question
+        Dans Python, une classe est une structure qui vous permet d'organiser et d'encapsuler des données et des fonctionnalités associées.Les classes sont une caractéristique fondamentale de la programmation orientée objet (OOP), un paradigme de programmation qui utilise des objets pour modéliser et organiser le code.
+
+En termes simples, une classe est comme un plan ou un modèle pour créer des objets.Un objet est une instance spécifique d'une classe qui a des attributs (données) et des méthodes (fonctions) associés.Les attributs représentent les caractéristiques de l'objet, et les méthodes représentent les actions que l'objet peut effectuer.
+Exemple:
+
+Élève de classe:
+def \_\_init \_\_ (soi, nom, âge, grade): \# Ce sont ses attributs
+self.name = nom
+self.age = âge
+self.grade = grade
+
+def introduir (self): \# c'est une méthode
+return f "Hello! Je suis \{self.name\}, je suis \{self.age\} ans, et ma note actuelle est \{self.grade\}."
+
+DEF Étude (self, heures): \# C'est une autre méthode
+self.grade + = heures * 0,5
+return f "Après avoir étudié pendant \{heures\}, \{\{self.name\}, la nouvelle note est \{self.grade\}."
+
+Student1 = Student ("Ana", 20, 80)
+
+print (Student1.Introduce ())
+Imprimer (Student1.Study (3))
+
+Dans ce code:
+
+La classe étudiante a une méthode \_\_init\_\_ pour initialiser le nom, l'âge et la note des attributs de l'élève.
+L'introduction est une méthode qui imprime un message introduisant l'élève.
+L'étude est une méthode qui simule l'acte d'étude et met à jour la note de l'étudiant.
+
+Instructions:
+
+Pour terminer cet exercice, copiez le code fourni à partir de l'exemple et collez-le dans votre fichier app.py.Exécutez le code et testez sa fonctionnalité.Expérimentez avec la modification des différents aspects du code pour observer comment il se comporte.Cette approche pratique vous aidera à comprendre la structure et le comportement de la classe étudiante.Une fois que vous vous êtes familiarisé avec le code et ses effets, n'hésitez pas à passer à l'exercice suivant.
+        \par
+        \renewcommand{\nomfichier}{q112.py}
+        \begin{solution}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+        \end{solution}
+        
+
+        \question
+        Méthodes \_\_init\_\_ et \_\_str\_\_
+
+En règle générale, lorsque vous travaillez avec des classes, vous rencontrerez des méthodes du formulaire \_\_ <méthode> \_\_;Ceux-ci sont appelés «méthodes magiques».Il y en a beaucoup, chacun servant un objectif spécifique.Cette fois, nous nous concentrerons sur l'apprentissage de deux des plus fondamentaux.
+
+La méthode magique \_\_init\_\_ est essentielle pour l'initialisation des objets au sein d'une classe.Il est automatiquement exécuté lorsqu'une nouvelle instance de la classe est créée, permettant l'affectation des valeurs initiales aux attributs de l'objet.
+
+La méthode \_\_str\_\_ est utilisée pour fournir une représentation de chaîne lisible par l'instance, permettant la personnalisation de la sortie lorsque l'objet est imprimé.Ceci est particulièrement utile pour améliorer la lisibilité du code et faciliter le débogage, car il définit une version respectueuse des informations humaines des informations contenues dans l'objet.
+Exemple:
+
+Personne de classe:
+Def \_\_init \_\_ (soi, nom, âge, genre):
+self.name = nom
+self.age = âge
+self.geder = sexe
+
+Def \_\_str \_\_ (Self):
+return f "\{self.name\}, \{self.age\} ans, \{self.gender\}"
+
+\# Créez une instance de la classe de personne
+Person1 = personne ("Juan", 25, "Homme")
+
+\# Imprimez les informations de la personne à l'aide de la méthode \_\_str\_\_
+Impression (Person1) \# Sortie: Juan, 25 ans, homme
+
+Instructions:
+
+Créez une classe intitulée Book qui a les méthodes \_\_init\_\_ et \_\_str\_\_.
+
+La méthode \_\_init\_\_ doit initialiser les attributs de titre, d'auteur et d'année.
+
+La méthode \_\_str\_\_ doit renvoyer une chaîne représentant les informations d'une instance du livre suivant de cette manière:
+
+Book1 = ("The Great Gatsby", "F. Scott Fitzgerald", 1925)
+
+Imprimer (Book1)
+
+\# Sortir:
+\#
+\# Titre du livre: The Great Gatsby
+\# Auteur: F. Scott Fitzgerald
+\# Année: 1925
+        \par
+        \renewcommand{\nomfichier}{q113.py}
+        \begin{solution}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+        \end{solution}
+        
+
+        \question
+        Héritage et polymorphisme
+
+Maintenant que nous comprenons ce qu'est une classe et certaines de ses caractéristiques, parlons de deux nouveaux concepts liés aux classes: l'héritage et le polymorphisme.Considérez l'exemple suivant:
+
+Classe HighschoolStudent (Student): \# Ajoutez la classe parentale à l'intérieur de la parenthèse
+Def \_\_init \_\_ (soi, nom, âge, grade, spécialisation):
+super () .\_\_ init \_\_ (nom, âge, grade)
+self.specialization = spécialisation
+
+Étude DEF (self, heures):
+return f "\{self.name\} est un élève du secondaire spécialisé dans \{self.specialization\} et étudie pendant \{heures\} des heures pour les examens."
+
+\# Création d'une instance de lycéen
+high\_school\_student = lycée ("John", 16, 85, "science")
+print (high\_school\_student.introduce ()) \# Nous pouvons appeler cette méthode grâce à l'héritage
+print (high\_school\_student.study (4)) \# Cette méthode a été légèrement modifiée et maintenant elle renvoie une chaîne différente
+
+En supposant que la classe étudiante de l'exercice précédent est codée juste au-dessus de cette classe d'études secondaires, pour hériter de ses méthodes et attributs, nous incluons simplement le nom de la classe que nous voulons hériter de (la classe parent) à l'intérieur des parenthèses de la classe enfant (HighschoolStudent).Comme vous pouvez le voir, nous pouvons désormais utiliser la méthode d'introduction de la classe étudiante sans avoir à la coder à nouveau, ce qui rend notre code plus efficace.Il en va de même pour les attributs;Nous n'avons pas besoin de les redéfinir.
+
+De plus, nous avons la flexibilité d'ajouter de nouvelles méthodes exclusivement pour cette classe ou même de remplacer une méthode héréditaire si nécessaire, comme démontré dans la méthode d'étude, qui est légèrement modifiée à partir de la méthode étudiante;C'est ce qu'on appelle le polymorphisme.
+Instructions:
+
+Créez une classe appelée Collegestudente qui hérite de la classe étudiante déjà définie.
+
+Ajoutez un nouvel attribut appelé Major pour représenter le major qu'ils étudient.
+
+Modifiez la méthode d'introduction héritée pour renvoyer cette chaîne:
+
+"Salut! Je suis <nom>, un étudiant spécialisé en <Ommor>."
+
+Ajoutez une nouvelle méthode appelée Assister\_lecture qui renvoie la chaîne suivante:
+
+"<nom> assiste à une conférence pour les étudiants de <JOARD>."
+
+Créez une instance de votre classe nouvellement créée et appelez chacune de ses méthodes.Exécutez votre code pour vous assurer qu'il fonctionne.
+        \par
+        \renewcommand{\nomfichier}{q114.py}
+        \begin{solution}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+        \end{solution}
+        
+
+        \question
+        méthodes statiques
+
+Une méthode statique dans Python est une méthode qui est liée à une classe plutôt qu'à une instance de la classe.Contrairement aux méthodes régulières, les méthodes statiques n'ont pas accès à l'instance ou à la classe elle-même.
+
+Les méthodes statiques sont souvent utilisées lorsqu'une méthode particulière ne dépend pas de l'état de l'instance ou de la classe.Ils ressemblent davantage aux fonctions utilitaires associées à une classe.
+
+Personne de classe:
+
+def \_\_init \_\_ (soi, nom, âge):
+self.name = nom
+self.age = âge
+
+@StaticMethod
+Def is\_adult (âge):
+âge de retour> = 18
+
+\# Création d'instances de personne
+Person1 = personne ("Alice", 25)
+Person2 = personne ("Bob", 16)
+
+\# Utilisation de la méthode statique pour vérifier si une personne est un adulte
+IS\_ADULT\_PERSON1 = Person.is\_adult (Person1.age)
+IS\_ADULT\_PERSON2 = Person.is\_adult (Person2.age)
+print (f "\{person1.name\} est un adulte: \{is\_adult\_person1\}")
+print (f "\{person2.name\} est un adulte: \{is\_adult\_person2\}")
+
+Dans cet exemple:
+
+La méthode statique est\_adult vérifie si une personne est un adulte en fonction de son âge.Il n'a pas accès directement aux variables d'instance ou de classe.
+
+Instructions:
+
+Créez une classe appelée Mathoperations.
+
+Créez une méthode statique nommée add\_numbers qui prend deux nombres comme paramètres et renvoie leur somme.
+
+Créez une instance de la classe Mathoperations.
+
+Utilisez la méthode statique add\_numbers pour ajouter deux nombres, par exemple, 10 et 15.
+
+Imprimez le résultat.
+
+Exemple d'entrée:
+
+math\_operations\_instance = mathoperations ()
+sum\_of\_numbers = mathoperations.add\_numbers (10, 15)
+
+Exemple de sortie:
+
+\# Somme des nombres: 25
+        \par
+        \renewcommand{\nomfichier}{q115.py}
+        \begin{solution}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+        \end{solution}
+        
+
+        \question
+        Méthodes de classe
+
+Une méthode de classe est une méthode liée à la classe et non à l'instance de la classe.Il prend la classe elle-même comme son premier paramètre, souvent nommé "CLS".Les méthodes de classe sont définies à l'aide du décorateur @classMethod.
+
+La caractéristique principale d'une méthode de classe est qu'elle peut accéder et modifier les attributs au niveau de la classe, mais il ne peut pas accéder ou modifier les attributs spécifiques à l'instance car il n'a pas accès à une instance de la classe.Les méthodes de classe sont souvent utilisées pour les tâches qui impliquent la classe elle-même plutôt que pour les instances individuelles.
+
+Personne de classe:
+Total\_people = 0 \# Variable de classe pour garder une trace du nombre total de personnes
+
+def \_\_init \_\_ (soi, nom, âge):
+self.name = nom
+self.age = âge
+Personne.total\_people + = 1 \# incrément le nombre total\_people pour chaque nouvelle instance
+
+@classmethod
+def get\_total\_people (CLS):
+return cls.total\_people
+
+\# Création d'instances de personne
+Person1 = personne ("Alice", 25)
+Person2 = personne ("Bob", 16)
+
+\# Utilisation de la méthode de classe pour obtenir le nombre total de personnes
+total\_people = personne.get\_total\_people ()
+print (f "Total People: \{total\_people\}")
+
+Dans cet exemple:
+
+La méthode de classe get\_total\_people renvoie le nombre total de personnes créées (instances de la classe de personne).
+
+Instructions:
+
+Créez une classe appelée Mathoperations.
+
+À l'intérieur de la classe, définissez ce qui suit:
+
+Une variable de classe nommée PI avec une valeur de 3.14159.
+Une méthode de classe nommée Calculate\_Circle\_Area qui prend un rayon comme paramètre et renvoie la zone d'un cercle en utilisant la formule: $zone = \pi × radius^2$
+
+Utilisez la méthode de classe Calculer\_Circle\_area pour calculer la zone d'un cercle avec un rayon de 5.
+
+Imprimez le résultat.(Pas besoin de créer une instance)
+
+Exemple d'entrée:
+
+cercle\_area = mathoperations.calculate\_circle\_area (5)
+
+Exemple de sortie:
+
+\# Circle Zone: 78.53975
+        \par
+        \renewcommand{\nomfichier}{q116.py}
+        \begin{solution}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+        \end{solution}
+        
