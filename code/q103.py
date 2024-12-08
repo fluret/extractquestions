@@ -9,7 +9,7 @@ def number_of_uppercase(string):
         else:
             pass
 
-    return f"UPPERCASE {counts['UPPERCASE']} LOWERCASE {counts['LOWERCASE']}"
+    return f"Majuscule {counts['UPPERCASE']} \nMinuscule {counts['LOWERCASE']}"
 
 
 print(number_of_uppercase("Hello world!"))

@@ -5,5 +5,4 @@ def total_cost(d, c, n):
     return total_dollars, remaining_cents
 
 
-# Invoke the function with three integers: total_cost(dollars, cents, number_of_cupcakes)
 print(total_cost(15, 22, 4))

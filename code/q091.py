@@ -5,7 +5,7 @@ def factorial(x):
     return result
 
 
-print(factorial(5))
+print(factorial(8))
 
 ### Solution 2 ###
 

@@ -8,7 +8,7 @@ def letters_and_digits(text):
         else:
             pass
 
-    return f"LETTERS {counts['LETTERS']} DIGITS {counts['DIGITS']}"
+    return f"Lettres {counts['LETTERS']} \nChiffres {counts['DIGITS']}"
 
 
 print(letters_and_digits("hello world! 123"))

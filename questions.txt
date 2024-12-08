@@ -1,2250 +1,336 @@
 #----------------------------------------#
 Question:
-Complete a function previous_next() that reads an integer number and returns its previous and next numbers.
 
-Example input:
-
-previous_next(179)
-
-Example output:
-
-(178, 180)
 
 Hints: 
 
 
 Solution:
-# Complete the function to return the previous and next number of a given number
-def previous_next(num):
-  # Your code here
-  return (num-1, num+1)
 
-
-# Invoke the function with any integer as its argument
-print(previous_next(179))
-#----------------------------------------#
-Question:
-N students take K apples and distribute them among each other evenly. The remaining (indivisible) part remains in the basket. How many apples will each single student get, and how many apples will remain in the basket? The function reads the numbers N and K and it should return the two answers for the questions above.
-
-Example input:
-
-apple_sharing(6, 50)
-
-Example output:
-
-(8, 2)
-
-Hints: 
-
-
-Solution:
-def apple_sharing(n,k):
-  # Your code here
-  return (round(k/n), k%n)
- 
-
-print(apple_sharing(6,50))
-#----------------------------------------#
-Question:
-Write a function called square() that calculates the square value of a number.
-
-Example input:
-
-square(6)
-
-Example output:
-
-36
-Hints: 
-
-
-Solution:
-def square(num):
-    # Your code here
-    return num ** 2
-
-print(square(6))
-#----------------------------------------#
-Question:
-Complete the function hours_minutes to transform the given number of seconds into hours and minutes, indicating how much time has passed since then.
-Instructions:
-
-    Complete the function to return the expected result.
-
-    Perform two calculations based on the input parameter representing seconds. One calculation should determine the time elapsed in hours, while the other should indicate the time in minutes (hours, minutes).
-
-Example 1:
-
-output = hours_minutes(3900)
-print(output)  # (1, 5)
-
-Example 2:
-
-output = hours_minutes(60)
-print(output)  # (0, 1)
-
-Hints: 
-
-
-Solution:
-def hours_minutes(seconds):
-  # Your code here
-  hours = seconds // 3600
-  remaining_seconds = seconds % 3600
-  minutes = remaining_seconds // 60
-  return (hours, minutes)
-
-# Invoke the function and pass any integer as its argument
-print(hours_minutes(3900))
-#----------------------------------------#
-Question:
-Given two timestamps of the same day: a number of hours, minutes and seconds for both of the timestamps. The moment of the first timestamp happened before the moment of the second one. Calculate how many seconds passed between them.
-
-Example 1:
-
-output = two_timestamp(1,1,1,2,2,2)
-print(output)  # 3661
-
-Example 2:
-
-output = two_timestamp(1,2,30,1,3,20)
-print(output)  # 50
-
-Hints: 
-
-
-Solution:
-def two_timestamp(hr1, min1, sec1, hr2, min2, sec2):
-    # Your code here   
-    first_hour = hr1 * 3600
-    first_min = min1 * 60
-    final_first = first_hour + first_min + sec1
-    second_hour = hr2 * 3600
-    second_min = min2 * 60
-    final_second = second_hour + second_min + sec2
-    
-    return final_second - final_first
-
-# Invoke the function and pass two timestamps(6 integers) as its arguments
-print(two_timestamp(1, 1, 1, 2, 2, 2))
-#----------------------------------------#
-Question:
-Create a function named two_digits(). Given a two-digit integer, two_digits() returns its left digit (the tens digit) and then its right digit (the units digit).
-
-Example input:
-
-two_digits(79)
-
-Example output:
-
-(7, 9)
-
-Hints: 
-
-
-Solution:
-# Complete the function to return the tens digit and the units digit of any interger
-def two_digits(number):
-    # Your code here
-    aux = str(number)
-    return (int(aux[0]), int(aux[1]))
-   
-
-# Invoke the function with any two digit integer as its argument
-print(two_digits(79))
-
-
-### SOLUTION 2 ###
-
-# def two_digits(number):
-#     tens_digit = number // 10
-#     ones_digit = number % 10
-
-#     return tens_digit, ones_digit
-
-# print(two_digits(37))
-#----------------------------------------#
-Question:
-Complete a function named swap_digits(). Given a two-digit integer, swap_digits() swaps its digits and print the result.
-
-Example input:
-
-swap_digits(79)
-
-Example output:
-
-97
-
-Hints: 
-
-
-Solution:
-# Complete the function to return the swapped digits of a given two-digit integer
-def swap_digits(num):
-  # Your code here
-  aux = str(num)[1] + str(num)[0]
-  return int(aux)
-   
-# Invoke the function with any two-digit integer as its argument
-print(swap_digits(30))
-#----------------------------------------#
-Question:
-Complete the last_two_digits() function. Given an integer greater than 9, last_two_digits() prints its last two digits.
-
-Example input:
-
-last_two_digits(1234)
-
-Example output:
-
-34
-
-Hints: 
-
-
-Solution:
-# Complete the function to print the last two digits of an integer greater than 9
-def last_two_digits(num):
-    if num > 9: return int(str(num)[-2:])
-    else: return num
-
-# Invoke the function with any integer greater than 9
-print(last_two_digits(212))
-#----------------------------------------#
-Question:
-Complete the tens_digit() function. Given an integer, tens_digit() returns its tens digit.
-
-Example 1:
-
-output = tens_digit(1234)
-print(output)  # 3
-
-Example 2:
-
-output = tens_digit(179)
-print(output)  # 7
-
-Hints: 
-
-
-Solution:
-# Complete the function to return the tens digit of a given integer
-def tens_digit(num):
-  return (num // 10) % 10
-
-
-# Invoke the function with any integer
-print(tens_digit(198))
 #----------------------------------------#
 Question:
 
-    Complete the digits_sum() function. Given a three-digit number, digits_sum() finds the sum of its digits.
-
-Example input:
-
-digits_sum(123)
-
-Example output:
-
-6
 
 Hints: 
 
 
 Solution:
-# Complete the function "digits_sum" so that it prints the sum of a three-digit number
-def digits_sum(num):
-  aux = 0
-  for x in str(num):
-    aux = aux + int(x)
-  return aux
-
-
-# Invoke the function with any three-digit number
-print(digits_sum(123))
-#----------------------------------------#
-Question:
-Complete the first_digit() function. Given a positive real number, first_digit() returns its first digit (to the right of the decimal point).
-
-Example input:
-
-first_digit(1.79)
-
-Example output:
-
-7
-
-Hints: 
-
-
-Solution:
-import math
-
-# Complete the function to return the first digit to the right of the decimal point
-def first_digit(num):
-  return int(str(math.floor(num*10)/10)[-1])
-
-
-# Invoke the function with a positive real number. ex. 34.33
-print(first_digit(2.6))
-#----------------------------------------#
-Question:
-A car can cover a distance of N kilometers per day. How many days will it take to cover a route of length M kilometers?
-Instructions:
-
-    Write a car_route() function that, given the distance it can drive in one day as the first parameter, and the distance to drive as the second parameter, calculates the number of days it will take to drive that distance.
-
-Example input:
-
-car_route(20, 40)
-
-Example output:
-
-2
-
-Hints: 
-
-
-Solution:
-import math
-
-# Complete the function to return the amount of days it will take to cover a route
-def car_route(n,m):
-  return int(math.ceil(m/n))
-
-
-# Invoke the function with two integers
-print(car_route(35, 50))
-
-### A mettre dans test.py
-import io, sys, pytest, os, re, mock, math
-path = os.path.dirname(os.path.abspath(__file__))+'/app.py'
-
-@pytest.mark.it("You need to import the math module")
-def test_import_random():
-    with open(path, 'r') as content_file:
-        content = content_file.read()
-        regex = re.compile(r"import(\s)+math")
-        assert bool(regex.search(content)) == True
-
-@pytest.mark.it('The function car_route must exist')
-def test_for_functon_existence(capsys, app):
-    assert callable(app.car_route)
-
-@pytest.mark.it('The function must return something')
-def test_function_return(capsys, app):
-    assert app.car_route(659, 1857) != None
-
-@pytest.mark.it('The function must return a number')
-def test_function_return_type(capsys, app):
-    assert type(app.car_route(659, 1857)) == type(1)
-
-@pytest.mark.it('We tried to pass 20 and 40 as parameter and it did not return 2')
-def test_for_file_output(capsys, app):
-    assert app.car_route(20, 40) == 2
-
-@pytest.mark.it('We tried to pass 20 and 900 as parameter and it did not return 45')
-def test_for_file_output2(capsys, app):
-    assert app.car_route(20, 900) == 45
-#----------------------------------------#
-Question:
-Write a function century(). Given a year (as a positive integer), century() finds the respective number of the century.
-
-Example input:
-
-century(2001)
-
-Example output:
-
-21
-
-Hints: 
-
-
-Solution:
-import math
-
-# Complete the function to return the respective number of the century
-def century(year):
-  if year % 100 == 0:
-    return math.floor(year / 100) 
-  else:
-    return math.floor(year / 100 + 1)
-
-
-# Invoke the function with any given year
-print(century(2024))
-### A mettre dans test.py
-import io, sys, pytest, os, re, mock, math
-path = os.path.dirname(os.path.abspath(__file__))+'/app.py'
-
-@pytest.mark.it("You need to import the math module")
-def test_import_random():
-    with open(path, 'r') as content_file:
-        content = content_file.read()
-        regex = re.compile(r"import(\s)+math")
-        assert bool(regex.search(content)) == True
-
-
-@pytest.mark.it('The function century must exist')
-def test_for_functon_existence(capsys, app):
-    assert callable(app.century)
-
-@pytest.mark.it('The function must return something')
-def test_function_return(capsys, app):
-    assert app.century(19001) != None
-
-@pytest.mark.it('The function must return a number')
-def test_function_return_type(capsys, app):
-    assert type(app.century(19001)) == type(1)
-
-@pytest.mark.it('We tried to pass 2000 as parameter and it did not return 20')
-def test_for_file_output(capsys, app):
-  assert app.century(2000) == 20
-
-@pytest.mark.it('We tried to pass 2001 as parameter and it did not return 21')
-def test_for_file_output2(capsys, app):
-  assert app.century(2001) == 21
-
-@pytest.mark.it('We tried to pass 2101 as parameter and it did not return 22')
-def test_for_file_output3(capsys, app):
-  assert app.century(2101) == 22
-#----------------------------------------#
-Question:
-A cupcake costs d dollars and c cents. Write a function that determines how many dollars and cents someone should pay for n cupcakes. The function gets three numbers: d, c, n and it should return two numbers: total cost in dollars and cents.
-
-Example input:
-
-total_cost(10,15,2)
-
-Hints: 
-
-
-Solution:
-# Complete the function to return the total cost in dollars and cents of (n) cupcakes
-def total_cost(d, c, n):
-    total_cents = (d * 100 + c) * n
-    total_dollars = total_cents // 100
-    remaining_cents = total_cents % 100
-    return total_dollars, remaining_cents
-
-
-# Invoke the function with three integers: total_cost(dollars, cents, number_of_cupcakes)
-print(total_cost(15,22,4))
-### test.py
-import io, sys, pytest, os, re, mock, math
-path = os.path.dirname(os.path.abspath(__file__))+'/app.py'
-
-
-@pytest.mark.it('The function total_cost must exist')
-def test_for_functon_existence(capsys, app):
-    assert callable(app.total_cost)
-
-@pytest.mark.it('The function must return something')
-def test_function_return(capsys, app):
-    assert app.total_cost(15, 22, 4) != None
-  
-@pytest.mark.it('The function must return a tuple')
-def test_function_return_type(capsys, app):
-    assert type(app.total_cost(15, 22, 4)) == type((60, 88))
-  
-@pytest.mark.it('The function must return a tuple of numbers')
-def test_function_return_type_parameters(capsys, app):
-    result = app.total_cost(15, 22, 4)
-    assert type(result[0]) == type(1) and type(result[1]) == type(1)
-  
-@pytest.mark.it('We tried to pass 15, 22, 4 as parameters and it did not return (60, 88)')
-def test_for_file_output(capsys, app):
-    assert app.total_cost(15, 22, 4) == (60, 88)
-  
-@pytest.mark.it('We tried to pass 10, 15, 4 as parameters and it did not return (40, 60)')
-def test_for_file_output2(capsys, app):
-    assert app.total_cost(10, 15, 4) == (40, 60)
-#----------------------------------------#
-Question:
-Write a function day_of_week(). Given an integer k in the range 1 to 365, day_of_week() finds the number of day of week for k-th day of the year, provided that in this year January 1 was Thursday.
-
-The days of the week are numbered as:
-
-0 — Sunday
-1 — Monday
-2 — Tuesday, ...
-6 — Saturday 
-
-Example input:
-
-day_of_week(1)
-
-Example output:
-
-4
-
-Hints: 
-
-
-Solution:
-# Complete the function to return the number of day of the week for k'th day of year
-def day_of_week(k):
-  return (3 + k) % 7
-
-
-# Invoke function day_of_week with an integer between 1 and 365
-print(day_of_week(125))
-### test.py
-import io, sys, pytest, os, re, mock, math
-path = os.path.dirname(os.path.abspath(__file__))+'/app.py'
-
-
-@pytest.mark.it('The function day_of_week must exist')
-def test_for_functon_existence(capsys, app):
-    assert callable(app.day_of_week)
-
-@pytest.mark.it('The function must return something')
-def test_function_return(capsys, app):
-    assert app.day_of_week(1) != None
-
-@pytest.mark.it('The function must return a number')
-def test_function_return_type(capsys, app):
-    assert type(app.day_of_week(1)) == type(1)
-
-@pytest.mark.it('Something went wrong! We tried to pass 1 as parameter and it did not return 4. Keep trying!')
-def test_for_file_output(capsys, app):
-    assert app.day_of_week(1) == 4
-
-@pytest.mark.it('Something went wrong! We tried to pass 46 as parameter and it did not return 0. Keep trying!')
-def test_for_file_output2(capsys, app):
-    assert app.day_of_week(46) == 0
-#----------------------------------------#
-Question:
-Given the integer n - the number of minutes that have passed since midnight, how many hours and minutes are displayed on the 24h digital clock? Write a digital_clock() function to calculate it. The function should print two numbers: the number of hours (between 0 and 23) and the number of minutes (between 0 and 59).
-
-Example input:
-
-digital_clock(150)
-
-Example output:
-
-(2, 30)
-
-Hints: 
-
-
-Solution:
-# Complete the function to return how many hours and minutes are displayed on the 24h digital clock
-def digital_clock(n):
-  return ((n // 60), (n % 60))
-
-# Invoke the function with any integer (minutes after midnight)
-print(digital_clock(150))
-### test.py
-import io, sys, pytest, os, re, mock, math
-path = os.path.dirname(os.path.abspath(__file__))+'/app.py'
-
-
-@pytest.mark.it('The function digital_clock must exist')
-def test_for_functon_existence(capsys, app):
-    assert callable(app.digital_clock)
-
-@pytest.mark.it('The function must return something')
-def test_function_return(capsys, app):
-    assert app.digital_clock(194) != None
-
-@pytest.mark.it('The function must return a tuple')
-def test_function_return_type(capsys, app):
-    assert type(app.digital_clock(194)) == type((3, 14))
-
-@pytest.mark.it('We tried to pass 194 as parameter and it did not return (3, 14). Keep Trying!')
-def test_for_file_output(capsys, app):
-    assert app.digital_clock(194) == (3, 14)
-
-@pytest.mark.it('We tried to pass 150 as parameter and it did not return (2, 30). Keep Trying!')
-def test_for_file_output(capsys, app):
-    assert app.digital_clock(150) == (2, 30)
-#----------------------------------------#
-Question:
-Create a function named factorial(), which receives a number as a parameter and returns the factorial of the given number.
-
-Example input:
-
-factorial(8)
-
-Example output:
-
-40320
-
-Hints: 
-
-
-Solution:
-# Your code here
-def factorial(x):
-    result = 1
-    for i in range(1, x + 1):
-        result *= i
-    return result
-
-print(factorial(5))
-
-### Solution 2 ###
-
-# import math
-#
-# def factorial(x):
-#     return math.factorial(x)
-#
-# print(factorial(8))
-### test.py
-import io, sys, os, re, pytest
-import app
-
-@pytest.mark.it('You should create a function named factorial')
-def test_factorial_exists(app):
-    try:
-        from app import factorial
-        assert factorial 
-    except AttributeError:
-        raise AttributeError("The function 'factorial' should exist on app.py")
-
-@pytest.mark.it('The function must return something')
-def test_function_return(capsys, app):
-    assert app.factorial(8) != None
-
-@pytest.mark.it('The function must return a number')
-def test_function_return_type(capsys, app):
-    assert type(app.factorial(8)) == type(1)
-
-@pytest.mark.it('Testing the function factorial with the number 8, it should return 40320')
-def test_factorial_8(app):
-    try:
-        assert app.factorial(8) == 40320
-    except AttributeError:
-        raise AttributeError("The function 'factorial' should return the value 40320")
-
-@pytest.mark.it('Testing the function factorial with the number 3, it should return 6')
-def test_factorial_3(app):
-    try:
-        assert app.factorial(3) == 6
-    except AttributeError:
-        raise AttributeError("The function 'factorial' should return the value 6")
-
-@pytest.mark.it('Testing the function factorial with the number 1, it should return 1')
-def test_factorial_1(app):
-    try:
-        assert app.factorial(1) == 1
-    except AttributeError:
-        raise AttributeError("The function 'factorial' should return the value 1")
-#----------------------------------------#
-Question:
-Create a function named square_root(), which receives a number as a parameter and returns the square root of the given number.
-
-    If the resulting number has decimals, please only keep the first 2.
-
-Example input:
-
-square_root(50)
-
-Example output:
-
-7.07
-
-Hints: 
-
-
-Solution:
-# Your code here
-import math
-
-def square_root(number):
-    result = round(math.sqrt(number), 2)
-    return result
-
-
-print(square_root(50))
-### test.py
-import io, sys, os, re, pytest
-import app
-
-@pytest.mark.it('You should create a function named square_root')
-def test_square_root_exists(app):
-    try:
-        from app import square_root
-        assert square_root 
-    except AttributeError:
-        raise AttributeError("The function 'square_root' should exist on app.py")
-
-@pytest.mark.it('The function must return something')
-def test_function_return(capsys, app):
-    assert app.square_root(25) != None
-
-@pytest.mark.it('The function must return a float number')
-def test_function_return_type(capsys, app):
-    assert type(app.square_root(25)) == type(1.0)
-
-@pytest.mark.it('Testing the function square_root with the number 50, it should return 7.07')
-def test_square_root_50(app):
-    try:
-        assert app.square_root(50) == 7.07
-    except AttributeError:
-        raise AttributeError("The function 'square_root' should return the value 7.07")
-
-@pytest.mark.it('Testing the function square_root with the number 2.25, it should return 1.5')
-def test_square_root_2_25(app):
-    try:
-        assert app.square_root(2.25) == 1.5
-    except AttributeError:
-        raise AttributeError("The function 'square_root' should return the value 1.5")
-
-@pytest.mark.it('Testing the function square_root with the number 0, it should return 0')
-def test_square_root_0(app):
-    try:
-        assert app.square_root(0) == 0
-    except AttributeError:
-        raise AttributeError("The function 'square_root' should return the value 0")
-#----------------------------------------#
-Question:
-Create a function called squares_dictionary(). The function receives a number n and should generate a dictionary that contains pairs of the form (n: n*n) for each number in the range from 1 to n, inclusive.
-
-    Print the resulting dictionary.
-
-Example input:
-
-squares_dictionary(8)
-
-Example output:
-
-{1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64}
-
-Hints: 
-
-
-Solution:
-# Your code here
-def squares_dictionary(n):
-    new_dict = dict()
-    for i in range(1, n + 1):
-        new_dict[i] = i * i
-    return new_dict
-
-print(squares_dictionary(5))
-### test.py
-import pytest,os,re,io,sys, mock, json
-
-@pytest.mark.it('The function squares_dictionary should exist')
-def test_function_existence(capsys, app):
-    assert app.squares_dictionary
-
-@pytest.mark.it('The function should return a dictionary')
-def test_typeof_return(capsys, app):
-    assert type(app.squares_dictionary(7)) == type({})
-
-@pytest.mark.it('The function should return the expected output. Testing with 8')
-def test_expected_output(capsys, app):
-    assert app.squares_dictionary(8) == {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64}
-
-@pytest.mark.it('The function should return the expected output. Testing with 5')
-def test_another_entry_5(capsys, app):
-    assert app.squares_dictionary(5) == {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
-#----------------------------------------#
-Question:
-Create a function called list_and_tuple(), that given a input of n numbers returns a list and a tuple of those numbers and transforms each of them into a string.
-
-    Print the list, and in the next line, print the tuple.
-
-Example input:
-
-list_and_tuple(34,67,55,33,12,98)
-
-Example output:
-
-['34', '67', '55', '33', '12', '98']
-('34', '67', '55', '33', '12', '98')
-
-Hints: 
-
-
-Solution:
-# Your code here
-def list_and_tuple(*nums):
-    new_list = [str(num) for num in nums]
-    new_tuple = tuple(new_list)
-    
-    return new_list, new_tuple
-
-
-result_list, result_tuple = list_and_tuple(5, 4, 13, 24, 45)
-print(result_list)
-print(result_tuple)
-### test.py
-import pytest
-
-@pytest.mark.it('You should create a function named "list_and_tuple"')
-def test_variable_exists(app):
-  try:
-    assert app.list_and_tuple
-  except AttributeError:
-    raise AttributeError('The function "list_and_tuple" should exists')
-
-@pytest.mark.it('The function "list_and_tuple" should return two elements')
-def test_function_return_two_elements(app):
-  try:
-    value = app.list_and_tuple()
-    assert isinstance(value, tuple)
-    assert len(value) == 2
-  except AttributeError:
-    raise AttributeError('The function "list_and_tuple" should exists')
-
-@pytest.mark.it('The function "list_and_tuple" should return a list first')
-def test_function_return_a_list(app):
-  try:
-    value = app.list_and_tuple()
-    assert isinstance(value, tuple)
-    assert isinstance(value[0], list)
-  except AttributeError:
-    raise AttributeError('The function "list_and_tuple" should exists')
-  
-@pytest.mark.it('The function "list_and_tuple" should return a tuple second')
-def test_function_return_a_tuple(app):
-  try:
-    value = app.list_and_tuple()
-    assert isinstance(value, tuple)
-    assert isinstance(value[1], tuple)
-  except AttributeError:
-    raise AttributeError('The function "list_and_tuple" should exists')
-  
-@pytest.mark.it('The function "list_and_tuple" should return a list and tuple with the expected values')
-def test_function_return_the_expected_values(app):
-  try:
-    value = app.list_and_tuple(1,2,3,4,5,6)
-    assert value[0]==['1', '2', '3', '4', '5', '6']
-    assert value[1]==('1', '2', '3', '4', '5', '6')
-  except AttributeError:
-    raise AttributeError('The function "list_and_tuple" should exists')
-
-@pytest.mark.it('The function "list_and_tuple" should return a list and tuple with the expected values')
-def test_function_return_the_expected_values(app):
-  try:
-    value = app.list_and_tuple(7,8,9,10,11,12)
-    assert value[0]==['7', '8', '9', '10', '11', '12']
-    assert value[1]==('7', '8', '9', '10', '11', '12')
-  except AttributeError:
-    raise AttributeError('The function "list_and_tuple" should exists')
-#----------------------------------------#
-Question:
-Define a class called InputOutString which has at least two methods:
-
-    get_string to get a string from console input.
-    print_string to print the string in upper case.
-
-    Test your class' methods.
-
-
-Hints: 
-
-
-Solution:
-# Your code here
-class InputOutString:
-    def __init__(self):
-        self.input_string = ""
-
-    def get_string(self):
-        self.input_string = input("Enter a string: ")
-
-    def print_string(self):
-        print(self.input_string.upper())
-
-string_object = InputOutString()
-string_object.get_string()
-string_object.print_string()
-### test.py
-import pytest
-import os
-import re
-import io
-import sys
-import mock
-
-path = os.path.dirname(os.path.abspath(__file__))+'/app.py'
-
-
-@pytest.mark.it('Use the function print()')
-def test_for_file_output(capsys):
-    with open(path, 'r') as content_file:
-        content = content_file.read()
-        pattern = (r"print\s*\(")
-        regex = re.compile(pattern)
-        assert bool(regex.search(content)) == True
-
-
-@pytest.mark.it("String input should be uppercase")
-@mock.patch('builtins.input', lambda x: 'hello')
-def test_plus_ten(stdin):
-    sys.stdout = buffer = io.StringIO()
-    import app
-    captured = buffer.getvalue()
-    assert "HELLO\n" in captured
-#----------------------------------------#
-Question:
-Write a function print_formula(), with one parameter that calculates and prints the value according to the given formula:
-
-Q = Square root of (2 * c * d) / h
-
-Following are the fixed values of c and h:
-
-    c is 50.
-    h is 30.
-    d would be the parameter of the function.
-
-Example input:
-
-print_formula(150)
-
-Example output:
-
-22
-
-Hints: 
-
-
-Solution:
-# Your code here
-import math
-
-def print_formula(d):
-    return round(math.sqrt(2 * 50 * d / 30))
-
-print(print_formula(150))
-### test.py
-import pytest, io, sys, json, mock, re, os
-path = os.path.dirname(os.path.abspath(__file__))+'/app.py'
-
-@pytest.mark.it('The function print_formula must exist')
-def test_function_existence(capsys, app):
-    assert app.print_formula
-
-@pytest.mark.it('The solution should work as expected. Testing with 100')
-def test_expected_output(capsys, app):
-    assert app.print_formula(100) == 18
-
-@pytest.mark.it('The solution should work as expected. Testing with 90')
-def test_another_output(capsys, app):
-    assert app.print_formula(90) == 17
 
 #----------------------------------------#
 Question:
-Write a function two_dimensional_list(), that takes 2 digits (x, y) as input and generates a 2-dimensional list or matrix.
-
-    The element value in the i row and j column of the list should be i*j (their index values).
-
-Example input:
-
-two_dimensional_list(3,5)
-
-Example output:
-
-[[0, 0, 0, 0, 0], [0, 1, 2, 3, 4], [0, 2, 4, 6, 8]]
-
-Hints: 
-
-
-Solution:
-# Your code here
-def two_dimensional_list(n_rows, n_columns):
-    dimensions = [int(x) for x in "{},{}".format(n_rows, n_columns).split(',')]
-    row_num = dimensions[0]
-    col_num = dimensions[1]
-    matrix = [[0 for col in range(col_num)] for row in range(row_num)]
-
-    for row in range(row_num):
-        for col in range(col_num):
-            matrix[row][col] = row * col
-
-    return matrix
-
-print(two_dimensional_list(3,5))
-### test.py
-import pytest,os,re,io,sys, mock, json
-
-@pytest.mark.it('The function two_dimensional_list must exist')
-def test_function_existence(capsys, app):
-    assert app.two_dimensional_list
-
-@pytest.mark.it('The function should return the expected output')
-def test_expected_output(capsys, app):
-    assert app.two_dimensional_list(3,5) == [[0, 0, 0, 0, 0], [0, 1, 2, 3, 4], [0, 2, 4, 6, 8]]
-
-@pytest.mark.it('The function should work with other entries. Testing with (2, 7)')
-def test_expected_output(capsys, app):
-    assert app.two_dimensional_list(2,7) == [[0, 0, 0, 0, 0, 0, 0], [0, 1, 2, 3, 4, 5, 6]]
-        
-@pytest.mark.it('The function should work with other entries. Testing with (1, 10)')
-def test_expected_output(capsys, app):
-    assert app.two_dimensional_list(1,10) == [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
-#----------------------------------------#
-Question:
-Write a function sequence_of_words, that accepts a comma separated sequence of words as input (a string).
-
-    Print the words in a comma-separated sequence after sorting them alphabetically.
-
-Example input:
-
-sequence_of_words("without,hello,bag,world")
-
-Example output:
-
-bag, hello, without, world
-
-Hints: 
-
-
-Solution:
-# Your code here
-def sequence_of_words(words):
-    items=[x for x in "{}".format(words).split(',')]
-    items.sort()
-    return (','.join(items))
-
-print(sequence_of_words("this,is,sorted"))
-### test.py
-import pytest, io, sys, json, mock, re, os
-path = os.path.dirname(os.path.abspath(__file__))+'/app.py'
-
-@pytest.mark.it('The function sequence_of_words must exist')
-def test_function_existence(capsys, app):
-    assert app.sequence_of_words
-
-@pytest.mark.it('The function should return the expected output')
-def test_function_existence(capsys, app):
-    assert app.sequence_of_words("bag,hello,without,world") == "bag,hello,without,world"
-
-@pytest.mark.it('The function should return the expected output. Testing with different values')
-def test_function_existence(capsys, app):
-    assert app.sequence_of_words("No,pain,gain") == "No,gain,pain"
-#----------------------------------------#
-Question:
-Write a function called remove_duplicate_words() that accepts a sequence of whitespace separated words as input and returns the words after removing all duplicate words and sorting them alphanumerically.
-
-Example input:
-
-remove_duplicate_words("hello world and practice makes perfect and hello world again")
-
-Example output:
-
-again and hello makes perfect practice world
-
 
 
 Hints: 
 
 
 Solution:
-# Your code here
-def remove_duplicate_words(text):
-    words = text.split()
-    return (" ".join(sorted(list(set(words)))))
-
-print(remove_duplicate_words("hello world and practice makes perfect and hello world again"))
-### test.py
-import pytest, io, sys, json, mock, re, os
-
-@pytest.mark.it('The function remove_duplicate_words must exist')
-def test_function_existence(capsys, app):
-    app.remove_duplicate_words
-
-@pytest.mark.it('The function should return the expected output')
-def test_expected_output(capsys, app):
-    assert app.remove_duplicate_words("hello world and practice makes perfect and hello world again") == "again and hello makes perfect practice world"
-
-@pytest.mark.it('The function should work with other entries. Testing with different values')
-def test_expected_output_2(capsys, app):
-    assert app.remove_duplicate_words("lets try this again with another try") == "again another lets this try with"
-
-@pytest.mark.it('The function should work with other entries. Testing with different values')
-def test_expected_output_3(capsys, app):
-    assert app.remove_duplicate_words("Jacke was Named Jacke by his mother") == "Jacke Named by his mother was"
 
 #----------------------------------------#
 Question:
-Write a function divisible_binary() that takes a sequence of comma-separated 4-digit binary numbers as input and checks if they are divisible by 5. Print the numbers that are divisible by 5 in a comma-separated sequence.
 
-Example input:
-
-divisible_binary("0100,0011,1010,1001")
-
-Example output:
-
-1010
 
 Hints: 
 
 
 Solution:
-# Your code here
-def divisible_binary(binary_sequence):
-    divisible_numbers = []
-    binary_numbers = [x for x in binary_sequence.split(',')]
-    for binary_num in binary_numbers:
-        int_binary_num = int(binary_num, 2)
-        if not int_binary_num % 5:
-            divisible_numbers.append(binary_num)
 
-    return ','.join(divisible_numbers)
-
-print(divisible_binary("1000,1100,1010,1111"))
-### test.py
-import pytest, io, sys, json, mock, re, os
-
-@pytest.mark.it('The function divisible_binary must exist')
-def test_function_existence(capsys, app):
-    assert app.divisible_binary
-
-@pytest.mark.it('The function should return the expected output')
-def test_expected_output(capsys, app):
-    assert app.divisible_binary("0100,0011,1010,1001") == "1010"
-
-@pytest.mark.it('The function should work with other parameters. testing with 1111,1000,0101,0000')
-def test_expected_output_2(capsys, app):
-    assert app.divisible_binary("1111,1000,0101,0000") == "1111,0101,0000"
-
-@pytest.mark.it("The function should work with other parameters. Testing with 1000")
-def test_expected_output_3(capsys, app):
-    assert app.divisible_binary("1000,1000,1000,1000") == ""
-#----------------------------------------#
-Question:
-Define a function named all_digits_even() to identify and print all numbers between 1000 and 3000 (inclusive) where each digit is an even number. Display the resulting numbers in a comma-separated sequence on a single line.
-
-Hints: 
-
-
-Solution:
-# Your code here
-def all_digits_even():
-    values = []
-    for i in range(1000, 3001):
-        s = str(i)
-        if (int(s[0]) % 2 == 0) and (int(s[1]) % 2 == 0) and (int(s[2]) % 2 == 0) and (int(s[3]) % 2 == 0):
-            values.append(s)
-
-    return ",".join(values)
-
-print(all_digits_even())
 #----------------------------------------#
 Question:
 
-    Write a function named letters_and_digits() that takes a sentence as input and calculates the number of letters and digits present in it.
-
-Example input:
-
-letters_and_digits("hello world! 123")
-
-Example output:
-
-LETTERS 10
-DIGITS 3
-
 
 Hints: 
 
 
 Solution:
-# Your code here
-def letters_and_digits(text):
-    counts = {"DIGITS": 0, "LETTERS": 0}
-    for char in text:
-        if char.isdigit():
-            counts["DIGITS"] += 1
-        elif char.isalpha():
-            counts["LETTERS"] += 1
-        else:
-            pass
-    
-    return f"LETTERS {counts['LETTERS']} DIGITS {counts['DIGITS']}"
-
-print(letters_and_digits("hello world! 123"))
-### test.py
-import mock, pytest, io, sys 
-
-
-@pytest.mark.it('The function letters_and_digits must exist')
-def test_function_existence(capsys, app):
-    assert app.letters_and_digits
-
-@pytest.mark.it('The function should return the expected output')
-def test_output(capsys, app):
-    app.letters_and_digits("hello world! 123") == "LETTERS 10 DIGITS 3"
-
-@pytest.mark.it('The solution should work with other parameters')
-def test_another_entry(capsys, app):
-    assert app.letters_and_digits("My name is C200 and i live in apartment 3H") == "LETTERS 29 DIGITS 4"
-#----------------------------------------#
-Question:
-Write a program number_of_uppercase() that accepts a sentence and calculates the number of uppercase and lowercase letters.
-
-Example input:
-
-number_of_uppercase("Hello world!")
-
-Example output:
-
-UPPERCASE 1
-LOWERCASE 9
-
-
-Hints: 
-
-
-Solution:
-# Your code here
-def number_of_uppercase(string):
-    counts = {"UPPERCASE": 0, "LOWERCASE": 0}
-    for char in string:
-        if char.isupper():
-            counts["UPPERCASE"] += 1
-        elif char.islower():
-            counts["LOWERCASE"] += 1
-        else:
-            pass
-    
-    return f"UPPERCASE {counts['UPPERCASE']} LOWERCASE {counts['LOWERCASE']}"
-
-print(number_of_uppercase("Hello world!"))
-#----------------------------------------#
-Question:
-Write a program computed_value() to calculate the sum of a+aa+aaa+aaaa, where 'a' is a given digit.
-
-Example input:
-
-computed_value(9)
-
-Example output:
-
-11106
-
-Hints: 
-
-
-Solution:
-# Your code here
-def computed_value(param):
-    result = 0
-    for i in range(1, 5):
-        concatenated_number = int(str(param) * i)
-        result += concatenated_number
-    return result
-
-print(computed_value(9))
-### test.py
-import io, sys, pytest, os, re, mock
-
-@pytest.mark.it('The function computed_value must exist')
-def test_function_existence(capsys, app):
-    assert app.computed_value
-
-@pytest.mark.it('The function should return the expected output')
-def test_expected_output(capsys, app):
-    assert app.computed_value(9) == 11106
-
-@pytest.mark.it('The function should work with other inputs. Testing with 123')
-def test_another_output(capsys, app):
-    assert app.computed_value(123) == 123246369492
-
-@pytest.mark.it('The function should work with other inputs. Testing with 0')
-def test_with_zero(capsys, app):
-    assert app.computed_value(0) == 0
-#----------------------------------------#
-Question:
-Write a function named square_odd_numbers() that accepts a string of comma-separated numbers as input, squares only the odd numbers, and returns the results as a list.
-
-Example input:
-
-square_odd_numbers("1,2,3,4,5,6,7,8,9")
-
-Example output:
-
-[1, 9, 25, 49, 81]
-
-Hints: 
-
-
-Solution:
-# Your code here
-def square_odd_numbers(numbers_str):
-    numbers_list = numbers_str.split(',')
-    squared_odd_numbers = []
-
-    for num_str in numbers_list:
-        if num_str.isdigit():
-            num = int(num_str)
-
-            if num % 2 != 0:
-                squared_odd_numbers.append(num**2)
-
-    return squared_odd_numbers
-
-print(square_odd_numbers("1,2,3,4,5,6,7"))
-
-
-### SOLUTION 2 ### (List Comprehension)
-
-# def square_odd_numbers(numbers):
-#     number_list = [int(num) for num in numbers.split(',')]
-#     squared_odd_numbers = [num**2 for num in number_list if num % 2 != 0]
-
-#     return squared_odd_numbers
-
-# print(square_odd_numbers("1,2,3,4,5,6,7"))
-#----------------------------------------#
-Question:
-Write a function named net_amount() that computes the net amount of a bank account based on a transaction log from input. The transaction log format is shown as following:
-
-    D 100
-    W 200
-
-D means deposit while W means withdrawal.
-Example input:
-
-net_amount("D 300 D 300 W 200 D 100")
-
-Example output:
-
-500
-
-Hints: 
-
-
-Solution:
-# Your code here
-def net_amount(param):
-    total = 0
-    values = param.split()
-    for x in range(len(values)):
-        if values[x] == 'D':
-            total+=int(values[x+1])
-        elif values[x] == 'W':
-            total-=int(values[x+1])
-    return total
-
-print(net_amount("D 300 W 200 D 400"))
-### test.py
-import pytest, io, sys, json, mock, re, os
-path = os.path.dirname(os.path.abspath(__file__))+'/app.py'
-
-@pytest.mark.it('The function net_amount must exist')
-def test_function_existence(capsys, app):
-    assert app.net_amount
-    
-@pytest.mark.it('The solution should return the expected output')
-def test_output(capsys, app):
-    assert app.net_amount("D 300 D 300 W 200 D 100") == 500
-
-@pytest.mark.it('The solution should work with other parameters. Testing with "W 300 D 300 W 200 D 300"')
-def test_output_2(capsys, app):
-    assert app.net_amount("W 300 D 300 W 200 D 300") == 100
-
-@pytest.mark.it('The solution should work with other parameters. Testing with "W 300 D 300 W 200 D 300"')
-def test_output_negative(capsys, app):
-    assert app.net_amount("W 300 D 300 W 200 W 300") == -500
-#----------------------------------------#
-Question:
-A website requires the users to input a username and password to register. Write a function named valid_password() to check the validity of password input by users. Following are the criteria for checking the password:
-
-    At least 1 letter between [a-z].
-    At least 1 number between [0-9].
-    At least 1 letter between [A-Z].
-    At least 1 character from [$#@].
-    Minimum length of password: 6.
-    Maximum length of password: 12.
-
-Your program should accept a password and verify it according to the previous criteria. If the password is successfully validated, the function returns the following string "Valid password". Otherwise, it returns "Invalid password. Please try again".
-Example input:
-
-valid_password("ABd1234@1")
-
-Example output:
-
-"Valid password"
-
-Hints: 
-
-
-Solution:
-# Your code here
-import re
-
-def valid_password(password):
-    pattern = re.compile(r'^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$#@]).{6,12}$')
-    
-    if not pattern.match(password):
-        return "Invalid password. Please try again"
-    else:
-        return "Valid password"
-
-
-print(valid_password("ABd1234@1"))
-### test.py
-import pytest, io, sys, json, mock, re, os
-path = os.path.dirname(os.path.abspath(__file__))+'/app.py'
-
-
-@pytest.mark.it('The function valid_password must exist')
-def test_function_existence(capsys, app):
-    assert app.valid_password
-
-@pytest.mark.it('The function should return the expected output')
-def test_expected_output(capsys, app):
-    assert app.valid_password("ABd1234@1") == "Valid password"
-
-@pytest.mark.it('Your solution should work as expected for valid passwords')
-def test_expected_another_output(capsys, app):
-    assert app.valid_password("Lmd4567@2") == "Valid password"
-
-@pytest.mark.it('Your solution should work as expected when there is no valid password input')
-def test_expected_output_no_valid_entries(capsys, app):
-    assert app.valid_password("ABd12") == "Invalid password. Please try again"
-#----------------------------------------#
-Question:
-Write a function sort_tuples_ascending() to sort the (name, age, score) tuples by ascending order, where name, age and score are all strings. The sort criteria is:
-
-    Sort based on name.
-    Then sort based on age.
-    Then sort by score.
-
-The priority is name > age > score.
-Example input:
-
-sort_tuples_ascending(['Tom,19,80', 'John,20,90', 'Jony,17,91', 'Jony,17,93', 'Jason,21,85'])
-
-Example output:
-
-[('Jason', '21', '85'), ('John', '20', '90'), ('Jony', '17', '91'), ('Jony', '17', '93'), ('Tom', '19', '80')]
-
-
-
-Hints: 
-
-
-Solution:
-from operator import itemgetter
-
-# Your code here
-def sort_tuples_ascending(data):
-    tuples_list = [tuple(entry.split(',')) for entry in data]
-
-    sorted_tuples = sorted(tuples_list, key=itemgetter(0, 1, 2))
-
-    return sorted_tuples
-
-example_input = [
-    'Tom,19,80',
-    'John,20,90',
-    'Jony,17,91',
-    'Jony,17,93',
-    'Jason,21,85'
-]
-
-result = sort_tuples_ascending(example_input)
-print(result)
-### test.py
-import pytest, io, sys, json, mock, re, os
-
-path = os.path.dirname(os.path.abspath(__file__))+'/app.py'
-
-@pytest.mark.it('The function sort_tuples_ascending must exist')
-def test_function_existence(capsys, app):
-    assert app.sort_tuples_ascending
-
-@pytest.mark.it('The function should return the expected output')
-def test_expected_output(capsys, app):
-    assert app.sort_tuples_ascending([
-        'Tom,19,80',
-        'John,20,90',
-        'Jony,17,91',
-        'Jony,17,93',
-        'Jason,21,85'
-    ]) == [('Jason', '21', '85'), ('John', '20', '90'), ('Jony', '17', '91'), ('Jony', '17', '93'), ('Tom', '19', '80')]
-
-@pytest.mark.it('The solution should work with other entries')
-def test_another_entry(capsys, app):
-    assert app.sort_tuples_ascending([
-        'Martin,23,30',
-        'Tomas,25,27'
-    ]) == [('Martin', '23', '30'), ('Tomas', '25', '27')]
-#----------------------------------------#
-Question:
-Define a class with a generator function that can iterate the numbers that are divisible by 7 between a given range 0 and n.
-
-Hints: 
-
-
-Solution:
-class DivisibleBySevenIterator:
-    def __init__(self, n):
-        self.n = n
-
-    def generate_divisible_by_seven(self):
-        for number in range(self.n + 1):
-            if number % 7 == 0:
-                yield number
-
-
-n_value = 50
-divisible_by_seven_iterator = DivisibleBySevenIterator(n_value)
-
-for num in divisible_by_seven_iterator.generate_divisible_by_seven():
-    print(num)
-#----------------------------------------#
-Question:
-A robot moves in a plane starting from the original point (0,0). The robot can move toward UP, DOWN, LEFT and RIGHT with given steps. The trace of robot movement is shown as a list like the following:
-
-["UP 5", "DOWN 3", "LEFT 3", "RIGHT 2"]
-
-The numbers after the direction are steps. Please write a program named compute_robot_distance() to compute the final distance after a sequence of movements from the original point. If the distance is a float, then just print the nearest integer.
-Example input:
-
-compute_robot_distance(["UP 5", "DOWN 3", "LEFT 3", "RIGHT 2"])
-
-Example output:
-
-2
-
-Hints: 
-
-
-Solution:
-# Your code here
-def compute_robot_distance(movements):
-    x, y = 0, 0
-
-    for move in movements:
-        direction, steps = move.split()
-        steps = int(steps)
-
-        if direction == "UP":
-            y += steps
-        elif direction == "DOWN":
-            y -= steps
-        elif direction == "LEFT":
-            x -= steps
-        elif direction == "RIGHT":
-            x += steps
-
-    distance = (x**2 + y**2)**0.5
-    rounded_distance = round(distance)
-
-    return rounded_distance
-
-print(compute_robot_distance(["UP 5", "DOWN 3", "LEFT 3", "RIGHT 2"]))
-### test.py
-import pytest, io, sys, json, mock, re, os
-
-@pytest.mark.it('The function compute_robot_distance must exist')
-def test_function_existence(capsys, app):
-    assert app.compute_robot_distance
-
-@pytest.mark.it('The function should return the expected output')
-def test_expected_output(capsys, app):
-    movements_list = ["UP 5", "DOWN 3", "LEFT 3", "RIGHT 2"]
-    assert app.compute_robot_distance(movements_list) ==  2
-
-@pytest.mark.it('The solution should work with other entries')
-def test_another_output(capsys, app):
-    movements_list = ["DOWN 20", "UP 5", "LEFT 5", "RIGHT 2"]
-    assert app.compute_robot_distance(movements_list) ==  15
-
-@pytest.mark.it('The solution should work with negative inputs')
-def test_negative_inputs(capsys, app):
-    movements_list = ["DOWN -1", "UP -5", "LEFT 50", "RIGHT 20"]
-    assert app.compute_robot_distance(movements_list) ==  30
-#----------------------------------------#
-Question:
-Write a function called compute_word_frequency() to compute the frequency of the words from a string input.
-
-    Put each word separated by a space in a dictionary and count its frequency.
-
-    Sort the dictionary alphanumerically and print in the console each key in a new line.
-
-Example input:
-
-compute_word_frequency("New to Python or choosing between Python 2 and Python 3? Read Python 2 or Python 3.")
-
-Example output:
-
-2: 2
-3.: 1
-3?: 1
-New: 1
-Python: 5
-Read: 1
-and: 1
-between: 1
-choosing: 1
-or: 2
-to: 1
-
-
-Hints: 
-
-
-Solution:
-# Your code here
-def compute_word_frequency(sentence):
-    words = sentence.split()
-
-    word_frequency = {}
-
-    for word in words:
-        word_frequency[word] = word_frequency.get(word, 0) + 1
-
-    sorted_word_frequency = sorted(word_frequency.items(), key=lambda x: x[0])
-
-    for word, frequency in sorted_word_frequency:
-        print(f"{word}: {frequency}")
-
-
-input_sentence = "New to Python or choosing between Python 2 and Python 3? Read Python 2 or Python 3."
-compute_word_frequency(input_sentence)
-### test.py
-import pytest, io, sys, json, mock, re, os
-
-path = os.path.dirname(os.path.abspath(__file__))+'/app.py'
-
-@pytest.mark.it('The solution should return the expected output')
-def test_convert_inputs(capsys, app):
-
-    fake_input = ["New to Python or choosing between Python 2 and Python 3? Read Python 2 or Python 3"] #fake input
-    with mock.patch('builtins.input', lambda x: fake_input.pop()):
-        app()
-        captured = capsys.readouterr()
-        assert captured.out == "2:2 3.:1 3?:1 New:1 Python:5 Read:1 and:1 between:1 choosing:1 or:2 to:1\n"
-#----------------------------------------#
-Question:
-In Python, a class is a structure that allows you to organize and encapsulate related data and functionalities. Classes are a fundamental feature of object-oriented programming (OOP), a programming paradigm that uses objects to model and organize code.
-
-In simple terms, a class is like a blueprint or a template for creating objects. An object is a specific instance of a class that has associated attributes (data) and methods (functions). Attributes represent the characteristics of the object, and methods represent the actions that the object can perform.
-Example:
-
-class Student:
-    def __init__(self, name, age, grade): # These are its attributes
-        self.name = name
-        self.age = age
-        self.grade = grade
-
-    def introduce(self): # This is a method
-        return f"Hello! I am {self.name}, I am {self.age} years old, and my current grade is {self.grade}."
-
-    def study(self, hours): # This is another method
-        self.grade += hours * 0.5
-        return f"After studying for {hours} hours, {self.name}'s new grade is {self.grade}."
-
-student1 = Student("Ana", 20, 80)
-
-print(student1.introduce())
-print(student1.study(3))
-
-In this code:
-
-    The Student class has an __init__ method to initialize the attributes name, age, and grade of the student.
-    introduce is a method that prints a message introducing the student.
-    study is a method that simulates the act of studying and updates the student's grade.
-
-Instructions:
-
-    To complete this exercise, copy the provided code from the example and paste it into your app.py file. Execute the code and test its functionality. Experiment with modifying different aspects of the code to observe how it behaves. This hands-on approach will help you understand the structure and behavior of the Student class. Once you have familiarized yourself with the code and its effects, feel free to proceed to the next exercise.
-
-
-Hints: 
-
-
-Solution:
-### code de départ
-class Student:
-    def __init__(self, name, age, grade): # These are its attributes
-        self.name = name
-        self.age = age
-        self.grade = grade
-
-    def introduce(self): # This is a method
-        return f"Hello! I am {self.name}, I am {self.age} years old, and my current grade is {self.grade}."
-
-    def study(self, hours): # This is another method
-        self.grade += hours * 0.5
-        return f"After studying for {hours} hours, {self.name}'s new grade is {self.grade}."
-
-student1 = Student("Ana", 20, 80)
-
-print(student1.introduce())
-print(student1.study(3))
-### correction
-# Your code here
-class Student:
-    def __init__(self, name, age, grade): # These are its attributes
-        self.name = name
-        self.age = age
-        self.grade = grade
-
-    def introduce(self): # This is a method
-        return f"Hello! I am {self.name}, I am {self.age} years old, and my current grade is {self.grade}."
-
-    def study(self, hours): # This is another method
-        self.grade += hours * 0.5
-        return f"After studying for {hours} hours, {self.name}'s new grade is {self.grade}."
-
-student1 = Student("Ana", 20, 80)
-
-print(student1.introduce())
-print(student1.study(3))
-### test.py
-import pytest
-from app import Student
-
-@pytest.mark.it("The Student class should exist")
-def test_student_class_exists():
-    try:
-        assert Student
-    except AttributeError:
-        raise AttributeError("The class 'Student' should exist in app.py")
-
-@pytest.mark.it("The Student class includes the 'name' attribute")
-def test_student_has_name_attribute():
-    student = Student("John", 21, 75)
-    assert hasattr(student, "name")
-
-@pytest.mark.it("The Student class includes the 'age' attribute")
-def test_student_has_age_attribute():
-    student = Student("John", 21, 75)
-    assert hasattr(student, "age")
-
-@pytest.mark.it("The Student class includes the 'grade' attribute")
-def test_student_has_grade_attribute():
-    student = Student("John", 21, 75)
-    assert hasattr(student, "grade")
-
-@pytest.mark.it("The Student class includes the 'introduce' method")
-def test_student_has_introduce_method():
-    student = Student("Alice", 22, 90)
-    assert hasattr(student, "introduce")
-
-@pytest.mark.it("The introduce method should return the expected string. Testing with different values")
-def test_student_introduce_method_returns_expected_string():
-    student1 = Student("Alice", 22, 90)
-    student2 = Student("Bob", 19, 85)
-    assert student1.introduce() == "Hello! I am Alice, I am 22 years old, and my current grade is 90."
-    assert student2.introduce() == "Hello! I am Bob, I am 19 years old, and my current grade is 85."
-
-@pytest.mark.it("The Student class includes the 'study' method")
-def test_student_has_study_method():
-    student = Student("John", 21, 75)
-    assert hasattr(student, "study")
-
-@pytest.mark.it("The study method should return the expected string. Testing with different values")
-def test_student_study_method_returns_expected_string():
-    student1 = Student("Eve", 20, 78)
-    student2 = Student("Charlie", 23, 88)
-    assert student1.study(3) == "After studying for 3 hours, Eve's new grade is 79.5."
-    assert student2.study(2) == "After studying for 2 hours, Charlie's new grade is 89.0."
-#----------------------------------------#
-Question:
-__init__ and __str__ methods
-
-Typically, when working with classes, you will encounter methods of the form __<method>__; these are known as "magic methods." There are a lot of them, each serving a specific purpose. This time, we will focus on learning two of the most fundamental ones.
-
-The magic method __init__ is essential for the initialization of objects within a class. It is automatically executed when a new instance of the class is created, allowing for the assignment of initial values to the object's attributes.
-
-The __str__ method is used to provide a readable string representation of the instance, allowing customization of the output when the object is printed. This is especially useful for improving code readability and facilitating debugging, as it defines a human-friendly version of the information contained in the object.
-Example:
-
-class Person:
-    def __init__(self, name, age, gender):
-        self.name = name
-        self.age = age
-        self.gender = gender
-
-    def __str__(self):
-        return f"{self.name}, {self.age} years old, {self.gender}"
-
-# Create an instance of the Person class
-person1 = Person("Juan", 25, "Male")
-
-# Print the information of the person using the __str__ method
-print(person1)  # Output: Juan, 25 years old, Male
-
-Instructions:
-
-    Create a class called Book that has the __init__ and __str__ methods.
-
-    The __init__ method should initialize the title, author, and year attributes.
-
-    The __str__ method should return a string representing the information of an instance of the following book in this manner:
-
-book1 = ("The Great Gatsby", "F. Scott Fitzgerald", 1925)
-
-print(book1)
-
-# Output:
-#
-# Book Title: The Great Gatsby
-# Author: F. Scott Fitzgerald
-# Year: 1925
-
-Hints: 
-
-
-Solution:
-### code départ
-class Person:
-    def __init__(self, name, age, gender):
-        self.name = name
-        self.age = age
-        self.gender = gender
-
-    def __str__(self):
-        return f"{self.name}, {self.age} years old, {self.gender}"
-
-# Create an instance of the Person class
-person1 = Person("Juan", 25, "Male")
-
-# Print the information of the person using the __str__ method
-print(person1)  # Output: Juan, 25 years old, Male
-### correction
-# Your code here
-
-class Book:
-    def __init__(self, title, author, year):
-        self.title = title
-        self.author = author
-        self.year = year
-
-    def __str__(self):
-        return f"Book Title: {self.title}\nAuthor: {self.author}\nYear: {self.year}"
-
-book1 = Book("The Great Gatsby", "F. Scott Fitzgerald", 1925)
-
-print(book1)
-### test.py
-import pytest
-from app import Book
-
-@pytest.mark.it("The Book class exists")
-def test_book_class_exists():
-    try:
-        assert Book
-    except AttributeError:
-        raise AttributeError("The class 'Book' should exist in app.py")
-
-@pytest.mark.it("The Book class has the __init__ method")
-def test_book_has_init_method():
-    assert hasattr(Book, "__init__")
-
-@pytest.mark.it("The __init__ method initializes the title, author, and year attributes")
-def test_init_method_initializes_attributes():
-    book = Book("The Great Gatsby", "F. Scott Fitzgerald", 1925)
-    assert hasattr(book, "title")
-    assert hasattr(book, "author")
-    assert hasattr(book, "year")
-
-@pytest.mark.it("The Book class has the __str__ method")
-def test_book_has_str_method():
-    assert hasattr(Book, "__str__")
-
-@pytest.mark.it("The __str__ method returns the expected string")
-def test_str_method_returns_expected_string(capsys):
-    book = Book("The Great Gatsby", "F. Scott Fitzgerald", 1925)
-    print(book)
-    captured = capsys.readouterr()
-    expected_output = "Book Title: The Great Gatsby\nAuthor: F. Scott Fitzgerald\nYear: 1925\n"
-    assert captured.out == expected_output
 
 #----------------------------------------#
 Question:
-Inheritance and polymorphism
-
-Now that we understand what a class is and some of its characteristics, let's talk about two new concepts related to classes: inheritance and polymorphism. Consider the following example:
-
-class HighSchoolStudent(Student):  # Add the parent class inside the parenthesis
-    def __init__(self, name, age, grade, specialization):
-        super().__init__(name, age, grade)
-        self.specialization = specialization
-
-    def study(self, hours):
-        return f"{self.name} is a high school student specializing in {self.specialization} and is studying for {hours} hours for exams."
-
-# Creating an instance of HighSchoolStudent
-high_school_student = HighSchoolStudent("John", 16, 85, "Science")
-print(high_school_student.introduce())  # We can call this method thanks to inheritance 
-print(high_school_student.study(4))  # This method has been slightly modified and now it returns a different string
-
-Assuming that the Student class from the previous exercise is coded just above this HighSchoolStudent class, to inherit its methods and attributes, we simply include the name of the class we want to inherit from (the parent class) inside the parentheses of the child class (HighSchoolStudent). As you can see, we can now use the introduce method from the Student class without having to code it again, making our code more efficient. The same applies to attributes; we don't need to redefine them.
-
-Additionally, we have the flexibility to add new methods exclusively for this class or even override an inherited method if needed, as demonstrated in the study method, which is slightly modified from the Student method; this is called polymorphism.
-Instructions:
-
-    Create a class called CollegeStudent which inherits from the already defined Student class.
-
-    Add a new attribute called major to represent the major they are studying.
-
-    Modify the inherited introduce method to return this string:
-
-"Hi there! I'm <name>, a college student majoring in <major>."
-
-    Add a new method called attend_lecture that returns the following string:
-
-"<name> is attending a lecture for <major> students."
-
-    Create an instance of your newly created class and call each of its methods. Execute your code to ensure it works.
 
 
 Hints: 
 
 
 Solution:
-### code départclass HighSchoolStudent(Student):  # Add the parent class inside the parenthesis
-    def __init__(self, name, age, grade, specialization):
-        super().__init__(name, age, grade)
-        self.specialization = specialization
-
-    def study(self, hours):
-        return f"{self.name} is a high school student specializing in {self.specialization} and is studying for {hours} hours for exams."
-
-# Creating an instance of HighSchoolStudent
-high_school_student = HighSchoolStudent("John", 16, 85, "Science")
-print(high_school_student.introduce())  # We can call this method thanks to inheritance 
-print(high_school_student.study(4))  # This method has been slightly modified and now it returns a different string
-### correction
-### DON'T modify this code ###
-
-class Student:
-    def __init__(self, name, age, grade):
-        self.name = name
-        self.age = age
-        self.grade = grade
-
-    def introduce(self):
-        return f"Hello! I am {self.name}, I am {self.age} years old, and my current grade is {self.grade}."
-
-    def study(self, hours):
-        return f"{self.name} is studying for {hours} hours."
-        
-### DON'T modify the code above ###
-        
-### ↓ Your code here ↓ ###
-
-class CollegeStudent(Student):
-    def __init__(self, name, age, grade, major):
-        super().__init__(name, age, grade)
-        self.major = major
-
-    def introduce(self):
-        return f"Hi there! I'm {self.name}, a college student majoring in {self.major}."
-
-    def attend_lecture(self):
-        return f"{self.name} is attending a lecture for {self.major} students."
-
-
-college_student = CollegeStudent("Alice", 20, 90, "Computer Science")
-print(college_student.introduce())
-print(college_student.study(3))
-print(college_student.attend_lecture())
-### test.py
-import pytest
-from app import CollegeStudent
-
-@pytest.mark.it("The CollegeStudent class should exist")
-def test_college_student_class_exists():
-    try:
-        assert CollegeStudent
-    except AttributeError:
-        raise AttributeError("The class 'CollegeStudent' should exist in app.py")
-
-@pytest.mark.it("The CollegeStudent class includes the 'name' attribute")
-def test_college_student_has_name_attribute():
-    college_student = CollegeStudent("John", 21, 75, "Computer Science")
-    assert hasattr(college_student, "name")
-
-@pytest.mark.it("The CollegeStudent class includes the 'age' attribute")
-def test_college_student_has_age_attribute():
-    college_student = CollegeStudent("John", 21, 75, "Computer Science")
-    assert hasattr(college_student, "age")
-
-@pytest.mark.it("The CollegeStudent class includes the 'grade' attribute")
-def test_college_student_has_grade_attribute():
-    college_student = CollegeStudent("John", 21, 75, "Computer Science")
-    assert hasattr(college_student, "grade")
-
-@pytest.mark.it("The CollegeStudent class includes the 'major' attribute")
-def test_college_student_has_major_attribute():
-    college_student = CollegeStudent("John", 21, 75, "Computer Science")
-    assert hasattr(college_student, "major")
-
-@pytest.mark.it("The CollegeStudent class includes the 'introduce' method")
-def test_college_student_has_introduce_method():
-    college_student = CollegeStudent("Alice", 22, 90, "Computer Science")
-    assert hasattr(college_student, "introduce")
-
-@pytest.mark.it("The CollegeStudent class includes the 'study' method")
-def test_college_student_has_study_method():
-    college_student = CollegeStudent("John", 21, 75, "Computer Science")
-    assert hasattr(college_student, "study")    
-
-@pytest.mark.it("The CollegeStudent class includes the 'attend_lecture' method")
-def test_college_student_has_attend_lecture_method():
-    college_student = CollegeStudent("John", 21, 75, "Computer Science")
-    assert hasattr(college_student, "attend_lecture")
-
-@pytest.mark.it("The introduce method should return the expected string. Testing with different values")
-def test_college_student_introduce_method_returns_expected_string():
-    student1 = CollegeStudent("Alice", 22, 90, "Computer Science")
-    student2 = CollegeStudent("Bob", 19, 85, "Mathematics")
-    assert student1.introduce() == "Hi there! I'm Alice, a college student majoring in Computer Science."
-    assert student2.introduce() == "Hi there! I'm Bob, a college student majoring in Mathematics."
-
-@pytest.mark.it("The study method should return the expected string. Testing with different values")
-def test_college_student_study_method_returns_expected_string():
-    student1 = CollegeStudent("Eve", 20, 78, "Physics")
-    student2 = CollegeStudent("Charlie", 23, 88, "Chemistry")
-    assert student1.study(3) == "Eve is studying for 3 hours."
-    assert student2.study(2) == "Charlie is studying for 2 hours."
-
-@pytest.mark.it("The attend_lecture method should return the expected string. Testing with different values")
-def test_college_student_attend_lecture_method_returns_expected_string():
-    student1 = CollegeStudent("Eve", 20, 78, "Physics")
-    student2 = CollegeStudent("Charlie", 23, 88, "Chemistry")
-    assert student1.attend_lecture() == "Eve is attending a lecture for Physics students."
-    assert student2.attend_lecture() == "Charlie is attending a lecture for Chemistry students."
 
 #----------------------------------------#
 Question:
-static methods
-
-A static method in Python is a method that is bound to a class rather than an instance of the class. Unlike regular methods, static methods don't have access to the instance or class itself.
-
-Static methods are often used when a particular method does not depend on the state of the instance or the class. They are more like utility functions associated with a class.
-
-class Person:
-
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
-
-    @staticmethod
-    def is_adult(age):
-        return age >= 18
-
-# Creating instances of Person
-person1 = Person("Alice", 25)
-person2 = Person("Bob", 16)
-
-# Using the static method to check if a person is an adult
-is_adult_person1 = Person.is_adult(person1.age)
-is_adult_person2 = Person.is_adult(person2.age)
-print(f"{person1.name} is an adult: {is_adult_person1}")
-print(f"{person2.name} is an adult: {is_adult_person2}")
-
-In this example:
-
-    The static method is_adult checks if a person is an adult based on their age. It doesn't have access to instance or class variables directly.
-
-Instructions:
-
-    Create a class called MathOperations.
-
-    Create a static method named add_numbers that takes two numbers as parameters and returns their sum.
-
-    Create an instance of the MathOperations class.
-
-    Use the static method add_numbers to add two numbers, for example, 10 and 15.
-
-    Print the result.
-
-Example input:
-
-math_operations_instance = MathOperations()
-sum_of_numbers = MathOperations.add_numbers(10, 15)
-
-Example output:
-
-# Sum of Numbers: 25
-
 
 
 Hints: 
 
 
 Solution:
-### code départ
-class Person:
 
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
-
-    @staticmethod
-    def is_adult(age):
-        return age >= 18
-
-# Creating instances of Person
-person1 = Person("Alice", 25)
-person2 = Person("Bob", 16)
-
-# Using the static method to check if a person is an adult
-is_adult_person1 = Person.is_adult(person1.age)
-is_adult_person2 = Person.is_adult(person2.age)
-print(f"{person1.name} is an adult: {is_adult_person1}")
-print(f"{person2.name} is an adult: {is_adult_person2}")
-### correction
-# Your code here
-
-class MathOperations:
-
-    @staticmethod
-    def add_numbers(num1, num2):
-        return num1 + num2
-
-# You can call the static method without creating an instance
-sum_of_numbers = MathOperations.add_numbers(10, 15)
-
-print(f"Sum of Numbers: {sum_of_numbers}")
-### test.py
-import pytest
-from app import MathOperations
-
-@pytest.mark.it("The 'MathOperations' class should exist")
-def test_math_operations_class_exists():
-    try:
-        assert MathOperations
-    except AttributeError:
-        raise AttributeError("The class 'MathOperations' should exist in app.py")
-
-@pytest.mark.it("The MathOperations class includes the 'add_numbers' static method")
-def test_math_operations_has_add_numbers_static_method():
-    assert hasattr(MathOperations, "add_numbers")
-
-@pytest.mark.it("The 'add_numbers' static method should return the expected sum")
-def test_add_numbers_static_method_returns_expected_sum():
-    result = MathOperations.add_numbers(5, 7)
-    assert result == 12
-
-@pytest.mark.it("The 'add_numbers' static method should return the expected sum. Testing with different values")
-def test_add_numbers_static_method_returns_expected_sum_for_different_values():
-    result = MathOperations.add_numbers(10, 20)
-    assert result == 30
 #----------------------------------------#
 Question:
-class methods
 
-A class method is a method that is bound to the class and not the instance of the class. It takes the class itself as its first parameter, often named "cls". Class methods are defined using the @classmethod decorator.
-
-The primary characteristic of a class method is that it can access and modify class-level attributes, but it cannot access or modify instance-specific attributes since it doesn't have access to an instance of the class. Class methods are often used for tasks that involve the class itself rather than individual instances.
-
-class Person:
-    total_people = 0  # Class variable to keep track of the total number of people
-
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
-        Person.total_people += 1  # Increment the total_people count for each new instance
-
-    @classmethod
-    def get_total_people(cls):
-        return cls.total_people
-
-# Creating instances of Person
-person1 = Person("Alice", 25)
-person2 = Person("Bob", 16)
-
-# Using the class method to get the total number of people
-total_people = Person.get_total_people()
-print(f"Total People: {total_people}")
-
-In this example:
-
-    The class method get_total_people returns the total number of people created (instances of the Person class).
-
-Instructions:
-
-    Create a class called MathOperations.
-
-    Inside the class, define the following:
-
-    A class variable named pi with a value of 3.14159.
-    A class method named calculate_circle_area that takes a radius as a parameter and returns the area of a circle using the formula: area = π × radius²
-
-    Use the class method calculate_circle_area to calculate the area of a circle with a radius of 5.
-
-    Print the result. (No need to create any instance)
-
-Example input:
-
-circle_area = MathOperations.calculate_circle_area(5)
-
-Example output:
-
-# Circle Area: 78.53975
 
 Hints: 
 
 
 Solution:
-### code départ
-class Person:
-    total_people = 0  # Class variable to keep track of the total number of people
 
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
-        Person.total_people += 1  # Increment the total_people count for each new instance
-
-    @classmethod
-    def get_total_people(cls):
-        return cls.total_people
-
-# Creating instances of Person
-person1 = Person("Alice", 25)
-person2 = Person("Bob", 16)
-
-# Using the class method to get the total number of people
-total_people = Person.get_total_people()
-print(f"Total People: {total_people}")
-### correction
-# Your code here
-
-class MathOperations:
-    pi = 3.14159
-
-    @classmethod
-    def calculate_circle_area(cls, radius):
-        area = cls.pi * radius ** 2
-        return area
-
-circle_area = MathOperations.calculate_circle_area(5)
-
-print(f"Circle Area: {circle_area}")
-### test.py
-import pytest
-from app import MathOperations
-
-@pytest.mark.it("The 'MathOperations' class should exist")
-def test_math_operations_class_exists():
-    try:
-        assert MathOperations
-    except AttributeError:
-        raise AttributeError("The class 'MathOperations' should exist in app.py")
-
-
-@pytest.mark.it("The MathOperations class includes the 'calculate_circle_area' class method")
-def test_math_operations_has_calculate_circle_area_class_method():
-    assert hasattr(MathOperations, "calculate_circle_area")
-
-
-@pytest.mark.it("The 'calculate_circle_area' class method should return the expected circle area")
-def test_calculate_circle_area_class_method_returns_expected_area():
-    result = MathOperations.calculate_circle_area(5)
-    assert result == 78.53975
-
-@pytest.mark.it("The 'calculate_circle_area' class method should return the expected circle area. Testing with different values")
-def test_calculate_circle_area_class_method_returns_expected_area_for_radius_10():
-    result = MathOperations.calculate_circle_area(10)
-    assert result == 314.159
 #----------------------------------------#
+Question:
 
+
+Hints: 
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+
+Solution:
+
+#----------------------------------------#
 
 
