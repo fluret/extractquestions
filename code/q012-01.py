@@ -1,8 +1,11 @@
-values = []
+lst = []
 
 for i in range(1000, 3001):
-    s = str(i)
-    if all(int(digit) % 2 == 0 for digit in s):
-        values.append(s)
+    flag = 1
+    for j in str(i):  # every integer number i is converted into string
+        if ord(j) % 2 != 0:  # ord returns ASCII value and j is every digit of i
+            flag = 0  # flag becomes zero if any odd digit found
+    if flag == 1:
+        lst.append(str(i))  # i is stored in list as string
 
-print(",".join(values))
+print(",".join(lst))

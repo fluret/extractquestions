@@ -1,12 +1,10 @@
-s = input()
-d = {"Chiffres": 0, "Lettres": 0}
-for c in s:
-    if c.isdigit():
-        d["Chiffres"] += 1
-    elif c.isalpha():
-        d["Lettres"] += 1
-    else:
-        pass
+word = input()
+letter, digit = 0, 0
 
-print("Lettres", d["Lettres"])
-print("Chiffres", d["Chiffres"])
+for i in word:
+    if ("a" <= i and i <= "z") or ("A" <= i and i <= "Z"):
+        letter += 1
+    if "0" <= i and i <= "9":
+        digit += 1
+
+print("Lettres {0}\nChiffres {1}".format(letter, digit))

@@ -1,21 +1,20 @@
 import math
-pos = [0, 0]
+
+x, y = 0, 0
 while True:
-    s = input()
+    s = input().split()
     if not s:
         break
-    movement = s.split(" ")
-    direction = movement[0]
-    steps = int(movement[1])
-    if direction == "UP":
-        pos[0] += steps
-    elif direction == "DOWN":
-        pos[0] -= steps
-    elif direction == "LEFT":
-        pos[1] -= steps
-    elif direction == "RIGHT":
-        pos[1] += steps
-    else:
-        pass
+    if s[0] == "UP":  # s[0] indicates command
+        x -= int(s[1])  # s[1] indicates unit of move
+    if s[0] == "DOWN":
+        x += int(s[1])
+    if s[0] == "LEFT":
+        y -= int(s[1])
+    if s[0] == "RIGHT":
+        y += int(s[1])
+# N**P means N^P
 
-print(int(round(math.sqrt(pos[1]**2+pos[0]**2))))
+dist = round(math.sqrt(x**2 + y**2))
+# euclidean distance = square root of (x^2+y^2) and rounding it to nearest integer
+print(dist)

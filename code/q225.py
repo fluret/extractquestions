@@ -1,0 +1,5 @@
+fruits = ["mango", "kiwi", "strawberry", "guava", "pineapple", "mandarin orange"]
+numbers = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 17, 19, 23, 256, -8, -4, -2, 5, -9]
+
+numbers_squared = [number ** 2 for number in numbers]
+print(numbers_squared)

@@ -1,0 +1,291 @@
+%Question 1
+\question
+Définir une fonction nommée is\_two. Elle doit accepter une entrée et retourner True si l'entrée passée est soit le nombre, soit la chaîne 2, False sinon.
+
+\renewcommand{\nomfichier}{q200.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 2
+\question
+Définir une fonction nommée is\_vowel. Elle doit renvoyer True si la chaîne passée est une voyelle, False sinon.
+
+\renewcommand{\nomfichier}{q201.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 3
+\question
+Définir une fonction nommée is\_consonant. Elle doit retourner True si la chaîne passée est une consonne, False sinon. Utilisez votre fonction is\_vowel
+
+\renewcommand{\nomfichier}{q202.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 4
+\question
+Définir une fonction qui accepte une chaîne de caractères qui est un mot. La fonction doit mettre en majuscule la première lettre du mot si celui-ci commence par une consonne.
+
+
+\renewcommand{\nomfichier}{q203.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+
+%Question 5
+\question
+Définissez une fonction nommée calculate\_tip. Elle doit accepter un pourcentage de pourboire (un nombre entre 0 et 1) et le total de l'addition, et renvoyer le montant du pourboire.
+
+
+\renewcommand{\nomfichier}{q204.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 6
+\question
+Définissez une fonction nommée apply\_discount. Elle doit accepter un prix d'origine et un pourcentage de remise, et renvoyer le prix après la remise.
+
+
+\renewcommand{\nomfichier}{q205.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 7
+\question
+Définissez une fonction nommée handle\_commas. Elle doit accepter en entrée une chaîne de caractères qui est un nombre contenant des virgules, et retourner un nombre en sortie.
+
+\renewcommand{\nomfichier}{q206.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 8
+\question
+Définissez une fonction nommée get\_letter\_grade. Elle doit accepter un nombre et retourner la lettre associée à ce nombre (A-F).
+
+\renewcommand{\nomfichier}{q207.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 9
+\question
+Définissez une fonction nommée remove\_vowels qui accepte une chaîne et renvoie une chaîne dont toutes les voyelles ont été supprimées.
+
+\renewcommand{\nomfichier}{q208.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 10
+\question
+Définissez une fonction nommée normalize\_name. Elle doit accepter une chaîne et retourner un identifiant python valide, c'est-à-dire :\newline
+\begin{itemize}
+	\item tout ce qui n'est pas un identifiant python valide doit être supprimé
+	\item les espaces blancs de début et de fin doivent être supprimés
+	\item tout doit être en minuscules
+	\item les espaces doivent être remplacés par des traits de soulignement
+\end{itemize}
+
+par exemple :\newline
+\begin{itemize}
+	\item Nom deviendra nom
+	\item Prénom deviendra prénom
+	\item Completed deviendra completed
+\end{itemize}
+
+\renewcommand{\nomfichier}{q209.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 11
+\question
+Écrivez une fonction nommée cumulative\_sum qui accepte une liste de nombres et renvoie une liste qui est la somme cumulative des nombres de la liste.
+\begin{itemize}
+\item cumulative\_sum([1, 1, 1]) renvoie [1, 2, 3]
+\item cumulative\_sum([1, 2, 3, 4]) renvoie [1, 3, 6, 10]
+\end{itemize}
+
+\renewcommand{\nomfichier}{q210.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 12
+\question
+Soit les deux listes suivantes :\newline
+fruits = ['mango', 'kiwi', 'strawberry', 'guava', 'pineapple', 'mandarin orange']\newline
+numbers = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 17, 19, 23, 256, -8, -4, -2, 5, -9]\newline
+Réécrire l'exemple de code ci-dessus en utilisant la syntaxe de compréhension de liste. Créez une variable nommée uppercased\_fruits pour contenir la sortie de la compréhension de liste. La sortie devrait être ['MANGO', 'KIWI', etc...].
+\renewcommand{\nomfichier}{q211.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 13
+\question
+Créer une variable nommée capitalized\_fruits et utiliser la syntaxe de compréhension de liste pour produire des résultats comme ['Mango', 'Kiwi', 'Strawberry', etc...].
+
+\renewcommand{\nomfichier}{q212.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 14
+\question
+Utilisez une compréhension de liste pour créer une variable nommée fruits\_avec\_plus\_de\_deux\_voyelles.
+
+Astuce : Vous aurez besoin d'un moyen de vérifier si quelque chose est une voyelle.
+
+
+\renewcommand{\nomfichier}{q213.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 15
+\question
+Créer une variable nommée fruits\_avec\_seulement\_deux\_voyelles.
+
+Le résultat devrait être ['mangue', 'kiwi', 'fraise'].
+
+\renewcommand{\nomfichier}{q214.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 16
+\question
+Faire une liste qui contient chaque fruit avec plus de 5 caractères
+
+
+\renewcommand{\nomfichier}{q215.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 17
+\question
+Faire une liste qui contient chaque fruit avec exactement 5 caractères
+
+\renewcommand{\nomfichier}{q216.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 18
+\question
+Faire une liste qui contient des fruits qui ont moins de 5 caractères
+
+\renewcommand{\nomfichier}{q217.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 19
+\question
+Faites une liste contenant le nombre de caractères de chaque fruit. Les résultats seraient 5, 4, 10, etc...
+
+\renewcommand{\nomfichier}{q218.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 20
+\question
+Créez une variable nommée fruits\_avec\_lettre\_a qui contient une liste des seuls fruits contenant la lettre "a"
+
+\renewcommand{\nomfichier}{q219.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 21
+\question
+Créer une variable nommée even\_numbers qui ne contiendra que les nombres pairs
+
+\renewcommand{\nomfichier}{q220.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 22
+\question
+Créer une variable nommée nombres\_impairs qui ne contient que les nombres impairs
+
+
+\renewcommand{\nomfichier}{q221.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 23
+\question
+Créer une variable nommée nombres\_positifs qui ne contient que les nombres positifs
+
+
+\renewcommand{\nomfichier}{q222.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 24
+\question
+Créer une variable nommée nombres\_négatifs qui ne contient que les nombres négatifs
+
+\renewcommand{\nomfichier}{q223.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 25
+\question
+Utiliser une compréhension de liste avec un conditionnel afin de produire une liste de nombres avec 2 chiffres ou plus
+
+\renewcommand{\nomfichier}{q224.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 26
+\question
+Créez une variable nommée numbers\_squared qui contient la liste des nombres avec chaque élément au carré. La sortie est [4, 9, 16, etc...]
+
+\renewcommand{\nomfichier}{q225.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 27
+\question
+Créez une variable nommée nombres\_impairs\_négatifs qui ne contient que les nombres qui sont à la fois impairs et négatifs.
+
+\renewcommand{\nomfichier}{q226.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 28
+\question
+Créez une variable nommée nombres\_plus\_5. Dans cette variable, renvoyez une liste contenant chaque nombre plus cinq.
+
+\renewcommand{\nomfichier}{q227.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}
+
+%Question 29
+\question
+Créez une variable nommée "primes" qui est une liste contenant les nombres premiers de la liste des nombres. *Astuce : vous pouvez créer ou trouver une fonction d'aide qui détermine si un nombre donné est premier ou non.
+
+\renewcommand{\nomfichier}{q228.py}
+\begin{solution}
+    \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+\end{solution}

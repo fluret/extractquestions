@@ -1,3 +1,3 @@
-items = [x for x in input().split(',')]
-items.sort()
-print(','.join(items))
+lst = input().split(",")
+lst.sort()
+print(",".join(lst))

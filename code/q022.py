@@ -1,10 +1,6 @@
-freq = {}   # frequency of words in text
-line = input()
-for word in line.split():
-    freq[word] = freq.get(word,0)+1
+ss = input().split()
+word = sorted(set(ss))
+# split words are stored and sorted as a set
 
-words = list(freq.keys())
-words.sort()
-print()
-for w in words:
-    print(f"{w}:{freq[w]}")
+for i in word:
+    print("{0}:{1}".format(i, ss.count(i)))
