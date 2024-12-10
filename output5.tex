@@ -1,0 +1,130 @@
+
+        \question
+        Créer une classe Véhicule avec les attributs d'instance vitesse\_max et kilométrage.
+        \par
+        \renewcommand{\nomfichier}{q238.py}
+        \begin{solution}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+        \end{solution}
+        
+
+        \question
+        Créer une classe Véhicule sans variables ni méthodes
+        \par
+        \renewcommand{\nomfichier}{q239.py}
+        \begin{solution}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+        \end{solution}
+        
+
+        \question
+        Créer une classe enfant Bus qui héritera de toutes les variables et méthodes de la classe Véhicule.\newline
+        Vous partirez du code suivant :
+        \renewcommand{\nomfichier}{q240depart.py}
+        \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+				Créer un objet Bus qui héritera de toutes les variables et méthodes de la classe parente "Véhicule" et l'afficher.\newline
+				Sortie attendue :\newline
+				Nom du véhicule : School Volvo Vitesse : 180 Kilométrage : 12
+        \par
+        \renewcommand{\nomfichier}{q240.py}
+        \begin{solution}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+        \end{solution}
+        
+
+        \question
+        Héritage des classes
+
+				Créez une classe Bus qui hérite de la classe Véhicule. Donnez à l'argument capacité de \textbf{Bus.seating\_capacity()} une valeur par défaut de 50.\newline
+				
+				Utilisez le code suivant pour votre classe mère Vehicle.
+        \renewcommand{\nomfichier}{q241depart.py}
+        \pythonfile{\chemincode \nomfichier}[][\nomfichier]				
+				Sortie attendue :\newline
+				La capacité d'accueil d'un bus est de 50 passagers.
+        \par
+        \textbf{Indices : }Tout d'abord, utilisez la surcharge de méthode.\newline
+   Ensuite, utilisez l'argument de méthode par défaut dans la définition de la méthode seating\_capacity() d'une classe de bus.
+        \renewcommand{\nomfichier}{q241.py}
+        \begin{solution}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+        \end{solution}
+        
+
+        \question
+        Définir une propriété qui doit avoir la même valeur pour chaque instance de classe (objet)\newline
+
+Définir un attribut de classe "color" dont la valeur par défaut est white.\newline
+
+Utilisez le code suivant pour cet exercice.\newline
+        \renewcommand{\nomfichier}{q242depart.py}
+        \pythonfile{\chemincode \nomfichier}[][\nomfichier]		
+
+Résultat attendu :\newline
+
+Couleur : Blanc, Nom du véhicule : School Volvo, Vitesse : 180, Kilométrage : 12\newline
+Couleur : Blanc, Nom du véhicule : Audi Q5, Vitesse : 240, Kilométrage : 18
+
+
+        \par
+        \textbf{Indices : }Définir une couleur comme variable de classe dans une classe de véhicule
+        \renewcommand{\nomfichier}{q242.py}
+        \begin{solution}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Les variables créées dans .\_\_init\_\_() sont appelées variables d'instance. La valeur d'une variable d'instance est spécifique à une instance particulière de la classe. Par exemple, dans la solution, tous les objets Véhicule ont un nom et une vitesse maximale, mais les valeurs des variables nom et vitesse maximale varient en fonction de l'instance de Véhicule.
+            
+            En revanche, la variable de classe est partagée par toutes les instances de la classe. Vous pouvez définir un attribut de classe en attribuant une valeur à un nom de variable en dehors de .\_\_init\_\_().
+        \end{solution}
+        
+
+        \question
+        Héritage des classes
+
+Créez une classe enfant Bus qui hérite de la classe Véhicule. Le tarif par défaut de tout véhicule est égal au \textbf{nombre de places * 100}. Si le véhicule est une instance de bus, nous devons ajouter 10 \% au tarif total à titre de frais de maintenance. Ainsi, le tarif total pour l'instance de bus deviendra le \textbf{montant final = tarif total + 10 \% du tarif total}.
+
+Remarque : le nombre de places assises dans le bus est de 50, le montant final du tarif devrait donc être de 5500. Vous devez surcharger la méthode fare() de la classe Vehicle dans la classe Bus.
+
+Utilisez le code suivant pour votre classe de véhicule parent. Nous devons accéder à la classe mère à partir d'une méthode d'une classe enfant.
+
+        \renewcommand{\nomfichier}{q243depart.py}
+        \pythonfile{\chemincode \nomfichier}[][\nomfichier]	
+
+Résultat attendu :\newline
+
+Le prix total du billet d'autobus est de 5500.0
+        \par
+        \renewcommand{\nomfichier}{q243.py}
+        \begin{solution}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+        \end{solution}
+        
+
+        \question
+        Vérifier le type d'un objet
+
+Écrire un programme permettant de déterminer à quelle classe appartient un objet Bus donné.
+Vous partirez du code suivant :
+        \renewcommand{\nomfichier}{q244depart.py}
+        \pythonfile{\chemincode \nomfichier}[][\nomfichier]	
+        \par
+        \textbf{Indices : }Utilisez la fonction intégrée type() de Python.
+        \renewcommand{\nomfichier}{q244.py}
+        \begin{solution}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+        \end{solution}
+        
+
+        \question
+        Déterminer si School\_bus est également une instance de la classe Vehicle
+        Vous partirez du code suivant :
+        \renewcommand{\nomfichier}{q245depart.py}
+        \pythonfile{\chemincode \nomfichier}[][\nomfichier]	        
+        \par
+        \textbf{Indices : }Utiliser la fonction isinstance()
+        \renewcommand{\nomfichier}{q245.py}
+        \begin{solution}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+        \end{solution}
+        
+
+        

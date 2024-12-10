@@ -1,151 +1,294 @@
 #----------------------------------------#
 Question:
-Écrire le code permettant de créer un objet de classe Cercle nommé “monCercle”.
+Create a Class with instance attributes
+Write a Python program to create a Vehicle class with max_speed and mileage instance attributes.
 
 Hints: 
 
 
 Solution:
-class Cercle:
-  def __init__(self):
-    self.rayon = 10		# attribut rayon du cercle
-    self.x = 0			# attribut position en X du centre du cercle
-    self.y = 0			# attribut position en Y du centre du cercle
+class Vehicle:
+    def __init__(self, max_speed, mileage):
+        self.max_speed = max_speed
+        self.mileage = mileage
 
-# Écrire votre code ci-dessous
-monCercle = Cercle()
+modelX = Vehicle(240, 18)
+print(modelX.max_speed, modelX.mileage)
 #----------------------------------------#
 Question:
-Écrire le code permettant de créer un objet de classe Cercle nommé “monCercle”, avec un rayon de 20, une position en X du centre de 5 et une position en Y du centre de 10.
+Create a Vehicle class without any variables and methods
 
 Hints: 
 
 
 Solution:
-class Cercle:
-  def __init__(self, r, posX, posY):
-    self.rayon = r		# attribut rayon du cercle
-    self.x = posX			# attribut position en X du centre du cercle
-    self.y = posY			# attribut position en Y du centre du cercle
-
-# Écrire votre code ci-dessous
-monCercle = Cercle(20, 5, 10)
+class Vehicle:
+    pass
 #----------------------------------------#
 Question:
-Écrire le code permettant de créer un objet de classe Cercle nommé “monCercle”, avec une position en X du centre de 5 et une position en Y du centre de -5. Vous devez utiliser uniquement ces deux valeurs pour la construction de l’objet et ne rien renseigner pour le rayon afin de laisser la valeur par défaut.
-
+Create a child class Bus that will inherit all of the variables and methods of the Vehicle class
+Create a Bus object that will inherit all of the variables and methods of the parent Vehicle class and display it.
+Sortie attendue : 
+Vehicle Name: School Volvo Speed: 180 Mileage: 12
 Hints: 
 
 
 Solution:
-class Cercle:
-  def __init__(self, r=15, posX=0, posY=0):
-    self.rayon = r		# attribut rayon du cercle
-    self.x = posX			# attribut position en X du centre du cercle
-    self.y = posY			# attribut position en Y du centre du cercle
+# Code départ
+class Vehicle:
 
-# Écrire votre code ci-dessous
-monCercle = Cercle(posX=5, posY=-5)
+    def __init__(self, name, max_speed, mileage):
+        self.name = name
+        self.max_speed = max_speed
+        self.mileage = mileage
+# Correction
+class Vehicle:
+
+    def __init__(self, name, max_speed, mileage):
+        self.name = name
+        self.max_speed = max_speed
+        self.mileage = mileage
+
+class Bus(Vehicle):
+    pass
+
+School_bus = Bus("School Volvo", 180, 12)
+print("Vehicle Name:", School_bus.name, "Speed:", School_bus.max_speed, "Mileage:", School_bus.mileage)
 #----------------------------------------#
 Question:
-Écrire le code permettant de créer un objet de classe Cercle nommé “monCercle”, avec un rayon de 10 et les valeurs par défaut pour les positions en X et Y du centre. Créer une variable “perimetre” contenant le résultat du calcul du périmètre de l’objet “monCercle”. Pour ce calcul vous devez uniquement utiliser la constante pi importée au début du programme et l’objet monCercle créé.
+Class Inheritance
 
+Create a Bus class that inherits from the Vehicle class. Give the capacity argument of Bus.seating_capacity() a default value of 50.
+
+Use the following code for your parent Vehicle class.
+
+Sortie attendue :
+The seating capacity of a bus is 50 passengers
 Hints: 
+   First, use method overriding.
+   Next, use default method argument in the seating_capacity() method definition of a bus class.
+
 
 
 Solution:
-from math import pi
+# Code depart
+class Vehicle:
+    def __init__(self, name, max_speed, mileage):
+        self.name = name
+        self.max_speed = max_speed
+        self.mileage = mileage
 
-class Cercle:
-  def __init__(self, r=15, posX=0, posY=0):
-    self.rayon = r		# attribut rayon du cercle
-    self.x = posX			# attribut position en X du centre du cercle
-    self.y = posY			# attribut position en Y du centre du cercle
-  
-  
-# Écrire votre code ci-dessous
-# Le périmètre d'un cercle de rayon R est égal à 2*pi*R
+    def seating_capacity(self, capacity):
+        return f"The seating capacity of a {self.name} is {capacity} passengers"
+# Correction
+class Vehicle:
+    def __init__(self, name, max_speed, mileage):
+        self.name = name
+        self.max_speed = max_speed
+        self.mileage = mileage
 
-monCercle = Cercle(10)
-perimetre = 2*pi*monCercle.rayon
+    def seating_capacity(self, capacity):
+        return f"The seating capacity of a {self.name} is {capacity} passengers"
+
+class Bus(Vehicle):
+    # assign default value to capacity
+    def seating_capacity(self, capacity=50):
+        return super().seating_capacity(capacity=50)
+
+School_bus = Bus("School Volvo", 180, 12)
+print(School_bus.seating_capacity())
 #----------------------------------------#
 Question:
-Écrire le code permettant de créer un objet de classe Cercle nommé “monCercle”, avec un rayon de 20 et les valeurs par défaut pour les positions en X et Y du centre. Créer une variable “surface” contenant le résultat du calcul de la surface de l’objet “monCercle”. Pour obtenir ce résultat vous devez utiliser uniquement l’objet monCercle créé sans écrire vous-même le calcul de la surface.
+Define a property that must have the same value for every class instance (object)
+
+Define a class attribute”color” with a default value white. I.e., Every Vehicle should be white.
+
+Use the following code for this exercise.
+
+Expected Output:
+
+Color: White, Vehicle name: School Volvo, Speed: 180, Mileage: 12
+Color: White, Vehicle name: Audi Q5, Speed: 240, Mileage: 18
+
+Explication :
+Variables created in .__init__() are called instance variables. An instance variable’s value is specific to a particular instance of the class. For example, in the solution, All Vehicle objects have a name and a max_speed, but the name and max_speed variables’ values will vary depending on the Vehicle instance.
+
+On the other hand, the class variable is shared between all class instances. You can define a class attribute by assigning a value to a variable name outside of .__init__().
+
 
 Hints: 
-
+Define a color as a class variable in a Vehicle class
 
 Solution:
-from math import pi
+# Code depart
+class Vehicle:
 
-class Cercle:
-  def __init__(self, r=15, posX=10, posY=10):
-    self.rayon = r		# attribut rayon du cercle
-    self.x = posX			# attribut position en X du centre du cercle
-    self.y = posY			# attribut position en Y du centre du cercle
-  
-  def calculerSurface(self):
-    return pi*self.rayon**2
-    
-# Écrire votre code ci-dessous
-monCercle = Cercle(20)
-surface = monCercle.calculerSurface()
+    def __init__(self, name, max_speed, mileage):
+        self.name = name
+        self.max_speed = max_speed
+        self.mileage = mileage
+
+class Bus(Vehicle):
+    pass
+
+class Car(Vehicle):
+    pass
+
+# Correction
+class Vehicle:
+    # Class attribute
+    color = "White"
+
+    def __init__(self, name, max_speed, mileage):
+        self.name = name
+        self.max_speed = max_speed
+        self.mileage = mileage
+
+class Bus(Vehicle):
+    pass
+
+class Car(Vehicle):
+    pass
+
+School_bus = Bus("School Volvo", 180, 12)
+print(School_bus.color, School_bus.name, "Speed:", School_bus.max_speed, "Mileage:", School_bus.mileage)
+
+car = Car("Audi Q5", 240, 18)
+print(car.color, car.name, "Speed:", car.max_speed, "Mileage:", car.mileage)
 #----------------------------------------#
 Question:
-Écrire le code permettant de créer un objet de classe Cercle nommé “monCercle” avec une position du centre en X de 5, une position du centre en Y de 10 et la valeur par défaut pour le rayon.
+Class Inheritance
 
-Écrire ensuite le code permettant de déplacer le centre de l’objet “monCercle” de 5 en X et de -8 en Y. Pour faire se déplacement vous devez uniquement utiliser une méthode de l’objet “monCercle”, avec des paramètres 5 et -8.
+Create a Bus child class that inherits from the Vehicle class. The default fare charge of any vehicle is seating capacity * 100. If Vehicle is Bus instance, we need to add an extra 10% on full fare as a maintenance charge. So total fare for bus instance will become the final amount = total fare + 10% of the total fare.
+
+Note: The bus seating capacity is 50. so the final fare amount should be 5500. You need to override the fare() method of a Vehicle class in Bus class.
+
+Use the following code for your parent Vehicle class. We need to access the parent class from inside a method of a child class.
+
+
+Expected Output:
+
+Total Bus fare is: 5500.0
 
 Hints: 
 
 
 Solution:
-from math import pi
+# Code depart
+class Vehicle:
+    def __init__(self, name, mileage, capacity):
+        self.name = name
+        self.mileage = mileage
+        self.capacity = capacity
 
-class Cercle:
-  def __init__(self, r=15, posX=0, posY=0):
-    self.rayon = r		# attribut rayon du cercle
-    self.x = posX			# attribut position en X du centre du cercle
-    self.y = posY			# attribut position en Y du centre du cercle
-  
-  def deplacerCentre(self, depX, depY):
-    self.x += depX
-    self.y += depY
-  
-# Écrire votre code ci-dessous
-monCercle = Cercle(posX=5, posY=10)
-monCercle.deplacerCentre(5, -8)
+    def fare(self):
+        return self.capacity * 100
+
+class Bus(Vehicle):
+    pass
+
+School_bus = Bus("School Volvo", 12, 50)
+print("Total Bus fare is:", School_bus.fare())
+
+#Correction
+class Vehicle:
+    def __init__(self, name, mileage, capacity):
+        self.name = name
+        self.mileage = mileage
+        self.capacity = capacity
+
+    def fare(self):
+        return self.capacity * 100
+
+class Bus(Vehicle):
+    def fare(self):
+        amount = super().fare()
+        amount += amount * 10 / 100
+        return amount
+
+School_bus = Bus("School Volvo", 12, 50)
+print("Total Bus fare is:", School_bus.fare())
+
+
 #----------------------------------------#
 Question:
-Écrire le code permettant de définir une classe Personne et son initialisateur. Les objets de classe Personne possèderont un attribut “nom” dont la valeur sera passée en paramètre à la construction de l’objet.
+Check type of an object
+
+Write a program to determine which class a given Bus object belongs to.
+
+
 
 Hints: 
-
+Use Python’s built-in function type().
 
 Solution:
-# Écrire votre code ci-dessous
-class Personne:
-  def __init__(self, nom):
-    self.nom = nom
+# Code depart
+class Vehicle:
+    def __init__(self, name, mileage, capacity):
+        self.name = name
+        self.mileage = mileage
+        self.capacity = capacity
+
+class Bus(Vehicle):
+    pass
+
+School_bus = Bus("School Volvo", 12, 50)
+
+#Correction
+class Vehicle:
+    def __init__(self, name, mileage, capacity):
+        self.name = name
+        self.mileage = mileage
+        self.capacity = capacity
+
+class Bus(Vehicle):
+    pass
+
+School_bus = Bus("School Volvo", 12, 50)
+
+# Python's built-in type()
+print(type(School_bus))
 #----------------------------------------#
 Question:
-Écrire le code permettant de définir une classe Personne et son initialisateur. Les objets de classe Personne possèderont des attributs “nom”, “age”, “poids” et “taille” dont les valeurs seront passées en paramètres à la construction de l’objet (dans cet ordre). Le poids sera donné en kilogrammes et la taille en mètres.
+Determine if School_bus is also an instance of the Vehicle class
 
-Ajouter à la classe Personne une méthode d’instance nommée “imc” permettant de calculer et de retourner l’IMC (Indice de Masse Corporelle) de la personne. L’IMC d’une personne est égal à son poids (en kilogrammes) divisé par le carré de sa taille (en mètres).
+Hints: 
+Use isinstance() function
+
+Solution:
+
+#----------------------------------------#
+Question:
+
 
 Hints: 
 
 
 Solution:
-# Écrire votre code ci-dessous
-class Personne:
-  def __init__(self, nom, age, poids, taille):
-    self.nom = nom
-    self.age = age
-    self.poids = poids
-    self.taille = taille
-  
-  def imc(self):
-    return self.poids/(self.taille**2)
-#----------------------------------------#
+# Code depart
+class Vehicle:
+    def __init__(self, name, mileage, capacity):
+        self.name = name
+        self.mileage = mileage
+        self.capacity = capacity
 
+class Bus(Vehicle):
+    pass
+
+School_bus = Bus("School Volvo", 12, 50)
+
+# Correction
+class Vehicle:
+    def __init__(self, name, mileage, capacity):
+        self.name = name
+        self.mileage = mileage
+        self.capacity = capacity
+
+class Bus(Vehicle):
+    pass
+
+School_bus = Bus("School Volvo", 12, 50)
+
+# Python's built-in isinstance() function
+print(isinstance(School_bus, Vehicle))
+#----------------------------------------#

@@ -1,0 +1,151 @@
+#----------------------------------------#
+Question:
+Écrire le code permettant de créer un objet de classe Cercle nommé “monCercle”.
+
+Hints: 
+
+
+Solution:
+class Cercle:
+  def __init__(self):
+    self.rayon = 10		# attribut rayon du cercle
+    self.x = 0			# attribut position en X du centre du cercle
+    self.y = 0			# attribut position en Y du centre du cercle
+
+# Écrire votre code ci-dessous
+monCercle = Cercle()
+#----------------------------------------#
+Question:
+Écrire le code permettant de créer un objet de classe Cercle nommé “monCercle”, avec un rayon de 20, une position en X du centre de 5 et une position en Y du centre de 10.
+
+Hints: 
+
+
+Solution:
+class Cercle:
+  def __init__(self, r, posX, posY):
+    self.rayon = r		# attribut rayon du cercle
+    self.x = posX			# attribut position en X du centre du cercle
+    self.y = posY			# attribut position en Y du centre du cercle
+
+# Écrire votre code ci-dessous
+monCercle = Cercle(20, 5, 10)
+#----------------------------------------#
+Question:
+Écrire le code permettant de créer un objet de classe Cercle nommé “monCercle”, avec une position en X du centre de 5 et une position en Y du centre de -5. Vous devez utiliser uniquement ces deux valeurs pour la construction de l’objet et ne rien renseigner pour le rayon afin de laisser la valeur par défaut.
+
+Hints: 
+
+
+Solution:
+class Cercle:
+  def __init__(self, r=15, posX=0, posY=0):
+    self.rayon = r		# attribut rayon du cercle
+    self.x = posX			# attribut position en X du centre du cercle
+    self.y = posY			# attribut position en Y du centre du cercle
+
+# Écrire votre code ci-dessous
+monCercle = Cercle(posX=5, posY=-5)
+#----------------------------------------#
+Question:
+Écrire le code permettant de créer un objet de classe Cercle nommé “monCercle”, avec un rayon de 10 et les valeurs par défaut pour les positions en X et Y du centre. Créer une variable “perimetre” contenant le résultat du calcul du périmètre de l’objet “monCercle”. Pour ce calcul vous devez uniquement utiliser la constante pi importée au début du programme et l’objet monCercle créé.
+
+Hints: 
+
+
+Solution:
+from math import pi
+
+class Cercle:
+  def __init__(self, r=15, posX=0, posY=0):
+    self.rayon = r		# attribut rayon du cercle
+    self.x = posX			# attribut position en X du centre du cercle
+    self.y = posY			# attribut position en Y du centre du cercle
+  
+  
+# Écrire votre code ci-dessous
+# Le périmètre d'un cercle de rayon R est égal à 2*pi*R
+
+monCercle = Cercle(10)
+perimetre = 2*pi*monCercle.rayon
+#----------------------------------------#
+Question:
+Écrire le code permettant de créer un objet de classe Cercle nommé “monCercle”, avec un rayon de 20 et les valeurs par défaut pour les positions en X et Y du centre. Créer une variable “surface” contenant le résultat du calcul de la surface de l’objet “monCercle”. Pour obtenir ce résultat vous devez utiliser uniquement l’objet monCercle créé sans écrire vous-même le calcul de la surface.
+
+Hints: 
+
+
+Solution:
+from math import pi
+
+class Cercle:
+  def __init__(self, r=15, posX=10, posY=10):
+    self.rayon = r		# attribut rayon du cercle
+    self.x = posX			# attribut position en X du centre du cercle
+    self.y = posY			# attribut position en Y du centre du cercle
+  
+  def calculerSurface(self):
+    return pi*self.rayon**2
+    
+# Écrire votre code ci-dessous
+monCercle = Cercle(20)
+surface = monCercle.calculerSurface()
+#----------------------------------------#
+Question:
+Écrire le code permettant de créer un objet de classe Cercle nommé “monCercle” avec une position du centre en X de 5, une position du centre en Y de 10 et la valeur par défaut pour le rayon.
+
+Écrire ensuite le code permettant de déplacer le centre de l’objet “monCercle” de 5 en X et de -8 en Y. Pour faire se déplacement vous devez uniquement utiliser une méthode de l’objet “monCercle”, avec des paramètres 5 et -8.
+
+Hints: 
+
+
+Solution:
+from math import pi
+
+class Cercle:
+  def __init__(self, r=15, posX=0, posY=0):
+    self.rayon = r		# attribut rayon du cercle
+    self.x = posX			# attribut position en X du centre du cercle
+    self.y = posY			# attribut position en Y du centre du cercle
+  
+  def deplacerCentre(self, depX, depY):
+    self.x += depX
+    self.y += depY
+  
+# Écrire votre code ci-dessous
+monCercle = Cercle(posX=5, posY=10)
+monCercle.deplacerCentre(5, -8)
+#----------------------------------------#
+Question:
+Écrire le code permettant de définir une classe Personne et son initialisateur. Les objets de classe Personne possèderont un attribut “nom” dont la valeur sera passée en paramètre à la construction de l’objet.
+
+Hints: 
+
+
+Solution:
+# Écrire votre code ci-dessous
+class Personne:
+  def __init__(self, nom):
+    self.nom = nom
+#----------------------------------------#
+Question:
+Écrire le code permettant de définir une classe Personne et son initialisateur. Les objets de classe Personne possèderont des attributs “nom”, “age”, “poids” et “taille” dont les valeurs seront passées en paramètres à la construction de l’objet (dans cet ordre). Le poids sera donné en kilogrammes et la taille en mètres.
+
+Ajouter à la classe Personne une méthode d’instance nommée “imc” permettant de calculer et de retourner l’IMC (Indice de Masse Corporelle) de la personne. L’IMC d’une personne est égal à son poids (en kilogrammes) divisé par le carré de sa taille (en mètres).
+
+Hints: 
+
+
+Solution:
+# Écrire votre code ci-dessous
+class Personne:
+  def __init__(self, nom, age, poids, taille):
+    self.nom = nom
+    self.age = age
+    self.poids = poids
+    self.taille = taille
+  
+  def imc(self):
+    return self.poids/(self.taille**2)
+#----------------------------------------#
+
