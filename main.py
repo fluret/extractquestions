@@ -48,15 +48,15 @@ def parse_question(question_text):
     solution = solution_match.group(1).strip() if solution_match else ''
     
     # Échapper les caractères spéciaux après la traduction
-    try:
-        title = translate_text(title)
-    except Exception as e:
-        print(f"Erreur de traduction pour le titre: {e}")
+    # try:
+    #    title = translate_text(title)
+    # except Exception as e:
+    #    print(f"Erreur de traduction pour le titre: {e}")
 
-    try:
-        hints = translate_text(hints)
-    except Exception as e:
-        print(f"Erreur de traduction pour les indices: {e}")
+    # try:
+    #    hints = translate_text(hints)
+    # except Exception as e:
+    #    print(f"Erreur de traduction pour les indices: {e}")
     
     # Échapper les caractères spéciaux après la traduction
     title = escape_latex(title)
