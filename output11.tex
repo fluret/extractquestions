@@ -1,0 +1,1215 @@
+sortie        \question
+        DEPART DES Ensembles
+Générer un ensemble de carrés de nombres de 1 à 10
+
+Exemple de sortie
+
+\{64, 1, 4, 36, 100, 9, 16, 49, 81, 25\}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q606.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Crée un ensemble nommé carrés qui contient les carrés des nombres de 1 à 10. Voici comment fonctionne le code :
+
+    {x**2 for x in range(1, 11)} : Il s'agit d'une compréhension d'ensemble. Elle parcourt les nombres de 1 à 10 (inclus) en utilisant range(1, 11) et calcule le carré de chaque nombre x en utilisant x**2. La compréhension de l'ensemble rassemble ces valeurs au carré dans un ensemble.
+    print(carrés) : Cette ligne de code affiche les carrés de l'ensemble sur la console.
+        \end{solution}
+        
+
+        \question
+        Créer un ensemble de nombres pairs de 1 à 20
+
+Exemple de résultat
+
+\{2, 4, 6, 8, 10, 12, 14, 16, 18, 20\}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q607.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python génère un ensemble nommé evens contenant des nombres pairs compris entre 2 et 20 (inclus). Voici comment fonctionne le code :
+
+    evens = {x for x in range(2, 21, 2)} : Cette ligne utilise une compréhension d'ensemble pour créer l'ensemble des pairs. Elle parcourt les nombres compris entre 2 et 20 (inclus) avec un pas de 2. Cette plage comprend tous les nombres pairs de cette plage.
+    La compréhension de l'ensemble {...} rassemble ces nombres pairs et forme un ensemble avec des éléments distincts. Comme les ensembles n'autorisent pas les valeurs dupliquées, seuls les nombres pairs distincts sont inclus dans l'ensemble.
+    print(evens) : Cette ligne affiche l'ensemble evens sur la console.
+        \end{solution}
+        
+
+        \question
+        Générer un ensemble de caractères à partir d'une chaîne de caractères
+
+Exemple de sortie
+
+Bonjour à tous !
+
+\{'e', 'r', 'o', 'H', 'w', 'l', 'd'\}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q608.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python traite une chaîne, string, et crée un ensemble, chars, contenant des caractères alphabétiques uniques (lettres) de la chaîne. Voici comment fonctionne ce code :
+
+    string = "Hello, world !": Cette ligne initialise une variable nommée string et lui affecte la chaîne "Hello, world !"
+    chars = {char for char in string if char.isalpha()} : Cette ligne initialise une variable nommée chars et lui affecte un ensemble créé à l'aide d'une compréhension d'ensemble. Elle itère sur chaque caractère char dans la chaîne et l'ajoute à l'ensemble s'il s'agit d'un caractère alphabétique (une lettre).
+        {...} : Cette notation est utilisée pour créer un ensemble.
+        char pour char dans la chaîne : Cette partie de la compréhension itère sur chaque caractère de la chaîne.
+        if char.isalpha() : Cette vérification conditionnelle permet de s'assurer que seuls les caractères alphabétiques (lettres) sont inclus dans l'ensemble. Elle utilise la méthode isalpha() pour déterminer si un caractère est une lettre.
+    print(string) : Cette ligne de code imprime la chaîne de caractères originale sur la console.
+    print(chars) : Cette ligne de code imprime le jeu de caractères sur la console.
+        \end{solution}
+        
+
+        \question
+        Créer un ensemble de longueurs de mots dans une phrase
+
+Exemple de sortie
+
+Voici un exemple de phrase.
+
+\{1, 2, 4, 6, 9\}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q609.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python traite une phrase, sentence, et crée un ensemble, word\_lengths, contenant les longueurs des mots dans la phrase. Voici comment fonctionne le code :
+
+    sentence = "Ceci est un exemple de phrase" : Cette ligne initialise une variable nommée sentence et lui affecte la chaîne de caractères "Ceci est un exemple de phrase".
+    word\_lengths = \{len(word) for word in sentence.split()\} : Cette ligne initialise une variable nommée word\_lengths et lui affecte un ensemble créé à l'aide d'une compréhension d'ensemble. Elle divise la phrase en mots à l'aide de split() et itère sur chaque mot, en ajoutant sa longueur (nombre de caractères) à l'ensemble.
+        \{...\} : Cette notation est utilisée pour créer un ensemble.
+        len(word) for word in sentence.split() : Cette partie de la compréhension passe en revue chaque mot de la phrase après l'avoir divisée et calcule la longueur de chaque mot à l'aide de len(word).
+    print(sentence) : Cette ligne de code imprime la phrase originale sur la console.
+    print(longueur\_des\_mots) : Cette ligne de code affiche sur la console le jeu de mots\_longueurs.
+        \end{solution}
+        
+
+        \question
+        Générer un ensemble de nombres premiers de 1 à 50
+
+Exemple de résultat
+
+\{2, 3, 5, 37, 7, 41, 11, 43, 13, 47, 17, 19, 23, 29, 31\}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q610.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python définit une fonction is\_prime pour vérifier si un nombre donné est premier ou non. Il utilise ensuite une compréhension d'ensemble pour créer un ensemble appelé prime\_numbers contenant tous les nombres premiers de 1 à 50. Voici une explication pas à pas du code :
+
+    def is\_prime(n) : Cette ligne définit une fonction nommée is\_prime qui prend un entier n comme argument. Elle renvoie True si n est un nombre premier et False dans le cas contraire.
+    if n <= 1: : C'est la première condition. Si n est inférieur ou égal à 1, il ne s'agit pas d'un nombre premier. Les nombres premiers sont supérieurs à 1, la fonction renvoie donc False dans ce cas.
+    for i in range(2, int(n**0.5) + 1): : Cette boucle itère de 2 à la racine carrée de n (arrondie à l'entier le plus proche) plus 1. Il s'agit d'une optimisation visant à réduire le nombre de diviseurs à vérifier. Les nombres premiers n'ont pas d'autres diviseurs que 1 et eux-mêmes, et nous n'avons besoin de vérifier que jusqu'à la racine carrée de n.
+    if n % i == 0: : Cette condition vérifie si n est divisible par i. Si c'est le cas, alors n n'est pas un nombre premier et la fonction renvoie False.
+    return True : Si la fonction ne renvoie pas False dans les conditions précédentes, cela signifie que n n'est divisible par aucun nombre dans l'intervalle donné et qu'il s'agit d'un nombre premier. Dans ce cas, la fonction renvoie True.
+    nombres\_premiers = \{x for x in range(1, 51) if is\_prime(x)\} : Cette ligne crée un ensemble appelé nombres\_premiers à l'aide d'une compréhension d'ensemble. Elle parcourt les nombres de 1 à 50 et les inclut dans l'ensemble si la fonction is\_prime renvoie True pour ce nombre. Cet ensemble de compréhension rassemble tous les nombres premiers de 1 à 50.
+    print(nombres\_premiers) : Cette ligne imprime l'ensemble prime\_numbers sur la console, en affichant tous les nombres premiers compris entre 1 et 50.
+        \end{solution}
+        
+
+        \question
+        Créer un ensemble de lettres minuscules
+
+Exemple de résultat
+
+\{'a', 'e', 'u', 'z', 'y', 'j', 'k', 't', 'x', 'd', 'r', 'v', 'o', 'h', 'f', 'i', 'c', 'g', 'l', 'p', 'b', 'n', 'm', 'q', 's', 'w'\}.
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q611.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Crée un ensemble nommé lowercase\_letters contenant toutes les lettres minuscules de l'alphabet anglais. Voici comment fonctionne le code :
+
+    \{chr(x) for x in range(ord('a'), ord('z')+1)\} : Il s'agit d'une compréhension d'ensemble qui itère sur une plage de points de code Unicode correspondant aux lettres minuscules anglaises.
+        chr(x) : Cette fonction convertit un point de code Unicode x en un caractère correspondant.
+        for x in range(ord('a'), ord('z')+1) : Elle parcourt une plage de points de code, en commençant par le point de code 'a' (ord('a')) jusqu'au point de code 'z' (ord('z')), inclus.
+    lettres minuscules = \{...\} : Cette partie du code initialise une variable nommée lettres minuscules et lui assigne l'ensemble créé par la compréhension de l'ensemble.
+    print(lettres\_case\_inférieures) : Cette ligne de code imprime l'ensemble lowercase\_letters sur la console.
+        \end{solution}
+        
+
+        \question
+        Générer un ensemble de lettres majuscules
+
+Exemple de résultat
+
+\{'U', 'M', 'F', 'D', 'A', 'I', 'R', 'Y', 'V', 'N', 'T', 'P', 'X', 'O', 'C', 'L', 'W', 'Q', 'K', 'J', 'H', 'Z', 'E', 'G', 'S', 'B' \}.
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q612.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python crée un ensemble nommé uppercase\_letters contenant toutes les lettres majuscules de l'alphabet anglais. Voici comment fonctionne ce code :
+
+    \{chr(x) for x in range(ord('A'), ord('Z')+1)\} : Il s'agit d'une compréhension d'ensemble qui itère sur une plage de points de code Unicode correspondant aux lettres majuscules de l'alphabet anglais.
+        chr(x) : Cette fonction convertit un point de code Unicode x en un caractère correspondant.
+        for x in range(ord('A'), ord('Z')+1) : Elle parcourt une plage de points de code, en commençant par le point de code 'A' (ord('A')) jusqu'au point de code 'Z' (ord('Z')), inclus.
+    lettres\_majuscules = \{...\} : Cette partie du code initialise une variable nommée uppercase\_letters et lui assigne l'ensemble créé par la compréhension de l'ensemble.
+    print(uppercase\_letters) : Cette ligne de code imprime l'ensemble uppercase\_letters sur la console.
+        \end{solution}
+        
+
+        \question
+        Créer un ensemble de nombres pairs au carré et de nombres impairs au cube de 1 à 10
+
+Exemple de résultat
+
+\{64, 1, 4, 36, 100, 16, 343, 729, 27, 125\}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q613.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python utilise une compréhension d'ensemble pour créer un ensemble nommé result. L'ensemble contient les carrés des nombres pairs et les cubes des nombres impairs dans l'intervalle de 1 à 10. Voici comment fonctionne le code :
+
+    result = \{x**2 if x % 2 == 0 else x**3 for x in range(1, 11)\} : Cette ligne initialise un ensemble nommé result à l'aide d'une compréhension d'ensemble.
+        for x in range(1, 11) : Cette partie du code met en place une boucle qui parcourt les nombres de 1 à 10 (inclus).
+        \{x**2 if x % 2 == 0 else x**3\} : Pour chaque nombre x, cette partie calcule le carré (x**2) si x est pair (c'est-à-dire si x % 2 == 0 est vrai) et le cube (x**3) si x est impair.
+    print(result) : Cette ligne de code affiche le résultat sur la console.
+        \end{solution}
+        
+
+        \question
+        Générer un ensemble de multiples communs de 3 et 5 jusqu'à 100
+
+Exemple de sortie
+
+\{75, 45, 15, 90, 60, 30\}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q614.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python utilise une compréhension d'ensemble pour créer un ensemble nommé common\_multiples. L'ensemble contient les multiples communs de 3 et 5 dans l'intervalle de 1 à 100. Voici comment fonctionne le code :
+
+    common\_multiples = \{x for x in range(1, 101) if x % 3 == 0 and x % 5 == 0\} : Cette ligne initialise l'ensemble common\_multiples à l'aide d'une compréhension de l'ensemble.
+        for x in range(1, 101) : Cette partie du code met en place une boucle qui parcourt les nombres de 1 à 100 (inclus).
+        \{x\} : Pour chaque nombre x, cette partie l'inclut dans l'ensemble s'il est un multiple de 3 (x % 3 == 0) et également un multiple de 5 (x % 5 == 0).
+    print(common\_multiples) : Cette ligne de code affiche l'ensemble common\_multiples sur la console.
+        \end{solution}
+        
+
+        \question
+        Créer un ensemble de chaînes inversées à partir d'un autre ensemble
+
+Exemple de sortie
+
+\{'cerise', 'pomme', 'banane'\}
+
+\{'ananab', 'elppa', 'yrrehc'\}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q615.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python utilise la compréhension d'un ensemble pour créer un ensemble nommé mots\_inversés contenant les versions inversées des mots de l'ensemble original mots. Voici comment fonctionne ce code :
+
+    words = \{"apple", "banana", "cherry"\} : Cette ligne initialise un ensemble nommé words contenant trois mots : "pomme", "banane" et "cerise".
+    mots\_inversés = \{mot[::-1] pour mot dans mots\} : Cette ligne initialise l'ensemble reversed\_words à l'aide d'une compréhension de l'ensemble.
+        pour mot dans mots : Cette partie du code met en place une boucle qui parcourt chaque mot de l'ensemble des mots.
+        \{word[::-1]\} : Pour chaque mot, cette partie inclut son inverse (chaîne inversée) dans l'ensemble mots\_inversés. L'opération de découpage word[::-1] est utilisée pour inverser le mot.
+    print(words) : Cette ligne de code affiche le jeu de mots original sur la console.
+    print(mots\_inversés) : Cette ligne de code affiche le jeu de mots inversés sur la console.
+        \end{solution}
+        
+
+        \question
+        Générer un ensemble de racines carrées positives à partir d'un ensemble de nombres positifs
+
+Exemple de résultat
+
+\{16, 1, 4, 9, 25\}
+
+\{1.0, 2.0, 3.0, 4.0, 5.0\}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q616.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python utilise une compréhension d'ensemble pour créer un ensemble nommé positive\_sqrt qui contient les racines carrées des nombres de l'ensemble positive\_numbers. Voici comment fonctionne le code :
+
+    nombres\_positifs = \{1, 4, 9, 16, 25\} : Cette ligne initialise un ensemble nommé nombres\_positifs contenant cinq entiers positifs.
+    positive\_sqrt = \{math.sqrt(x) for x in positive\_numbers\} : Cette ligne initialise l'ensemble positive\_sqrt à l'aide d'une compréhension de l'ensemble.
+        for x in positive\_numbers : Cette partie du code met en place une boucle qui parcourt chaque nombre de l'ensemble positive\_numbers.
+        \{math.sqrt(x)\} : Pour chaque nombre, cette partie inclut sa racine carrée, calculée à l'aide de la fonction math.sqrt(), dans l'ensemble positive\_sqrt.
+    print(nombres\_positifs) : Cette ligne de code affiche sur la console le jeu de nombres positifs d'origine.
+    print(positive\_sqrt) : Cette ligne de code affiche l'ensemble positive\_sqrt sur la console.
+        \end{solution}
+        
+
+        \question
+        Créer un ensemble de mots en majuscules à partir d'une phrase
+
+Exemple de sortie
+
+Voici un exemple de phrase.
+
+\{'SAMPLE', 'THIS', 'SENTENCE.', 'A', 'IS'\}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q617.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python utilise une compréhension d'ensemble pour créer un ensemble nommé mots\_uppercase qui contient les versions en majuscules des mots de la phrase d'entrée. Voici comment fonctionne le code :
+
+    sentence = "Ceci est un exemple de phrase" : Cette ligne initialise une chaîne nommée sentence contenant un exemple de phrase.
+    uppercase\_words = \{word.upper() for word in sentence.split()\} : Cette ligne initialise l'ensemble uppercase\_words à l'aide d'une compréhension de l'ensemble.
+        for word in sentence.split() : Cette partie du code divise la phrase en mots à l'aide de la méthode split() et met en place une boucle pour parcourir les mots.
+        \{word.upper()\} : Pour chaque mot, cette partie inclut sa version en majuscules (convertie à l'aide de la méthode upper()) dans l'ensemble uppercase\_words.
+    print(sentence) : Cette ligne de code imprime la phrase originale sur la console.
+    print(mots\_uppercase) : Cette ligne de code imprime le jeu de mots en majuscules sur la console.
+        \end{solution}
+        
+
+        \question
+        Générer un ensemble de caractères non-voyelles à partir d'une chaîne de caractères
+
+Exemple de sortie
+
+Bonjour à tous !
+
+\{' ', '!', 'w', ',', 'r', 'H', 'l', 'd' \}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q618.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python utilise une compréhension d'ensemble pour créer un ensemble nommé non\_voyelles qui contient les caractères non-voyelles de la chaîne d'entrée. Voici comment fonctionne ce code :
+
+    string = "Hello, world !": Cette ligne initialise une chaîne nommée string contenant le texte "Hello, world !".
+    non\_voyelles = \{char for char in string if char.lower() not in 'aeiou'\} : Cette ligne initialise l'ensemble non\_voyelles à l'aide d'une compréhension d'ensemble.
+        for char in string : Cette partie du code met en place une boucle qui parcourt chaque caractère de la chaîne.
+        \{char\} : Pour chaque caractère, cette partie l'inclut dans l'ensemble non\_voyelles s'il ne s'agit pas d'une voyelle. La condition char.lower() not in 'aeiou' vérifie que la version minuscule du caractère ne se trouve pas dans la chaîne 'aeiou', filtrant ainsi les voyelles.
+    print(string) : Cette ligne de code imprime la chaîne originale sur la console.
+    print(non\_voyelles) : Cette ligne de code imprime le jeu de non\_voyelles sur la console.
+        \end{solution}
+        
+
+        \question
+        Créer un ensemble de numéros uniques à partir d'une liste
+
+Exemple de sortie
+
+[1, 2, 3, 2, 4, 5, 1]
+
+\{1, 2, 3, 4, 5\}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q619.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python utilise une compréhension d'ensemble pour créer un ensemble nommé nombres\_uniques qui contient les éléments uniques de la liste nombres. Voici comment fonctionne ce code :
+
+    nombres = [1, 2, 3, 2, 4, 5, 1] : Cette ligne initialise une liste nommée numbers contenant plusieurs entiers, dont certaines valeurs répétées.
+    nombres\_uniques = \{x for x in numbers\} : Cette ligne initialise l'ensemble unique\_numbers à l'aide d'une compréhension d'ensemble.
+        pour x dans nombres : Cette partie du code met en place une boucle qui parcourt chaque élément de la liste des nombres.
+        \{x\} : Pour chaque élément, cette partie l'inclut dans l'ensemble unique\_numbers. Cependant, comme les ensembles ne permettent pas de dupliquer les éléments, seuls les éléments uniques sont inclus dans l'ensemble résultant.
+    print(nombres) : Cette ligne de code imprime la liste originale des nombres sur la console.
+    print(nombres\_uniques) : Cette ligne de code affiche l'ensemble unique\_numbers sur la console.
+        \end{solution}
+        
+
+        \question
+        nérer un ensemble de valeurs ASCII de caractères à partir d'une chaîne de caractères
+
+Exemple de sortie
+
+Bonjour à tous !
+
+\{32, 33, 100, 101, 72, 108, 44, 111, 114, 119\}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q620.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python utilise une compréhension d'ensemble pour créer un ensemble nommé ascii\_values qui contient les valeurs ASCII des caractères de la chaîne d'entrée. Voici comment fonctionne le code :
+
+    string = "Hello, world !": Cette ligne initialise une chaîne nommée string contenant le texte "Hello, world !".
+    ascii\_values = \{ord(char) for char in string\} : Cette ligne initialise l'ensemble ascii\_values à l'aide d'une compréhension d'ensemble.
+        for char in string : Cette partie du code met en place une boucle qui parcourt chaque caractère de la chaîne.
+        \{ord(char)\} : Pour chaque caractère, cette partie inclut sa valeur ASCII, calculée à l'aide de la fonction ord(), dans l'ensemble ascii\_values.
+    print(string) : Cette ligne de code imprime la chaîne de caractères originale sur la console.
+    print(ascii\_values) : Cette ligne de code imprime le jeu de valeurs ascii sur la console.
+        \end{solution}
+        
+
+        \question
+        Générer un ensemble de tuples contenant des nombres et leurs carrés
+
+Exemple de sortie
+
+\{(2, 4), (4, 16), (1, 1), (3, 9), (5, 25)\}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q621.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python utilise une compréhension d'ensemble pour créer un ensemble nommé num\_squares qui contient des tuples avec des paires de nombres et leurs carrés. Voici comment fonctionne le code :
+
+    \{(x, x**2) for x in range(1, 6)\} : Cette compréhension d'ensemble crée un ensemble en itérant à travers les valeurs de x de 1 à 5 (inclus). Pour chaque valeur de x, elle génère un tuple (x, x**2) contenant le nombre original x et son carré x**2. Le résultat est un ensemble de ces tuples.
+    print(num\_squares) : Cette ligne de code affiche l'ensemble num\_squares sur la console.
+        \end{solution}
+        
+
+        \question
+        Créer un ensemble de voyelles à partir d'une chaîne de caractères
+
+Exemple de sortie
+
+Bonjour à tous !
+
+\{'e', 'o'\}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q622.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python utilise une compréhension d'ensemble pour créer un ensemble nommé voyelles qui contient des voyelles minuscules à partir de la chaîne d'entrée. Voici comment fonctionne le code :
+
+    string = "Hello, world !": Cette ligne initialise une chaîne nommée string contenant le texte "Hello, world !".
+    voyelles = \{char.lower() for char in string if char.lower() in 'aeiou'\} : Cette ligne initialise l'ensemble des voyelles à l'aide d'une compréhension de l'ensemble.
+        for char in string : Cette partie du code met en place une boucle qui parcourt chaque caractère de la chaîne.
+        \{char.lower()\} : Pour chaque caractère, cette partie inclut sa version minuscule dans l'ensemble des voyelles, mais uniquement s'il s'agit d'une voyelle. La condition char.lower() dans 'aeiou' vérifie si la version minuscule du caractère est l'une des voyelles minuscules.
+    print(string) : Cette ligne de code imprime la chaîne de caractères originale sur la console.
+    print(voyelles) : Cette ligne de code imprime le jeu de voyelles sur la console.
+        \end{solution}
+        
+
+        \question
+        Générer un ensemble de nombres qui sont des carrés parfaits de 1 à 100
+
+Exemple de sortie
+
+\{64, 1, 4, 36, 100, 9, 16, 49, 81, 25\}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q623.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python utilise une compréhension d'ensemble pour créer un ensemble nommé perfect\_squares qui contient des nombres carrés parfaits compris entre 1 et 100. Voici comment fonctionne le code :
+
+    \{x for x in range(1, 101) if int(x**0.5)**2 == x\} : Cette compréhension d'ensemble crée un ensemble en parcourant les valeurs de x de 1 à 100 (inclus). Pour chaque valeur de x, elle vérifie si la valeur entière de la racine carrée de x (int(x**0.5)) au carré (**2) est égale à x. Si cette condition est vraie, elle inclut x dans l'ensemble perfect\_squares.
+    print(perfect\_squares) : Cette ligne de code affiche l'ensemble perfect\_squares sur la console.
+        \end{solution}
+        
+
+        \question
+        Générer un ensemble de caractères qui sont des chiffres à partir d'une chaîne de caractères
+
+Exemple de sortie
+
+12345Bonjour67890
+
+\{'2', '8', '7', '3', '9', '0', '1', '5', '4', '6'\}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q624.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python utilise une compréhension d'ensemble pour créer un ensemble nommé digits qui contient tous les caractères digitaux uniques de la chaîne d'entrée. Voici comment fonctionne le code :
+
+    string = "12345Hello67890" : Cette ligne initialise une chaîne nommée chaîne contenant un mélange de chiffres et de caractères non numériques.
+    digits = \{char for char in string if char.isdigit()\} : Cette ligne initialise l'ensemble de chiffres à l'aide d'une compréhension de l'ensemble.
+        for char in string : Cette partie du code met en place une boucle qui parcourt chaque caractère de la chaîne.
+        \{char.isdigit()\} : Pour chaque caractère, cette partie inclut le caractère dans le jeu de chiffres s'il s'agit d'un chiffre. La condition char.isdigit() vérifie si le caractère est un chiffre ou non.
+    print(string) : Cette ligne de code imprime la chaîne de caractères originale sur la console.
+    print(digits) : Cette ligne de code imprime le jeu de chiffres sur la console.
+        \end{solution}
+        
+
+        \question
+        Créer un ensemble de nombres qui sont des puissances de 2 de 1 à 10
+
+Exemple de résultat
+
+\{32, 64, 2, 128, 4, 256, 512, 1024, 8, 16\}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q625.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python utilise une compréhension d'ensemble pour créer un ensemble nommé puissances\_de\_2 qui contient les puissances de 2 pour x allant de 1 à 10. Voici comment fonctionne le code :
+
+    \{2**x for x in range(1, 11)\} : Cette compréhension d'ensemble crée un ensemble en parcourant les valeurs de x de 1 à 10 (inclus). Pour chaque valeur de x, elle calcule la puissance de 2 correspondante, 2**x, et l'inclut dans l'ensemble powers\_of\_2.
+    print(puissances\_de\_2) : Cette ligne de code affiche l'ensemble powers\_of\_2 sur la console.
+        \end{solution}
+        
+
+        \question
+        Générer un ensemble d'éléments communs à partir de deux listes
+
+Exemple de sortie
+
+[1, 2, 3, 4, 5]
+
+[3, 4, 5, 6, 7]
+
+\{3, 4, 5\}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q626.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python utilise une compréhension d'ensemble pour créer un ensemble nommé common\_elements qui contient les éléments communs à deux listes, list1 et list2. Voici comment fonctionne ce code :
+
+    list1 = [1, 2, 3, 4, 5] et list2 = [3, 4, 5, 6, 7] : Ces lignes initialisent deux listes, list1 et list2, avec des valeurs entières.
+    common\_elements = \{x for x in list1 if x in list2\} : Cette ligne initialise l'ensemble common\_elements à l'aide d'une compréhension d'ensemble.
+        for x in list1 : Cette partie du code met en place une boucle qui parcourt chaque élément x de la liste1.
+        \{x for x in list1 if x in list2\} : Pour chaque élément x dans list1, cette partie inclut x dans l'ensemble common\_elements s'il se trouve également dans list2.
+    print(list1) : Cette ligne de code affiche list1 sur la console.
+    print(list2) : Cette ligne de code affiche la liste 2 sur la console.
+    print(common\_elements) : Cette ligne de code affiche le jeu d'éléments communs sur la console.
+        \end{solution}
+        
+
+        \question
+        Générer un ensemble de caractères non alphanumériques à partir d'une chaîne de caractères
+
+Exemple de sortie
+
+Bonjour à tous !
+
+\{'!', ' ', ','\}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q627.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python utilise une compréhension d'ensemble pour créer un ensemble nommé non\_alphanumeric qui contient tous les caractères non alphanumériques de la chaîne d'entrée. Voici comment fonctionne ce code :
+
+    string = "Hello, world !": Cette ligne initialise une chaîne nommée string contenant des lettres, des espaces et des signes de ponctuation.
+    non\_alphanumeric = \{char for char in string if not char.isalnum()\} : Cette ligne initialise l'ensemble non\_alphanumérique à l'aide d'une compréhension d'ensemble.
+        for char in string : Cette partie du code met en place une boucle qui parcourt chaque caractère de la chaîne.
+        \{char.isalnum()\} : Pour chaque caractère, cette partie inclut le caractère dans l'ensemble non\_alphanumérique s'il n'est pas alphanumérique. La condition char.isalnum() vérifie si le caractère est alphanumérique ou non.
+    print(string) : Cette ligne de code imprime la chaîne de caractères originale sur la console.
+    print(non\_alphanumerique) : Cette ligne de code imprime le jeu de caractères non alphanumériques sur la console.
+        \end{solution}
+        
+
+        \question
+        Créer un ensemble de caractères qui sont des consonnes à partir d'une chaîne de caractères
+
+Exemple de sortie
+
+Bonjour à tous !
+
+\{'H', 'r', 'w', 'd', 'l' \}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q628.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python utilise une compréhension d'ensemble pour créer un ensemble nommé consonnes qui contient tous les caractères consonants de la chaîne d'entrée. Voici comment fonctionne ce code :
+
+    string = "Hello, world !": Cette ligne initialise une chaîne nommée chaîne contenant des lettres, des espaces et des signes de ponctuation.
+    consonnes = \{char for char in string if char.isalpha() and char.lower() not in 'aeiou'\} : Cette ligne initialise l'ensemble des consonnes à l'aide d'une compréhension de l'ensemble.
+        for char in string : Cette partie du code met en place une boucle qui parcourt chaque caractère de la chaîne.
+        \{char.isalpha() et char.lower() not in 'aeiou'\} : Pour chaque caractère, cette partie inclut le caractère dans le jeu de consonnes s'il s'agit d'un caractère alphabétique (c'est-à-dire char.isalpha()) et non d'une voyelle minuscule (c'est-à-dire char.lower() not in 'aeiou').
+    print(string) : Cette ligne de code affiche la chaîne de caractères originale sur la console.
+    print(consonnes) : Cette ligne de code affiche le jeu de consonnes sur la console.
+        \end{solution}
+        
+
+        \question
+        Créer un ensemble de chaînes de caractères avec des caractères en majuscules
+
+Exemple de sortie
+
+\{'banane', 'pomme', 'cerise'\}
+
+\{'APPLE', 'BANANA', 'CHERRY'\}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q629.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python utilise une compréhension d'ensemble pour créer un nouvel ensemble nommé uppercase\_strings qui contient les versions en majuscules des mots de l'ensemble d'entrée strings. Voici comment fonctionne ce code :
+
+    strings = \{"apple", "banana", "cherry"\} : Cette ligne initialise un ensemble nommé strings avec trois éléments de chaîne.
+    uppercase\_strings = {word.upper() for word in strings} : Cette ligne initialise l'ensemble uppercase\_strings à l'aide d'une compréhension de l'ensemble.
+        for word in strings : Cette partie du code met en place une boucle qui parcourt chaque mot (chaîne) de l'ensemble strings.
+        \{word.upper()\} : Pour chaque mot, cette partie inclut la version en majuscules du mot dans l'ensemble uppercase\_strings à l'aide de la méthode .upper().
+    print(strings) : Cette ligne de code imprime les chaînes du jeu original sur la console.
+    print(uppercase\_strings) : Cette ligne de code imprime le jeu de chaînes en majuscules sur la console.
+        \end{solution}
+        
+
+        \question
+        Créer une série de mots avec leurs caractères triés.
+
+Exemple de sortie
+
+\{'banane', 'pomme', 'cerise'\}
+
+\{'aaabnn', 'aelpp', 'cehrry'\}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q630.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python utilise la compréhension d'un ensemble pour créer un nouvel ensemble appelé sorted\_chars, qui contient les mots de l'ensemble d'entrée words, mais dont les caractères sont triés par ordre alphabétique. Voici comment fonctionne ce code :
+
+    words = \{"apple", "banana", "cherry"\} : Cette ligne initialise un ensemble nommé words avec trois éléments de type chaîne de caractères.
+    sorted\_chars = {''.join(sorted(word)) for word in words} : Cette ligne initialise l'ensemble sorted\_chars à l'aide d'une compréhension d'ensemble.
+        for word in words : Cette partie du code met en place une boucle qui parcourt chaque mot (chaîne) de l'ensemble words.
+        \{''.join(sorted(word))\} : Pour chaque mot, cette partie trie les caractères du mot par ordre alphabétique à l'aide de la fonction sorted(), puis ''.join() est utilisé pour concaténer les caractères triés en une seule chaîne.
+    print(words) : Cette ligne de code imprime les mots du jeu original sur la console.
+    print(sorted\_chars) : Cette ligne de code affiche le jeu de caractères triés sur la console.
+        \end{solution}
+        
+
+        \question
+        Générer un ensemble de tuples contenant des nombres pairs et impairs de 1 à 10
+
+Exemple de sortie
+
+\{(3, 4), (5, 4), (3, 10), (9, 2), (5, 10), (9, 8), (1, 6), (7, 4), (7, 10), (5, 6), (3, 6), (9, 4), (9, 10), (1, 2), (1, 8), (7, 6), (3, 2), (5, 2), (3, 8), (5, 8), (9, 6), (1, 4), (1, 10), (7, 2), (7, 8)\}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q631.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python utilise une compréhension d'ensemble pour créer un nouvel ensemble nommé even\_odd\_pairs. Il contient des paires de nombres dont le premier (x) est impair et compris entre 1 et 10, et le second (y) est pair et compris entre 2 et 12. Voici comment fonctionne le code :
+
+    \{(x, y) for x in range(1, 11, 2) for y in range(2, 12, 2)\} : Il s'agit d'une compréhension d'ensemble qui crée des paires (x, y) pour x dans l'intervalle des nombres impairs de 1 à 10 (1, 3, 5, 7, 9) et pour y dans l'intervalle des nombres pairs de 2 à 12 (2, 4, 6, 8, 10, 12).
+        pour x dans range(1, 11, 2) : Cette partie du code met en place la boucle externe, qui parcourt les nombres impairs de 1 à 10 avec un pas de 2.
+        for y in range(2, 12, 2) : Cette partie du code met en place la boucle interne, itérant à travers les nombres pairs de 2 à 12 avec un pas de 2.
+        (x, y) : Pour chaque combinaison de x et y, il crée un tuple contenant les valeurs de x et y.
+    print(even\_odd\_pairs) : Cette ligne de code affiche l'ensemble even\_odd\_pairs sur la console.
+        \end{solution}
+        
+
+        \question
+        Créer un ensemble de mots dont les voyelles sont remplacées par des traits de soulignement.
+
+Exemple de résultat
+
+\{'banane', 'cerise', 'pomme'\}
+
+\{'\\_ppl\\_', 'ch\\_rry', 'b\\_n\\_n\\_'\}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q632.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python utilise la compréhension d'un ensemble pour créer un nouvel ensemble nommé vowel\_replaced, qui contient des mots de l'ensemble d'entrée words avec des voyelles remplacées par des traits de soulignement. Voici comment fonctionne ce code :
+
+    words = \{"apple", "banana", "cherry"\} : Cette ligne initialise un ensemble nommé words avec trois éléments de type chaîne de caractères.
+    vowel\_replaced = {''.join(['\_' if char.lower() in 'aeiou' else char for char in word]) for word in words} : Cette ligne initialise l'ensemble vowel\_replaced à l'aide d'une compréhension de l'ensemble.
+        for word in words : Cette partie du code met en place une boucle qui parcourt chaque mot (chaîne) de l'ensemble de mots.
+        ''.join(['\_' if char.lower() in 'aeiou' else char for char in word]) : Pour chaque mot, cette partie crée une nouvelle chaîne où chaque caractère est remplacé par un trait de soulignement ('\_') s'il s'agit d'une voyelle (en minuscules), ou laissé inchangé s'il ne s'agit pas d'une voyelle.
+    print(words) : Cette ligne de code imprime les mots du jeu original sur la console.
+    print(voyelle\_remplacée) : Cette ligne de code affiche sur la console le jeu de voyelles\_remplacées.
+        \end{solution}
+        
+
+        \question
+        Générer un ensemble de tuples contenant des nombres et leurs cubes
+
+Exemple de sortie
+
+\{(3, 27), (4, 64), (1, 1), (5, 125), (2, 8)\}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q633.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python utilise une compréhension d'ensemble pour créer un nouvel ensemble nommé num\_cubes. Il contient des paires de nombres où le premier nombre (x) est compris entre 1 et 5, et le second nombre est le cube de x. Voici comment fonctionne le code :
+
+    \{(x, x**3) for x in range(1, 6)\} : Il s'agit d'une compréhension d'ensemble qui crée des paires (x, x**3) pour x dans la plage de nombres allant de 1 à 5.
+        for x in range(1, 6) : Cette partie du code met en place la boucle, itérant sur les nombres de 1 à 5 (inclus).
+        (x, x**3) : Pour chaque valeur de x, elle crée un tuple contenant la valeur de x et son cube, x**3.
+    print(num\_cubes) : Cette ligne de code affiche la valeur de num\_cubes sur la console.
+        \end{solution}
+        
+
+        \question
+        Créer un ensemble de personnages uniques à partir d'une liste de mots
+
+Exemple de sortie
+
+['apple', 'banana', 'cherry']
+
+\{'y', 'a', 'e', 'c', 'b', 'p', 'l', 'n', 'h', 'r' \}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q634.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python utilise une compréhension d'ensemble pour créer un nouvel ensemble nommé unique\_chars, qui contient des caractères uniques extraits d'une liste de mots. Voici comment fonctionne ce code :
+
+    words = ["apple", "banana", "cherry"] : Cette ligne initialise une liste nommée words avec trois éléments de type chaîne de caractères.
+    unique\_chars = \{char for word in words for char in word\} : Cette ligne initialise l'ensemble unique\_chars à l'aide d'une compréhension de l'ensemble.
+        pour mot dans mots : Cette partie du code met en place une boucle imbriquée qui parcourt chaque mot de la liste des mots.
+        for char in word : Pour chaque mot, cette partie parcourt chaque caractère du mot et ajoute chaque caractère unique à l'ensemble unique\_chars.
+    print(words) : Cette ligne de code imprime la liste originale de mots, words, sur la console.
+    print(unique\_chars) : Cette ligne de code affiche sur la console le jeu de caractères unique\_chars, qui contient les caractères uniques des mots.
+        \end{solution}
+        
+
+        \question
+        Générer un ensemble de tuples contenant des nombres et leurs valeurs absolues
+
+Exemple de sortie
+
+[-2, 3, -5, 7, -11]
+
+\{(7, 7), (-11, 11), (3, 3), (-5, 5), (-2, 2)\}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q635.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python utilise une compréhension d'ensemble pour créer un nouvel ensemble nommé valeurs\_absolues, qui contient des paires de nombres et leurs valeurs absolues à partir d'une liste de nombres. Voici comment fonctionne ce code :
+
+    nombres = [-2, 3, -5, 7, -11] : Cette ligne initialise une liste nommée numbers avec cinq éléments entiers.
+    valeurs\_absolues = \{(x, abs(x)) for x in numbers\} : Cette ligne initialise l'ensemble valeurs\_absolues à l'aide d'une compréhension d'ensemble.
+        for x in numbers : Cette partie du code met en place une boucle qui parcourt chaque nombre de la liste des nombres.
+        (x, abs(x)) : Pour chaque nombre, cette partie crée un tuple contenant le nombre lui-même (x) et sa valeur absolue (abs(x)).
+    print(nombres) : Cette ligne de code imprime la liste originale de nombres, numbers, sur la console.
+    print(valeurs\_absolues) : Cette ligne de code affiche sur la console le jeu de valeurs absolues, qui contient les paires de nombres et leurs valeurs absolues.
+        \end{solution}
+        
+
+        \question
+        Créer une série de mots dont les caractères sont répétés deux fois.
+
+Exemple de sortie
+
+['apple', 'banana', 'cherry']
+
+\{'aappppllee', 'bbaannaannaa', 'cchheerrrryy'\}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q636.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python utilise une compréhension d'ensemble pour créer un nouvel ensemble nommé duplicated\_chars, qui contient des mots avec des caractères dupliqués à partir d'une liste de mots. Voici comment fonctionne ce code :
+
+    mots = ["pomme", "banane", "cerise"] : Cette ligne initialise une liste nommée words avec trois éléments de type chaîne de caractères.
+    duplicated\_chars = \{''.join([char*2 for char in word]) for word in words\} : Cette ligne initialise l'ensemble duplicated\_chars à l'aide d'une compréhension d'ensemble.
+        for word in words : Cette partie du code met en place une boucle qui parcourt chaque mot de la liste des mots.
+        for char in word : Pour chaque mot, cette partie parcourt chaque caractère du mot et le double en utilisant char*2.
+        ''.join(...) : Cette partie du code combine les caractères doublés en une seule chaîne pour chaque mot.
+    print(words) : Cette ligne de code imprime la liste originale de mots, words, sur la console.
+    print(duplicated\_chars) : Cette ligne de code imprime sur la console l'ensemble duplicated\_chars, qui contient les mots dont les caractères sont dupliqués.
+        \end{solution}
+        
+
+        \question
+        Générer un ensemble de tuples contenant des nombres et leurs carrés, mais seulement pour les nombres pairs
+
+Exemple de sortie
+
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+\{(2, 4), (4, 16), (8, 64), (10, 100), (6, 36)\}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q637.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python utilise une compréhension d'ensemble pour créer un nouvel ensemble nommé even\_num\_squares, qui contient des tuples de nombres pairs et leurs carrés à partir d'une liste de nombres. Voici comment fonctionne ce code :
+
+    nombres = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] : Cette ligne initialise une liste nommée nombres avec dix éléments entiers.
+    even\_num\_squares = \{(x, x**2) for x in numbers if x % 2 == 0\} : Cette ligne initialise l'ensemble even\_num\_squares à l'aide d'une compréhension d'ensemble.
+        for x in numbers : Cette partie du code met en place une boucle qui parcourt chaque nombre de la liste des nombres.
+        if x % 2 == 0 : Cette partie du code filtre les nombres pour n'inclure que les nombres pairs (divisibles par 2).
+        (x, x**2) : Pour chaque nombre pair, cette partie crée un tuple contenant le nombre original et son carré.
+    print(nombres) : Cette ligne de code imprime la liste originale des nombres, numbers, sur la console.
+    print(even\_num\_squares) : Cette ligne de code affiche sur la console l'ensemble even\_num\_squares, qui contient des tuples de nombres pairs et leurs carrés.
+        \end{solution}
+        
+
+        \question
+        Créer un ensemble de nombres qui sont des cubes parfaits de 1 à 100
+
+Exemple de résultat
+
+\{8, 1, 27\}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q638.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python utilise une compréhension d'ensemble pour créer un nouvel ensemble nommé perfect\_cubes, qui contient des nombres cubiques parfaits compris entre 1 et 100. Voici comment fonctionne le code :
+
+    perfect\_cubes = \{x for x in range(1, 101) if int(x**(1/3))**3 == x\} : Cette ligne initialise l'ensemble perfect\_cubes à l'aide d'une compréhension de l'ensemble.
+        for x in range(1, 101) : Cette partie du code met en place une boucle qui parcourt chaque nombre compris entre 1 et 100 (inclus).
+        if int(x**(1/3))**3 == x : Cette partie du code filtre les nombres pour n'inclure que ceux qui sont des cubes parfaits. Elle vérifie si la racine cubique de x, convertie en entier et élevée à la puissance 3, est égale à x. Si c'est le cas, cela signifie que x est un cube parfait.
+    print(perfect\_cubes) : Cette ligne de code affiche sur la console l'ensemble perfect\_cubes, qui contient les nombres de cubes parfaits.
+        \end{solution}
+        
+
+        \question
+        Créer un ensemble de caractères sans espace à partir d'une chaîne de caractères
+
+Exemple de sortie
+
+Bonjour à tous !
+
+\{'e', 'r', 'H', 'd', 'w', ',', 'l', '!', 'o'\}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q639.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python utilise une compréhension d'ensemble pour créer un nouvel ensemble nommé non\_whitespace\_chars, qui contient les caractères sans espace de la chaîne "Hello, world !". Voici comment fonctionne ce code :
+
+    non\_whitespace\_chars = \{char for char in string if not char.isspace()\} : Cette ligne initialise l'ensemble non\_whitespace\_chars à l'aide d'une compréhension de l'ensemble.
+        for char in string : Cette partie du code parcourt chaque caractère de la chaîne "Hello, world !".
+        if not char.isspace() : Cette partie du code filtre les caractères pour n'inclure que ceux qui ne sont pas des caractères d'espacement. Elle vérifie si le caractère char n'est pas un caractère d'espacement à l'aide de la méthode isspace().
+    print(string) : Cette ligne de code imprime la chaîne originale, "Hello, world !", sur la console.
+    print(non\_whitespace\_chars) : Cette ligne de code affiche sur la console le jeu de caractères non\_whitespace\_chars, qui contient les caractères non blancs de la chaîne.
+        \end{solution}
+        
+
+        \question
+        Créer un ensemble de nombres pairs de 1 à 50 qui ne sont pas divisibles par 4
+
+Exemple de résultat
+
+\{2, 34, 6, 38, 10, 42, 14, 46, 18, 50, 22, 26, 30\}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{pascorrige.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            
+        \end{solution}
+        
+
+        \question
+        Générer un ensemble d'éléments communs à partir de plusieurs ensembles
+
+Exemple de sortie
+
+\{1, 2, 3, 4, 5\}
+
+\{3, 4, 5, 6, 7\}
+
+\{5, 6, 7, 8, 9\}
+
+\{5\}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q640.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Dans ce code Python, vous disposez de trois ensembles : set1, set2 et set3, et vous recherchez les éléments communs présents dans les trois ensembles. Voici comment fonctionne le code :
+
+    set1 = \{1, 2, 3, 4, 5\} : Cette ligne définit l'ensemble 1 comme un ensemble contenant les éléments 1, 2, 3, 4 et 5.
+    set2 = \{3, 4, 5, 6, 7\} : Cette ligne définit l'ensemble 2 comme un ensemble contenant les éléments 3, 4, 5, 6 et 7.
+    set3 = \{5, 6, 7, 8, 9\} : Cette ligne définit l'ensemble 3 comme un ensemble contenant les éléments 5, 6, 7, 8 et 9.
+    common\_elements = \{x for x in set1 if x in set2 and x in set3\} : Cette ligne crée un ensemble nommé common\_elements à l'aide d'une compréhension d'ensemble. Elle parcourt les éléments de l'ensemble 1 et inclut un élément dans l'ensemble common\_elements s'il est également présent dans les ensembles 2 et 3. En d'autres termes, il trouve les éléments qui sont communs aux trois ensembles.
+    print(set1) : Cette ligne affiche l'ensemble set1 sur la console.
+    print(set2) : Cette ligne affiche l'ensemble set2 sur la console.
+    print(set3) : Cette ligne affiche l'ensemble set3 sur la console.
+    print(common\_elements) : Cette ligne affiche le jeu d'éléments communs sur la console.
+        \end{solution}
+        
+
+        \question
+        Créez un ensemble de chaînes de caractères dont les voyelles ont été supprimées.
+
+Exemple de résultat
+
+\{'banane', 'cerise', 'pomme'\}
+
+\{'chrry', 'ppl', 'bnn'\}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q641.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Vous voulez créer un nouvel ensemble appelé no\_vowels qui contient les mêmes mots que strings, mais en supprimant les voyelles de chaque mot. Voici comment fonctionne le code :
+
+    strings = \{"apple", "banana", "cherry"\} : Cette ligne définit un ensemble nommé strings contenant trois mots : "pomme", "banane" et "cerise".
+    no\_vowels = \{''.join([char for char in word if char.lower() not in 'aeiou']) for word in strings\} : Cette ligne utilise une compréhension d'ensemble pour créer l'ensemble no\_vowels. Elle parcourt chaque mot de l'ensemble strings et, pour chaque mot, traite les caractères qu'il contient. Il vérifie si chaque caractère (converti en minuscule) n'est pas une voyelle ('a', 'e', 'i', 'o', 'u'). Si le caractère n'est pas une voyelle, il l'inclut dans le mot traité. La partie ''.join(...) est utilisée pour concaténer les caractères en un seul mot. Ainsi, pour chaque mot de strings, ce code crée un nouveau mot sans voyelles et l'ajoute à l'ensemble no\_vowels.
+    print(strings) : Cette ligne affiche sur la console le jeu de chaînes original, qui contient les mots avec voyelles.
+    print(no\_vowels) : Cette ligne affiche sur la console le jeu no\_vowels, qui contient les mots modifiés dont les voyelles ont été supprimées.
+        \end{solution}
+        
+
+        \question
+        Générer un ensemble de mots commençant par une voyelle à partir d'une phrase
+
+Exemple de résultat
+
+Voici un exemple de phrase contenant des mots commençant par des voyelles.
+
+\{'a', 'is'\}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q642.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Dans ce code Python, vous avez une phrase et vous voulez créer un ensemble appelé vowel\_start\_words qui contient les mots de la phrase qui commencent par une voyelle (en majuscules ou en minuscules). Voici comment fonctionne le code :
+
+    sentence = "Voici un exemple de phrase avec des mots commençant par des voyelles" : Cette ligne définit une chaîne appelée phrase contenant la phrase d'entrée.
+    vowel\_start\_words = \{word for word in sentence.split() if word[0].lower() in 'aeiou'\} : Cette ligne utilise une compréhension d'ensemble pour créer un ensemble appelé mots\_voyelles\_début. Voici comment cela fonctionne :
+        sentence.split() divise la phrase en une liste de mots.
+        for word in sentence.split() parcourt chaque mot de la liste.
+        if word[0].lower() in 'aeiou' vérifie si la minuscule du premier caractère du mot est une voyelle. Si c'est le cas, le mot est inclus dans l'ensemble.
+    print(phrase) : Cette ligne affiche la phrase originale sur la console.
+    print(mots\_voyelles\_début) : Cette ligne affiche sur la console l'ensemble mots\_début\_voyelles, qui contient les mots de la phrase commençant par des voyelles.
+        \end{solution}
+        
+
+        \question
+        Créer un ensemble de voyelles uniques à partir d'une liste de mots
+
+Exemple de résultat
+
+['apple', 'banana', 'cherry']
+
+\{'a', 'e'\}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q643.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python traite une liste de mots pour en extraire les voyelles uniques. Voici ce que fait chaque partie du code :
+
+    words = ["apple", "banana", "cherry"] : Cette ligne définit une liste appelée words, qui contient trois mots : "pomme", "banane" et "cerise".
+    unique\_vowels = \{char for word in words for char in word if char.lower() in 'aeiou'\} : Cette ligne utilise la compréhension d'un ensemble pour créer un ensemble appelé unique\_voyelles. Voici comment cela fonctionne :
+        for word in words parcourt chaque mot de la liste des mots.
+        for char in word parcourt chaque caractère du mot.
+        if char.lower() in 'aeiou' vérifie si la minuscule du caractère est une voyelle ('a', 'e', 'i', 'o', ou 'u'). Si c'est le cas, le caractère est inclus dans l'ensemble. La compréhension de l'ensemble permet de s'assurer que seuls les caractères voyelles uniques sont inclus.
+    print(words) : Cette ligne imprime la liste originale des mots sur la console.
+    print(unique\_vowels) : Cette ligne affiche l'ensemble unique\_voyelles, qui contient les voyelles uniques extraites des mots de la liste.
+        \end{solution}
+        
+
+        \question
+        Créer un ensemble de nombres palindromes de 1 à 100
+
+Exemple de résultat
+
+\{1, 2, 3, 4, 5, 6, 7, 8, 9, 33, 11, 44, 66, 77, 99, 22, 55, 88\}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q644.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python utilise une compréhension d'ensemble pour créer un ensemble nommé palindromes, qui contient des nombres palindromiques compris entre 1 et 100. Voici comment fonctionne le code :
+
+    palindromes = \{x for x in range(1, 101) if str(x) == str(x)[::-1]\} : Cette ligne initialise l'ensemble palindromes à l'aide d'une compréhension de l'ensemble.
+        for x in range(1, 101) : Cette partie du code parcourt les nombres de 1 à 100 (inclus).
+        if str(x) == str(x)[::-1] : Cette partie du code vérifie si un nombre est un palindrome. Pour ce faire, elle convertit le nombre x en chaîne de caractères à l'aide de str(x). Ensuite, elle vérifie si la représentation en chaîne du nombre est égale à son inverse, obtenu en découpant str(x)[::-1].
+    print(palindromes) : Cette ligne de code imprime le jeu de palindromes sur la console, qui contient les nombres palindromiques compris dans l'intervalle spécifié.
+        \end{solution}
+        
+
+        \question
+        Générer un ensemble de mots qui sont des anagrammes à partir d'une liste de mots
+
+Exemple de sortie
+
+['apple', 'banana', 'elppa', 'race', 'care', 'cherry']
+
+\{'aaabnn', 'cehrry', 'aelpp', 'acer'\}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q645.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python utilise une compréhension d'ensemble pour créer un ensemble nommé anagrammes, qui contient les lettres triées de chaque mot de la liste words. Voici comment fonctionne le code :
+
+    anagrammes = \{''.join(sorted(word)) for word in words\} : Cette ligne initialise l'ensemble d'anagrammes en utilisant une compréhension de l'ensemble.
+        for word in words : Cette partie du code parcourt chaque mot de la liste words.
+        ''.join(sorted(word)) : Pour chaque mot, le code trie les lettres par ordre alphabétique à l'aide de la fonction sorted, puis les réunit en une seule chaîne. Cela permet de créer un anagramme du mot.
+    print(words) : Cette ligne de code imprime la liste originale des mots, qui est ["apple", "banana", "elppa", "race", "care", "cherry"], sur la console.
+    print(anagrammes) : Cette ligne de code imprime le jeu d'anagrammes, qui contient les lettres triées de chaque mot, sur la console.
+        \end{solution}
+        
+
+        \question
+        Créer un ensemble de mots avec leurs caractères triés par ordre décroissant
+
+Exemple de résultat
+
+['apple', 'banana', 'cherry']
+
+\{'pplea', 'yrrhec', 'nnbaaa'\}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q646.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python utilise une compréhension d'ensemble pour créer un ensemble appelé sorted\_descending, qui contient les lettres de chaque mot de la liste words triées par ordre décroissant (dans l'ordre alphabétique inverse). Voici comment fonctionne ce code :
+
+    sorted\_descending = \{''.join(sorted(word, reverse=True)) for word in words\} : Cette ligne initialise l'ensemble sorted\_descending à l'aide d'une compréhension de l'ensemble.
+        for word in words : Cette partie du code parcourt chaque mot de la liste words.
+        ''.join(sorted(word, reverse=True)) : Pour chaque mot, le code trie les lettres dans l'ordre alphabétique inverse (ordre décroissant) en utilisant la fonction sorted avec l'argument reverse=True, puis les joint en une seule chaîne.
+    print(words) : Cette ligne de code imprime la liste originale des mots, qui est ["apple", "banana", "cherry"], sur la console.
+    print(sorted\_descending) : Cette ligne de code imprime sur la console l'ensemble sorted\_descending, qui contient les lettres de chaque mot trié par ordre décroissant.
+        \end{solution}
+        
+
+        \question
+        enerate un ensemble de caractères qui apparaissent exactement deux fois dans une chaîne de caractères
+
+Exemple de sortie
+
+Bonjour à tous !
+
+\{'o'\}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q647.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python utilise une compréhension d'ensemble pour créer un ensemble nommé twice\_chars, qui contient les caractères qui apparaissent exactement deux fois dans la chaîne de caractères. Voici comment fonctionne ce code :
+
+    twice\_chars = \{char for char in string if string.count(char) == 2\} : Cette ligne initialise l'ensemble twice\_chars à l'aide d'une compréhension de l'ensemble.
+        for char in string : Cette partie du code parcourt chaque caractère de la chaîne de caractères.
+        if string.count(char) == 2 : cette ligne vérifie si le nombre de caractères dans la chaîne est égal à 2, ce qui signifie que le caractère apparaît exactement deux fois dans la chaîne.
+    print(string) : Cette ligne de code imprime la chaîne originale, qui est "Hello, world !", sur la console.
+    print(twice\_chars) : Cette ligne de code imprime sur la console l'ensemble twice\_chars, qui contient les caractères qui apparaissent exactement deux fois dans la chaîne.
+        \end{solution}
+        
+
+        \question
+        Créer un ensemble de chaînes de caractères avec tous les caractères en majuscules à partir d'une liste de chaînes de caractères.
+
+Exemple de sortie
+
+['apple', 'banana', 'cherry']
+
+\{'Banane', 'Pomme', 'Cerise' \}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q648.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python utilise une compréhension d'ensemble pour créer un ensemble nommé chaînes\_capitalisées, qui contient des chaînes dont chaque mot est en majuscule. Voici comment fonctionne ce code :
+
+    chaînes\_capitalisées = \{' '.join([word.capitalize() for word in string.split()]) for string in strings\} : Cette ligne initialise l'ensemble chaînes\_capitalisées à l'aide d'une compréhension de l'ensemble.
+        for string in strings : Cette partie du code parcourt chaque chaîne de la liste des chaînes.
+        string.split() : Elle divise la chaîne actuelle en une liste de mots, en les séparant par des espaces.
+        [word.capitalize() for word in string.split()] : Il parcourt les mots de la liste et met la première lettre de chaque mot en majuscule.
+        ' '.join([word.capitalize() for word in string.split()]) : Il réunit les mots en majuscules en une seule chaîne de caractères, en les séparant par des espaces.
+    print(strings) : Cette ligne de code imprime la liste originale des chaînes de caractères, qui est ["apple", "banana", "cherry"], sur la console.
+    print(chaînes\_capitalisées) : Cette ligne de code imprime sur la console le jeu de chaînes capitalisées, qui contient les chaînes dont les mots sont en majuscules.
+        \end{solution}
+        
+
+        \question
+        Générer un ensemble de mots comportant au moins une voyelle à partir d'une liste de mots
+
+Exemple de résultat
+
+['apple', 'banana', 'cherry']
+
+\{'banane', 'pomme', 'cerise' \}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q649.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python utilise une compréhension d'ensemble pour créer un ensemble nommé mots\_voyelles, qui contient des mots de la liste des mots contenant au moins une voyelle (a, e, i, o ou u). Voici comment fonctionne ce code :
+
+    mots\_voyelles = \{mot pour mot dans mots si any(char.lower() in 'aeiou' pour char dans mot)\} : Cette ligne initialise l'ensemble mots\_voyelles à l'aide d'une compréhension de l'ensemble.
+        for word in words : Cette partie du code parcourt chaque mot de la liste des mots.
+        if any(char.lower() in 'aeiou' for char in word) : Cette partie du code vérifie si au moins un caractère du mot actuel est une voyelle minuscule (a, e, i, o ou u).
+    print(words) : Cette ligne de code imprime la liste originale des mots, qui est ["apple", "banana", "cherry"], sur la console.
+    print(mots\_voyelles) : Cette ligne de code imprime sur la console l'ensemble mots\_voyelles, qui contient les mots comportant au moins une voyelle.
+        \end{solution}
+        
+
+        \question
+        Créer une série de mots dont les caractères sont répétés trois fois à partir d'une liste de mots.
+
+Exemple de résultat
+
+['apple', 'banana', 'cherry']
+
+\{'bbbaaannnaaannnaaa', 'aaappppppllleee', 'ccchhheeerrrrrryyy'\}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q650.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python utilise la compréhension d'un ensemble pour créer un ensemble nommé tripled\_chars, qui contient des mots de la liste des mots dont chaque caractère est répété trois fois. Voici comment fonctionne ce code :
+
+    tripled\_chars = \{''.join([char*3 for char in word]) for word in words\} : Cette ligne initialise l'ensemble tripled\_chars à l'aide d'une compréhension d'ensemble.
+        for word in words : Cette partie du code parcourt chaque mot de la liste des mots.
+        ''.join([char*3 for char in word]) : Cette partie du code répète trois fois chaque caractère du mot actuel et les joint à l'aide d'une chaîne vide. Cela crée un mot avec des caractères triplés.
+    print(words) : Cette ligne de code imprime la liste originale de mots, qui est ["pomme", "banane", "cerise"], sur la console.
+    print(tripled\_chars) : Cette ligne de code imprime sur la console l'ensemble tripled\_chars, qui contient des mots dont chaque caractère est répété trois fois.
+        \end{solution}
+        
+
+        \question
+        Créer un ensemble de mots dont les caractères sont triés et concaténés
+
+Exemple de sortie
+
+['apple', 'banana', 'cherry']
+
+\{'aelpp', 'cehrry', 'aaabnn'\}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q651.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python utilise une compréhension d'ensemble pour créer un ensemble nommé sorted\_concatenated, qui contient des mots de la liste de mots triés et concaténés. Voici comment fonctionne le code :
+
+    sorted\_concatenated = \{''.join(sorted(word)) for word in words\} : Cette ligne initialise l'ensemble sorted\_concatenated à l'aide d'une compréhension d'ensemble.
+        for word in words : Cette partie du code parcourt chaque mot de la liste des mots.
+        ''.join(sorted(word)) : Cette partie du code trie les caractères du mot actuel par ordre alphabétique, puis les joint en utilisant une chaîne vide. Cela crée un mot dans lequel les caractères sont triés.
+    print(mots) : Cette ligne de code imprime la liste originale de mots, qui est ["apple", "banana", "cherry"], sur la console.
+    print(sorted\_concatenated) : Cette ligne de code imprime sur la console l'ensemble sorted\_concatenated, qui contient des mots dont les caractères sont triés par ordre alphabétique.
+        \end{solution}
+        
+
+        \question
+        Créer une série de mots avec leurs caractères mélangés à partir d'une liste de mots.
+
+Exemple de sortie
+
+['apple', 'banana', 'cherry']
+
+\{'hreyrc', 'nbaana', 'lepap'\}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q652.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python mélange les caractères de chaque mot de la liste des mots à l'aide d'un échantillonnage aléatoire et crée un ensemble nommé shuffled\_chars pour stocker les versions mélangées des mots. Voici comment fonctionne le code :
+
+    import random : Cette ligne importe le module random, qui fournit des fonctions permettant de générer des nombres aléatoires et d'effectuer des opérations aléatoires.
+    words = ["apple", "banana", "cherry"] : Cette ligne initialise une variable nommée words et lui attribue une liste de trois mots.
+    shuffled\_chars = \{''.join(random.sample(word, len(word))) for word in words\} : Cette ligne initialise un ensemble nommé shuffled\_chars à l'aide d'une compréhension d'ensemble.
+        for word in words : Cette partie du code parcourt chaque mot de la liste des mots.
+        random.sample(word, len(word)) : Pour chaque mot, il utilise la fonction random.sample pour mélanger ses caractères. random.sample renvoie un échantillon aléatoire de la séquence d'entrée (dans ce cas, les caractères du mot) de la longueur spécifiée.
+        ''.join(...) : Cette partie du code réunit les caractères mélangés en une seule chaîne.
+    print(words) : Cette ligne de code imprime la liste originale des mots sur la console.
+    print(shuffled\_chars) : Cette ligne de code imprime le jeu de caractères mélangés (qui contient les versions mélangées des mots) sur la console.
+        \end{solution}
+        
+
+        \question
+        Filtrer les nombres négatifs d'un ensemble
+
+Exemple de sortie
+
+\{1, 3, 5, -4, -2\}
+
+\{1, 3, 5\}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q653.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python utilise une compréhension d'ensemble pour filtrer les nombres positifs d'un ensemble donné et crée un nouvel ensemble nommé nombres\_positifs. Voici comment fonctionne le code :
+
+    import random : Cette ligne importe le module random, bien qu'il ne soit pas utilisé dans le code.
+    nombres = \{1, -2, 3, -4, 5\} : Cette ligne initialise un ensemble nommé numbers avec une collection d'entiers, comprenant à la fois des nombres positifs et négatifs.
+    nombres\_positifs = \{x for x in numbers if x >= 0\} : Cette ligne crée un nouvel ensemble nommé nombres\_positifs à l'aide d'une compréhension d'ensemble.
+        pour x dans nombres : Cette partie du code parcourt chaque élément de l'ensemble de nombres.
+        if x >= 0 : elle vérifie si chaque élément est supérieur ou égal à zéro, ce qui permet de filtrer les nombres positifs et zéro de l'ensemble de nombres.
+    print(nombres) : Cette ligne affiche le jeu de nombres original sur la console.
+    print(nombres\_positifs) : Cette ligne affiche sur la console l'ensemble nombres\_positifs (qui ne contient que les nombres positifs et zéro).
+        \end{solution}
+        
+
+        \question
+        Générer des paires d'éléments à partir de deux ensembles
+
+Exemple de sortie
+
+\{1, 2, 3\}
+
+\{'b', 'c', 'a'\}
+
+\{(2, 'b'), (3, 'a'), (3, 'b'), (1, 'b'), (1, 'a'), (2, 'c'), (3, 'c'), (1, 'c'), (2, 'a')\}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q654.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python crée des paires d'éléments à partir de deux ensembles, set1 et set2, et stocke ces paires dans un nouvel ensemble appelé paires. Voici comment fonctionne ce code :
+
+    set1 = \{1, 2, 3\} : Cette ligne initialise un ensemble nommé set1 contenant trois entiers.
+    set2 = \{"a", "b", "c"\} : Cette ligne initialise un autre ensemble nommé set2 contenant trois chaînes de caractères.
+    pairs = \{(x, y) for x in set1 for y in set2\} : Cette ligne utilise une compréhension de l'ensemble pour créer des paires d'éléments à partir de l'ensemble 1 et de l'ensemble 2.
+        for x in set1 : Cette partie du code parcourt chaque élément de l'ensemble 1.
+        for y in set2 : Pour chaque élément de l'ensemble 1, il parcourt chaque élément de l'ensemble 2, créant des paires (x, y) pour toutes les combinaisons.
+    print(set1) : Cette ligne affiche l'ensemble 1 original sur la console.
+    print(set2) : Cette ligne affiche l'ensemble 2 original sur la console.
+    print(pairs) : Cette ligne affiche le jeu de paires (qui contient toutes les paires possibles d'éléments de set1 et `set2) sur la console.
+        \end{solution}
+        
+
+        \question
+        Vérification des mots palindromes
+
+Exemple de sortie
+
+['radar', 'hello', 'level', 'world']
+
+\{'radar', 'level'\}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q655.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python crée un ensemble nommé palindromes qui contient des mots palindromiques à partir d'une liste de mots donnée. Voici comment fonctionne le code :
+
+    words = ["radar", "hello", "level", "world"] : Cette ligne initialise une liste nommée words avec quatre mots, dont certains sont palindromes et d'autres non.
+    palindromes = \{mot pour mot dans mots si mot == mot[::-1]\} : Cette ligne utilise une compréhension d'ensemble pour créer l'ensemble palindromes, qui ne contient que les mots de la liste words qui sont des palindromes.
+        for word in words : Cette partie du code parcourt chaque mot de la liste des mots.
+        si mot == mot[::-1] : Elle vérifie si chaque mot est un palindrome. Pour ce faire, il vérifie si le mot est égal à son inverse (mot[::-1]).
+    print(words) : Cette ligne affiche la liste originale des mots sur la console.
+    print(palindromes) : Cette ligne imprime le jeu de palindromes (qui contient les mots palindromiques de la liste des mots) sur la console.
+        \end{solution}
+        
+
+        \question
+        Conversion d'une liste de dictionnaires en un ensemble
+
+Exemple de sortie
+
+[\{'a' : 1, 'b' : 2\}, \{'b' : 2, 'c' : 3\}, \{'c' : 3, 'd' : 4\}]
+
+\{frozenset(\{('a', 1), ('b', 2)\}), frozenset(\{('d', 4), ('c', 3)\}), frozenset(\{('b', 2), ('c', 3)\})\}.
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q656.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python crée un ensemble nommé dict\_set en convertissant une liste de dictionnaires, list\_of\_dicts, en ensembles de paires clé-valeur. Voici comment fonctionne ce code :
+
+    list\_of\_dicts = [\{"a" : 1, "b" : 2\}, \{"b" : 2, "c" : 3\}, \{"c" : 3, "d" : 4\}] : Cette ligne initialise une liste de dictionnaires nommée list\_of\_dicts. Chaque dictionnaire contient des paires clé-valeur.
+    dict\_set = \{frozenset(d.items()) for d in list\_of\_dicts\} : Cette ligne utilise une compréhension de l'ensemble pour créer l'ensemble dict\_set. Pour chaque dictionnaire d dans list\_of\_dicts, elle convertit les paires clé-valeur en un frozenset en utilisant frozenset(d.items()).
+        pour d dans list\_of\_dicts : Cette partie du code parcourt chaque dictionnaire de la liste\_of\_dicts.
+        frozenset(d.items()) : Elle convertit les paires clé-valeur du dictionnaire en un frozenset. Un frozenset est utilisé parce qu'il s'agit d'un type immuable et qu'il peut être inclus dans un ensemble.
+    print(list\_of\_dicts) : Cette ligne affiche la liste originale des dictionnaires sur la console.
+    print(dict\_set) : Cette ligne affiche sur la console l'ensemble dict\_set (qui contient des frozensets de paires clé-valeur provenant des dictionnaires originaux).
+        \end{solution}
+        
+
+        \question
+        Suppression de la ponctuation d'une chaîne de caractères
+
+Exemple de sortie
+
+Bonjour à tous ! Comment ça va ?
+
+\{'e', ' ', 'g', 'o', 'h', 'd', 'l', 's', 'r', 'y', 'w', 't', 'H', 'n', 'v', 'i' \}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q657.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python supprime les caractères de ponctuation d'un texte donné en utilisant un ensemble de compréhension. Voici comment fonctionne le code :
+
+    import string : Cette ligne importe le module string, qui contient une constante string, string.punctuation, qui inclut tous les caractères de ponctuation.
+    text = "Hello, world ! Comment ça va ?": Cette ligne initialise une chaîne de caractères nommée text avec un exemple de texte contenant de la ponctuation.
+    cleaned\_text = \{char for char in text if char not in string.punctuation\} : Cette ligne utilise une compréhension d'ensemble pour créer l'ensemble texte\_nettoyé. Elle parcourt chaque caractère char du texte et l'inclut dans l'ensemble cleaned\_text s'il ne s'agit pas d'un caractère de ponctuation.
+        pour char dans texte : Cette partie du code parcourt chaque caractère de la chaîne de texte.
+        if char not in string.punctuation : Cette partie du code vérifie si chaque caractère ne se trouve pas dans la chaîne string.punctuation, qui contient les caractères de ponctuation.
+    print(text) : Cette ligne imprime le texte original sur la console.
+    print(texte\_nettoyé) : Cette ligne imprime le jeu de textes nettoyés, qui contient les caractères du texte original, à l'exception des caractères de ponctuation.
+        \end{solution}
+        
+
+        \question
+        Ensemble des mots ayant un préfixe donné
+
+Exemple de sortie
+
+['apple', 'banana', 'cherry', 'date']
+
+ba
+
+\{'banane'\}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q658.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python crée un ensemble nommé words\_with\_prefix qui contient des mots d'une liste donnée de mots commençant par un préfixe spécifié. Voici comment fonctionne ce code :
+
+    words = ["apple", "banana", "cherry", "date"] : Cette ligne initialise une liste nommée words avec quatre mots.
+    prefix = "ba" : Cette ligne initialise une variable de type chaîne nommée préfixe avec le préfixe que vous souhaitez rechercher.
+    words\_with\_prefix = \{word for word in words if word.startswith(prefix)\} : Cette ligne utilise une compréhension de l'ensemble pour créer l'ensemble words\_with\_prefix. Elle parcourt chaque mot de la liste des mots et l'inclut dans l'ensemble words\_with\_prefix s'il commence par le préfixe spécifié.
+        pour mot dans mots : Cette partie du code parcourt chaque mot de la liste des mots.
+        if word.startswith(prefix) : Cette partie du code vérifie si chaque mot commence par le préfixe spécifié.
+    print(mots) : Cette ligne imprime la liste de mots originale sur la console.
+    print(prefix) : Cette ligne affiche le préfixe spécifié sur la console.
+    print(mots\_avec\_préfixe) : Cette ligne affiche l'ensemble words\_with\_prefix, qui contient les mots commençant par le préfixe spécifié.
+        \end{solution}
+        
+
+        \question
+        Fusionner les caractères d'une liste de chaînes
+
+Exemple de sortie
+
+['apple', 'banana', 'cherry']
+
+\{'r', 'b', 'p', 'n', 'a', 'e', 'c', 'h', 'y', 'l' \}
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q659.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python crée un ensemble nommé merged\_chars qui contient les caractères distincts d'une liste de chaînes de caractères. Voici comment fonctionne ce code :
+
+    strings = ["apple", "banana", "cherry"] : Cette ligne initialise une liste nommée strings avec trois chaînes.
+    merged\_chars = \{char for string in strings for char in string\} : Cette ligne utilise une compréhension d'ensemble pour créer l'ensemble merged\_chars. Elle parcourt chaque chaîne de la liste des chaînes et inclut chaque caractère dans l'ensemble merged\_chars.
+        for string in strings : Cette partie du code parcourt chaque chaîne de la liste des chaînes.
+        for char in string : Elle parcourt chaque caractère de la chaîne en cours.
+    print(strings) : Cette ligne imprime la liste originale des chaînes de caractères sur la console.
+    print(merged\_chars) : Cette ligne affiche le jeu de caractères fusionnés, qui contient tous les caractères distincts des chaînes originales.
+        \end{solution}
+        

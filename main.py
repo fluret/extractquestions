@@ -45,12 +45,14 @@ def translate_text(text, dest_language="fr"):
 
 def parse_question(question_text, translate):
     title_match = re.search(r"Question:\s*(.*?)\s*Hints:", question_text, re.DOTALL)
-    hints_match = re.search(r"Hints:\s*(.*?)\s*Solution:", question_text, re.DOTALL)
+    hints_match = re.search(r"Hints:\s*(.*?)\s*Explication:", question_text, re.DOTALL)
+    expli_match = re.search(r"Explication:\s*(.*?)\s*Solution:", question_text, re.DOTALL)
     solution_match = re.search(r"Solution:\s*(.*)", question_text, re.DOTALL)
 
     title = title_match.group(1).strip() if title_match else ""
     hints = hints_match.group(1).strip() if hints_match else ""
     solution = solution_match.group(1).strip() if solution_match else ""
+    expli = expli_match.group(1).strip() if expli_match else ""
 
     if translate == "oui":
         if title:
@@ -58,7 +60,11 @@ def parse_question(question_text, translate):
                 title = translate_text(title)
             except Exception as e:
                 print(f"Erreur de traduction pour le titre: {e}")
-
+        if expli:
+            try:
+                expli = translate_text(expli)
+            except Exception as e:
+                print(f"Erreur de traduction pour l'explication: {e}")
         if hints:
             try:
                 hints = translate_text(hints)
@@ -69,7 +75,7 @@ def parse_question(question_text, translate):
     title = escape_latex(title)
     hints = escape_latex(hints)
 
-    return title, hints, solution
+    return title, hints, solution, expli
 
 
 def get_next_question_number(code_dir):
@@ -102,16 +108,17 @@ def save_solution(solution, question_number):
     return file_name
 
 
-def generate_latex(title, hints, solution_file):
+def generate_latex(title, hints, expli, solution_file):
     if hints:
         latex = f"""
         \\question
         {title}
         \\par
         \\textbf{{Indices : }}{hints}
-        \\renewcommand{{\\nomfichier}}{{{solution_file}}}
         \\begin{{solution}}
+            \\renewcommand{{\\nomfichier}}{{{solution_file}}}
             \\pythonfile{{\\chemincode \\nomfichier}}[][\\nomfichier]
+            {expli}
         \\end{{solution}}
         """
     else:
@@ -119,9 +126,10 @@ def generate_latex(title, hints, solution_file):
         \\question
         {title}
         \\par
-        \\renewcommand{{\\nomfichier}}{{{solution_file}}}
         \\begin{{solution}}
+            \\renewcommand{{\\nomfichier}}{{{solution_file}}}
             \\pythonfile{{\\chemincode \\nomfichier}}[][\\nomfichier]
+            {expli}
         \\end{{solution}}
         """
     return latex
@@ -139,10 +147,12 @@ def main():
     latex_content = []
 
     for i, question_text in enumerate(questions, start=1):
-        title, hints, solution = parse_question(question_text, translate)
+        title, hints, solution, expli = parse_question(question_text, translate)
         if solution:
             solution_file = save_solution(solution, i)
-        latex = generate_latex(title, hints, solution_file)
+        else:
+            solution_file = "pascorrige.py"
+        latex = generate_latex(title, hints, expli, solution_file)
         latex_content.append(latex)
 
     with open(output_file, "a", encoding="utf-8") as file:

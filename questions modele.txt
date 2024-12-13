@@ -4,14 +4,7 @@ Question:
 
 Hints: 
 
-
-Solution:
-
-#----------------------------------------#
-Question:
-
-
-Hints: 
+Explication:
 
 
 Solution:
@@ -22,14 +15,7 @@ Question:
 
 Hints: 
 
-
-Solution:
-
-#----------------------------------------#
-Question:
-
-
-Hints: 
+Explication:
 
 
 Solution:
@@ -40,14 +26,7 @@ Question:
 
 Hints: 
 
-
-Solution:
-
-#----------------------------------------#
-Question:
-
-
-Hints: 
+Explication:
 
 
 Solution:
@@ -58,14 +37,7 @@ Question:
 
 Hints: 
 
-
-Solution:
-
-#----------------------------------------#
-Question:
-
-
-Hints: 
+Explication:
 
 
 Solution:
@@ -76,14 +48,7 @@ Question:
 
 Hints: 
 
-
-Solution:
-
-#----------------------------------------#
-Question:
-
-
-Hints: 
+Explication:
 
 
 Solution:
@@ -94,14 +59,7 @@ Question:
 
 Hints: 
 
-
-Solution:
-
-#----------------------------------------#
-Question:
-
-
-Hints: 
+Explication:
 
 
 Solution:
@@ -112,14 +70,7 @@ Question:
 
 Hints: 
 
-
-Solution:
-
-#----------------------------------------#
-Question:
-
-
-Hints: 
+Explication:
 
 
 Solution:
@@ -130,14 +81,7 @@ Question:
 
 Hints: 
 
-
-Solution:
-
-#----------------------------------------#
-Question:
-
-
-Hints: 
+Explication:
 
 
 Solution:
@@ -148,14 +92,7 @@ Question:
 
 Hints: 
 
-
-Solution:
-
-#----------------------------------------#
-Question:
-
-
-Hints: 
+Explication:
 
 
 Solution:
@@ -166,14 +103,7 @@ Question:
 
 Hints: 
 
-
-Solution:
-
-#----------------------------------------#
-Question:
-
-
-Hints: 
+Explication:
 
 
 Solution:
@@ -184,14 +114,7 @@ Question:
 
 Hints: 
 
-
-Solution:
-
-#----------------------------------------#
-Question:
-
-
-Hints: 
+Explication:
 
 
 Solution:
@@ -202,14 +125,7 @@ Question:
 
 Hints: 
 
-
-Solution:
-
-#----------------------------------------#
-Question:
-
-
-Hints: 
+Explication:
 
 
 Solution:
@@ -220,14 +136,7 @@ Question:
 
 Hints: 
 
-
-Solution:
-
-#----------------------------------------#
-Question:
-
-
-Hints: 
+Explication:
 
 
 Solution:
@@ -238,14 +147,7 @@ Question:
 
 Hints: 
 
-
-Solution:
-
-#----------------------------------------#
-Question:
-
-
-Hints: 
+Explication:
 
 
 Solution:
@@ -256,14 +158,7 @@ Question:
 
 Hints: 
 
-
-Solution:
-
-#----------------------------------------#
-Question:
-
-
-Hints: 
+Explication:
 
 
 Solution:
@@ -274,14 +169,7 @@ Question:
 
 Hints: 
 
-
-Solution:
-
-#----------------------------------------#
-Question:
-
-
-Hints: 
+Explication:
 
 
 Solution:
@@ -292,14 +180,7 @@ Question:
 
 Hints: 
 
-
-Solution:
-
-#----------------------------------------#
-Question:
-
-
-Hints: 
+Explication:
 
 
 Solution:
@@ -310,14 +191,7 @@ Question:
 
 Hints: 
 
-
-Solution:
-
-#----------------------------------------#
-Question:
-
-
-Hints: 
+Explication:
 
 
 Solution:
@@ -328,9 +202,525 @@ Question:
 
 Hints: 
 
+Explication:
+
 
 Solution:
 
 #----------------------------------------#
+Question:
 
+
+Hints: 
+
+Explication:
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+Explication:
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+Explication:
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+Explication:
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+Explication:
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+Explication:
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+Explication:
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+Explication:
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+Explication:
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+Explication:
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+Explication:
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+Explication:
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+Explication:
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+Explication:
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+Explication:
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+Explication:
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+Explication:
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+Explication:
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+Explication:
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+Explication:
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+Explication:
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+Explication:
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+Explication:
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+Explication:
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+Explication:
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+Explication:
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+Explication:
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+Explication:
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+Explication:
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+Explication:
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+Explication:
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+Explication:
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+Explication:
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+Explication:
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+Explication:
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+Explication:
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+Explication:
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+Explication:
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+Explication:
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+Explication:
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+Explication:
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+Explication:
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+Explication:
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+Explication:
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+Explication:
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+Explication:
+
+
+Solution:
+
+#----------------------------------------#
+Question:
+
+
+Hints: 
+
+Explication:
+
+
+Solution:
 
