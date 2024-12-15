@@ -1,0 +1,713 @@
+\renewcommand{\chemincode}{../../code/}
+
+        \question
+        DEPART de la classe
+Ecrire un programme python pour créer une classe d'étudiants
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q710.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce programme Python définit une classe Student avec des attributs et des méthodes permettant de définir et d'afficher les données des étudiants. Voici une explication du programme :
+
+    classe Étudiant : Il s'agit de la classe principale représentant un étudiant. Elle possède les attributs et méthodes suivants :
+        Attributs de la classe :
+            id : Permet de stocker l'identifiant de l'étudiant (initialisé à 0 par défaut).
+            name : Stocke le nom de l'étudiant (initialisé par défaut à une chaîne vide).
+            gender (sexe) : Indique le sexe de l'étudiant (initialisé par défaut comme une chaîne vide).
+            total : Stocke les notes totales de l'étudiant (initialisé par défaut comme une chaîne vide).
+            per : Stocke le pourcentage de l'étudiant (initialisé à 0 par défaut).
+        setData(self, id, name, gender, total, per) : Cette méthode est utilisée pour définir les données d'un étudiant. Elle prend en paramètre l'identifiant, le nom, le sexe, le total des notes et le pourcentage de l'élève et les affecte aux attributs correspondants de l'instance.
+        showData(self) : Cette méthode est utilisée pour afficher les données de l'étudiant. Elle affiche l'ID, le nom, le sexe, le total des notes et le pourcentage de l'étudiant.
+    Une instance de la classe Student est créée et nommée s.
+    La méthode setData est appelée sur l'instance s pour définir les données de l'étudiant. Dans ce cas, l'ID de l'étudiant est fixé à 1, son nom à "Sam Kumar", son sexe à "Male", le total de ses notes à 422 et son pourcentage à 84,44.
+    La méthode showData est appelée sur l'instance s pour imprimer les données de l'étudiant.
+        \end{solution}
+        
+
+        \question
+        Écrire un programme python pour créer une classe d'étudiants avec un constructeur et un destructeur.
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q711.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce code Python définit une classe Student avec un constructeur, un destructeur et des méthodes pour définir et afficher les données des étudiants. Voici une explication du code :
+
+    class Student: : Cette ligne définit une classe nommée Student, qui sert de modèle pour la création d'objets étudiants.
+    def \_\_init\_\_(self): : Il s'agit de la méthode de construction de la classe Étudiant. Le constructeur est automatiquement appelé lorsqu'une instance de la classe est créée. À l'intérieur du constructeur :
+        Des valeurs par défaut sont attribuées aux variables d'instance (attributs) telles que id, name, gender, total et per.
+        Ces attributs représentent l'identifiant, le nom, le sexe, le total des notes et le pourcentage de l'étudiant.
+    def \_\_del\_\_(self): : Il s'agit de la méthode de destruction de la classe Student. Le destructeur est appelé lorsqu'un objet est sur le point d'être détruit. Dans ce cas, il affiche simplement "Object Destroyed" lorsque l'objet est détruit.
+    def setData(self): : Cette méthode permet de définir les données d'une instance d'étudiant. Elle demande à l'utilisateur de saisir des données et définit les valeurs des attributs de l'élève en fonction des données saisies par l'utilisateur.
+    def showData(self): : Cette méthode affiche les données de l'élève. Elle imprime les valeurs des attributs de l'étudiant dans la console.
+    s = Student() : Cette ligne crée une instance de la classe Student et l'affecte à la variable s. Cette instance représente un étudiant spécifique.
+    s.setData() : La méthode setData est appelée sur l'instance s pour définir les données de cet étudiant. L'utilisateur est invité à saisir l'identifiant, le nom, le sexe, le total des notes et le pourcentage de l'élève.
+    s.showData() : La méthode showData est appelée sur l'instance s pour afficher les données de l'élève. Elle imprime les valeurs des attributs définis dans la méthode setData.
+
+Lorsque vous exécutez ce programme, il crée un objet Étudiant, définit ses attributs en fonction des données saisies par l'utilisateur, puis affiche les informations relatives à l'étudiant.
+        \end{solution}
+        
+
+        \question
+        Ecrire un programme python pour implémenter des Getters et des Setters dans une classe.
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q712.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce programme Python définit une classe d'étudiant qui encapsule les détails de l'étudiant tels que le nom, le total et le pourcentage. Il démontre l'utilisation des méthodes setter et getter pour définir et récupérer ces attributs. Voici une explication du programme :
+
+    classe Étudiant: : Il s'agit de la définition de la classe Student.
+    def \_\_init\_\_(self): : Il s'agit de la méthode de construction de la classe Étudiant. Elle initialise trois variables d'instance : name, total et per avec des valeurs par défaut.
+    self.name = "", self.total = "", self.per = 0 : Ces lignes initialisent le nom comme une chaîne vide, le total comme une chaîne vide et per comme 0.
+    def setName(self, name): : Il s'agit d'une méthode setter permettant de définir le nom de l'élève.
+    self.name = name : L'attribut name est mis à jour avec la valeur passée à la méthode setName.
+    def getName(self): : Il s'agit d'une méthode getter permettant de récupérer le nom de l'élève.
+    return self.name : L'attribut name est renvoyé lorsque la méthode getName est appelée.
+    Des méthodes setter et getter similaires sont définies pour les attributs total et par.
+    name = input("Enter a Name :") : Le programme invite l'utilisateur à saisir un nom et la saisie est stockée dans la variable name.
+    total = int(input("Enter a Total :")) : Le programme invite l'utilisateur à saisir un total, et la saisie est convertie en un nombre entier et stockée dans la variable total.
+    per = float(input("Enter a Percentage :")) : Le programme invite l'utilisateur à saisir un pourcentage, et la donnée est convertie en un nombre flottant et stockée dans la variable per.
+    s = Student() : Une instance de la classe Student est créée, représentant un étudiant.
+    s.setName(name), s.setTotal(total), s.setPercentage(per) : Les méthodes de définition sont utilisées pour définir le nom, le total et le pourcentage de l'étudiant en fonction des données fournies par l'utilisateur.
+    n = s.getName(), t = s.getTotal(), p = s.getPercentage() : Les méthodes Getter sont utilisées pour récupérer le nom, le total et le pourcentage de l'élève.
+    print("\\nAffichage des détails de l'étudiant") : Un message est imprimé pour indiquer que les détails de l'élève vont être affichés.
+    print("Nom :", n), print("Total :", t), print("Pourcentage :", p) : Le nom, le total et le pourcentage de l'étudiant sont affichés sur la console en utilisant les valeurs récupérées par les méthodes getter.
+
+Ce programme démontre l'utilisation des principes orientés objet, de l'encapsulation et des méthodes setter et getter pour gérer et récupérer les informations relatives aux étudiants. Il permet à l'utilisateur de saisir des informations sur l'étudiant et affiche ensuite les détails de l'étudiant.
+        \end{solution}
+        
+
+        \question
+        Écrire un programme python pour mettre en œuvre l'abstraction à l'aide d'une classe abstraite.
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q713.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce programme Python démontre l'utilisation de classes abstraites et de la superposition de méthodes dans la programmation orientée objet. Il définit une classe de base abstraite, Vehicle, et deux sous-classes concrètes, Bike et Car. La classe Vehicle contient deux méthodes abstraites, accelerate et park, qui sont surchargées par les classes enfants afin de fournir des implémentations spécifiques pour différents types de véhicules. Voici une explication du programme :
+
+    classe Véhicule: : Il s'agit de la classe de base abstraite Véhicule. Elle contient deux méthodes abstraites, accelerate et park, qui sont définies mais n'ont pas d'implémentation (indiquée par l'instruction pass). Les méthodes abstraites sont des méthodes qui sont déclarées dans la classe de base mais qui n'ont pas d'implémentation spécifique, et elles doivent être surchargées par les classes enfants.
+    classe Vélo(Véhicule): : Il s'agit de la classe Bike, qui hérite de la classe Vehicle. Elle surcharge les méthodes accelerate et park pour fournir un comportement spécifique à un vélo.
+    classe Car(Véhicule): : Voici la classe Voiture, qui hérite également de la classe Véhicule. Elle surcharge les méthodes d'accélération et de stationnement pour fournir un comportement spécifique à une voiture.
+    def accelerate(self, name): : Dans les classes Bike et Car, la méthode accelerate est implémentée pour accepter un paramètre name et imprimer un message spécifique au type de véhicule, indiquant qu'il accélère.
+    def park(self, name): : Dans les classes Bike et Car, la méthode park est implémentée pour accepter un paramètre name et imprimer un message spécifique au type de véhicule, indiquant qu'il est en train de se garer.
+    c = Voiture() : Une instance de la classe Voiture est créée et affectée à la variable c.
+    c.accelerate("Voiture") : La méthode accelerate est appelée sur l'objet c, en passant "Car" comme paramètre de nom. Elle imprime un message indiquant que la voiture accélère.
+    c.park("Voiture") : La méthode park est appelée sur l'objet c, en passant "Voiture" comme paramètre de nom. Elle imprime un message indiquant que la voiture est en train de se garer.
+    b = Bike() : Une instance de la classe Bike est créée et assignée à la variable b.
+    b.accelerate("Vélo") : La méthode accelerate est appelée sur l'objet b, en passant "Bike" comme paramètre de nom. Elle imprime un message indiquant que le vélo accélère.
+    b.park("Vélo") : La méthode park est appelée sur l'objet b, en passant "Bike" comme paramètre de nom. Elle imprime un message indiquant que le vélo est en train de se garer.
+
+Dans ce programme, l'utilisation d'une classe de base abstraite (Véhicule) garantit que toutes les sous-classes (Vélo et Voiture) fournissent des implémentations spécifiques pour les méthodes accelerate et park. Cela vous permet de créer différentes instances de véhicules (vélo et voiture) et d'appeler leurs méthodes spécifiques pour démontrer le comportement de chaque type de véhicule.
+        \end{solution}
+        
+
+        \question
+        Écrire un programme python pour implémenter une interface à l'aide d'une classe
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q714.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce programme Python définit deux classes, Circle et Rectangle, qui héritent d'une classe de base commune, Shape. Le programme calcule les surfaces des cercles et des rectangles en fonction des données saisies par l'utilisateur. Voici une explication du programme :
+
+    Importation du module mathématique : Le programme commence par importer le module mathématique pour accéder à des fonctions mathématiques telles que pi et pow.
+    Classe Shape : Il s'agit de la classe de base, qui peut être considérée comme une interface dans ce contexte. Elle définit trois méthodes : input, process et output. Ces méthodes sont des espaces réservés pour des implémentations spécifiques dans les classes dérivées, mais ne sont pas implémentées ici.
+    classe Circle(Shape) : Il s'agit de la classe Circle, qui hérite de la classe Shape. Elle représente un cercle et est responsable du calcul de sa surface.
+        \_\_init\_\_(self, rad=0.0) : Le constructeur initialise l'objet Circle avec un rayon par défaut de 0,0. Il initialise également une variable de surface à 0,0.
+        setdata(self) : Cette méthode invite l'utilisateur à saisir le rayon du cercle et le fixe dans l'attribut radius.
+        circle\_area(self) : Cette méthode calcule la surface du cercle à l'aide de la formule $\pi * radius^2$ et stocke le résultat dans l'attribut area.
+        getdata(self) : Cette méthode imprime la surface calculée sur la console.
+    classe Rectangle(Forme) : Il s'agit de la classe Rectangle, qui hérite de la classe Shape. Elle représente un rectangle et calcule sa surface.
+        \_\_init\_\_(self, len=0, bre=0) : Le constructeur initialise l'objet Rectangle avec des valeurs de longueur et de largeur par défaut de 0. Il initialise également un attribut de surface à 0.
+        setdata(self) : Cette méthode invite l'utilisateur à saisir la longueur et la largeur du rectangle et les définit dans les attributs respectifs.
+        rect\_area(self) : Cette méthode calcule la surface du rectangle en multipliant la longueur et la largeur et stocke le résultat dans l'attribut area.
+        getdata(self) : Cette méthode imprime la surface calculée sur la console.
+    Création d'instances de cercle et de rectangle :
+        c = Circle() : Crée une instance de la classe Circle.
+        c.setdata() : Invite l'utilisateur à saisir le rayon et le fixe.
+        c.circle\_area() : Calcule la surface du cercle.
+        c.getdata() : Affiche la surface du cercle.
+        r = Rectangle() : Crée une instance de la classe Rectangle.
+        r.setdata() : Invite l'utilisateur à saisir la longueur et la largeur et les fixe.
+        r.rect\_area() : Calcule la surface du rectangle.
+        r.getdata() : Affiche la surface du rectangle.
+
+En résumé, ce programme montre comment les classes peuvent hériter d'une classe de base commune (ou d'une interface) et comment chaque classe dérivée fournit ses propres implémentations pour des méthodes spécifiques. Il calcule et affiche les surfaces des cercles et des rectangles en fonction des entrées de l'utilisateur.
+        \end{solution}
+        
+
+        \question
+        Écrire un programme pour l'héritage simple en Python
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q715.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce programme Python démontre l'héritage dans la programmation orientée objet. Il définit deux classes, Détails et Étudiant, où la classe Étudiant hérite de la classe Détails. Voici une explication du programme :
+
+    classe Détails: : Il s'agit de la classe Détails, qui sert de classe mère.
+        \_\_init\_\_(self) : La méthode du constructeur initialise trois variables d'instance : name, total et per. Toutes ces variables sont initialement définies à 0 ou à une chaîne vide.
+        setData(self, name, total, per) : Cette méthode permet de définir les valeurs des variables d'instance name, total et per.
+        showData(self) : Cette méthode affiche les valeurs de name, total et per.
+    class Student(Details): : La classe Student est une classe enfant qui hérite de la classe Details. Cela signifie qu'elle hérite des attributs et des méthodes de la classe mère.
+        \_\_init\_\_(self) : La méthode du constructeur de la classe Student initialise une variable d'instance supplémentaire, Grade, qui prend initialement la forme d'une chaîne vide.
+        setStudent(self, name, total, per, grade) : Cette méthode permet de définir les valeurs de name, total, per et de la nouvelle variable d'instance grade. Elle appelle la méthode setData de la classe mère pour définir les attributs communs.
+        showStudent(self) : Cette méthode appelle d'abord la méthode showData de la classe mère pour afficher les détails hérités de Details. Elle affiche ensuite l'attribut grade.
+    e = Student() : Une instance de la classe Student est créée et assignée à la variable e.
+    e.setStudent("Kim", 430, 86.00, 'B') : La méthode setStudent est appelée sur l'objet e pour définir les détails de l'étudiant, y compris le nom, le total, le pourcentage et la note.
+    e.showStudent() : La méthode showStudent est appelée pour afficher les détails de l'étudiant, notamment son nom, son total, son pourcentage et sa note.
+
+Lorsque vous exécutez le programme, il crée une instance de la classe Student, définit les détails de l'étudiant à l'aide de la méthode setStudent, puis affiche ces détails à l'aide de la méthode showStudent. Ce programme illustre le concept d'héritage, dans lequel la classe Student hérite des attributs et des méthodes de la classe Details et les étend avec ses propres attributs et méthodes.
+        \end{solution}
+        
+
+        \question
+        Écrire un programme d'héritage avec deux classes enfantines (dérivées) en Python
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q716.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce programme Python définit trois classes : Détails, Étudiant et Personnel. Ces classes sont utilisées pour collecter et afficher des informations sur les étudiants et les membres du personnel. Voici une explication du programme :
+
+    classe Détails: : Il s'agit de la classe de base, qui contient des attributs et des méthodes communs dont héritent les classes Student et Staff.
+        \_\_init\_\_(self) : Le constructeur initialise les attributs idn, name et gender aux valeurs par défaut.
+        setDetails(self) : Cette méthode permet de définir les détails d'une personne, notamment son numéro d'identification, son nom et son sexe. Elle recueille ces informations auprès de l'utilisateur par le biais d'une entrée.
+        showDetails(self) : Cette méthode permet d'afficher les détails d'une personne, notamment son numéro d'identification, son nom et son sexe.
+    class Student(Details): : Il s'agit d'une sous-classe de la classe Details, spécialement conçue pour contenir des informations sur les étudiants.
+        \_\_init\_\_(self) : Le constructeur initialise les attributs total et par aux valeurs par défaut. Il appelle également le constructeur de la classe mère (Details) en utilisant super().
+        setStudent(self) : Cette méthode recueille des informations supplémentaires relatives aux étudiants, telles que le total des notes et le pourcentage, en utilisant les données fournies par l'utilisateur. Elle appelle également la méthode setDetails de la classe mère pour collecter les détails communs.
+        showStudent(self) : Cette méthode affiche tous les détails d'un étudiant, y compris les détails communs (ID, nom et sexe) de la classe Details et les détails spécifiques (notes totales et pourcentage) de la classe Student.
+    classe Staff(Details): : Il s'agit d'une autre sous-classe de la classe Détails, conçue pour contenir des informations sur les membres du personnel.
+        \_\_init\_\_(self) : Le constructeur initialise les attributs depart et salary aux valeurs par défaut et appelle le constructeur de la classe mère (Details) à l'aide de super().
+        setStaff(self) : Cette méthode recueille des informations supplémentaires relatives au personnel, telles que le département et le salaire, en utilisant les données fournies par l'utilisateur. Elle appelle également la méthode setDetails de la classe mère pour collecter les informations communes.
+        showStaff(self) : Cette méthode affiche tous les détails d'un membre du personnel, y compris les détails communs (ID, nom et sexe) de la classe Details et les détails spécifiques (département et salaire) de la classe Staff.
+    Le programme commence par créer des instances des classes Étudiant et Personnel afin de collecter et d'afficher les informations relatives à un étudiant et à un membre du personnel. Il demande à l'utilisateur de saisir les détails de chacun d'eux, puis affiche les informations.
+
+Ce programme démontre l'utilisation de l'héritage de classe, où les classes Étudiant et Personnel héritent d'attributs et de méthodes communs de la classe Détails. Il montre comment vous pouvez collecter et afficher des informations spécifiques pour différents types d'objets (étudiants et membres du personnel) tout en réutilisant et en personnalisant les fonctionnalités communes fournies par la classe mère.
+        \end{solution}
+        
+
+        \question
+        Écrire un programme pour l'héritage multiple en Python
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q717.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce programme Python démontre le concept d'héritage multiple en créant une classe enfant, Student, qui hérite de deux classes parents, PersonalInfo et AcademicInfo. Le programme recueille les informations personnelles et académiques de l'utilisateur et affiche ensuite les détails combinés de l'étudiant, y compris les informations personnelles et académiques. Voici une explication du programme :
+
+    classe PersonalInfo : Il s'agit de la classe mère des informations personnelles. Elle contient un constructeur \_\_init\_\_ qui initialise les attributs tels que l'identifiant, le nom, le sexe, l'adresse et le contact. Elle comprend également une méthode display\_personal\_info qui permet d'afficher les informations personnelles.
+    classe AcademicInfo : Il s'agit de la classe mère pour les informations académiques. Elle contient un constructeur \_\_init\_\_ qui initialise les attributs tels que la filière et l'année. Elle comprend également une méthode display\_academic\_info pour afficher les informations académiques.
+    classe Student(PersonalInfo, AcademicInfo) : Il s'agit de la classe enfant qui hérite à la fois de PersonalInfo et de AcademicInfo. Elle surcharge le constructeur \_\_init\_\_ pour appeler les constructeurs des deux classes mères. Elle comprend également une méthode display\_student\_details pour afficher les informations personnelles et académiques.
+    Dans la partie principale du programme, l'utilisateur est invité à saisir ses informations personnelles et académiques à l'aide de la fonction input.
+    Une instance de la classe Student, nommée student, est créée en fournissant les informations collectées comme arguments au constructeur.
+    Enfin, la méthode display\_student\_details est appelée sur l'objet étudiant pour afficher tous les détails de l'étudiant.
+
+Lorsque vous exécutez ce programme, il collecte et affiche les informations personnelles et académiques d'un étudiant en héritant et en utilisant les méthodes et les attributs des classes mères PersonalInfo et AcademicInfo. Ceci démontre l'héritage multiple, où une classe enfant peut hériter de plusieurs classes parents pour réutiliser leurs attributs et méthodes.
+        \end{solution}
+        
+
+        \question
+        Écrire un programme python pour vérifier les nombres premiers en utilisant une approche orientée objet.
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q718.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce programme Python définit une classe PrimeChecker qui peut être utilisée pour vérifier si un nombre donné est premier ou non. Voici une explication du fonctionnement du programme :
+
+    La classe PrimeChecker est définie et prend un entier num comme paramètre lors de la création d'une instance de la classe.
+    La méthode \_\_init\_\_ est le constructeur de la classe et initialise la variable d'instance self.num avec la valeur qui lui a été transmise.
+    La méthode is\_prime est utilisée pour déterminer si le nombre stocké dans self.num est premier ou non. Elle suit les étapes suivantes :
+        Si le nombre est inférieur ou égal à 1, elle renvoie False, car les nombres premiers sont définis comme des entiers positifs supérieurs à 1.
+        Si le nombre est égal à 2, il renvoie True, car 2 est le seul nombre premier pair.
+        Si le nombre est pair (c'est-à-dire divisible par 2), il renvoie False car les nombres premiers (autres que 2) sont toujours impairs.
+        Il vérifie ensuite la divisibilité du nombre à partir de 3 jusqu'à la racine carrée du nombre. Il effectue cette opération dans une boucle avec un pas de 2 pour ne vérifier que les nombres impairs, car les nombres pairs supérieurs à 2 ne peuvent pas être premiers. S'il trouve un diviseur dans cet intervalle, il renvoie False, indiquant que le nombre n'est pas premier.
+        Si aucune des conditions ci-dessus n'est remplie, il renvoie True, ce qui indique que le nombre est premier.
+    Le programme prend ensuite en compte la saisie d'un nombre par l'utilisateur à l'aide de input() et le convertit en un nombre entier à l'aide de int(). Ce nombre est stocké dans la variable num.
+    Une instance de la classe PrimeChecker est créée avec les données de l'utilisateur et est affectée à la variable checker.
+    La méthode is\_prime de l'instance de checker est appelée. Si la méthode renvoie True, cela signifie que le nombre est premier et un message indiquant que le nombre est premier est imprimé. Si la méthode renvoie False, cela signifie que le nombre n'est pas premier et un message correspondant est imprimé.
+        \end{solution}
+        
+
+        \question
+        Écrire un programme python pour compter le nombre d'objets créés
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q719.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce programme Python définit une classe appelée Student et démontre l'utilisation des variables de classe, de la création d'objets et des méthodes d'instance. Voici une explication du programme :
+
+    classe Étudiant: : Cette ligne définit une classe nommée Student.
+    count = 0 : Il s'agit d'une variable de classe nommée count qui est utilisée pour garder une trace du nombre d'objets Student créés. Elle est initialisée à 0.
+    def \_\_init\_\_(self, name, age): : Il s'agit de la méthode de construction de la classe Étudiant. Elle est utilisée pour initialiser les attributs d'un objet Étudiant. self est une référence à l'instance de la classe en cours de création, et name et age sont les attributs qui sont définis pour chaque objet.
+    self.name = name et self.age = age : Ces lignes définissent les attributs nom et âge de l'objet Étudiant avec les valeurs passées en argument.
+    Student.count += 1 : Cette ligne incrémente la variable de classe count de 1 à chaque fois qu'un nouvel objet Etudiant est créé. Cela permet de garder une trace du nombre d'objets Étudiant créés.
+    def GetDetails(self): : Il s'agit d'une méthode d'instance de la classe Étudiant, utilisée pour imprimer le nom et l'âge d'un étudiant.
+    print("Name :", self.name) et print("Age :", self.age) : Ces lignes sont utilisées pour imprimer le nom et l'âge d'un objet Étudiant lorsque la méthode GetDetails est appelée.
+    Quatre instances de la classe Étudiant sont créées :
+        s1 = Student("Sam Kumar", 21) : un objet Student est créé avec le nom "Sam Kumar" et l'âge 21.
+        s2 = Student("Tiya", 20) : un autre objet Student est créé avec le nom "Tiya" et l'âge de 20 ans.
+        s3 = Student("Sathish", 19) : Un autre objet Student est créé avec le nom "Sathish" et l'âge 19.
+        s3 = Étudiant("Deepika", 21) : Un autre objet Etudiant est créé avec le nom "Deepika" et l'âge de 21 ans. Notez que cette ligne réaffecte la variable s3, écrasant l'objet précédent créé avec cette variable.
+    print("Nombre d'objets : ", Student.count) : Cette ligne imprime le nombre total d'objets Étudiant créés en accédant à la variable de classe count. Elle reflète le nombre d'objets créés, qui dans ce cas est de 3 puisque la variable s3 a été réaffectée.
+        \end{solution}
+        
+
+        \question
+        Ecrire un programme python pour vérifier le numéro Armstrong en utilisant une approche orientée objet.
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q720.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce programme Python définit une classe appelée ArmstrongChecker qui vérifie si un nombre donné est un nombre Armstrong. Voici une explication pas à pas de son fonctionnement :
+
+    La classe ArmstrongChecker est définie par un constructeur \_\_init\_\_, qui prend un argument, num, représentant le nombre à vérifier.
+    Dans le constructeur, self.num se voit attribuer la valeur de l'argument num, qui stocke le nombre à vérifier pour être un nombre Armstrong.
+    La classe possède une méthode appelée is\_armstrong(). Cette méthode vérifie si le nombre stocké dans self.num est un nombre d'Armstrong et renvoie une valeur booléenne (True ou False).
+    A l'intérieur de la méthode is\_armstrong : a. num\_str est calculé en convertissant le nombre en une chaîne de caractères. Cela permet de compter le nombre de chiffres dans le nombre original.
+        num\_digits est calculé comme la longueur de num\_str, ce qui donne le nombre de chiffres dans le nombre original.
+        digit\_sum est calculé à l'aide d'une expression de générateur. Il calcule la somme de chaque chiffre élevé à la puissance de num\_chiffres. Par exemple, si num est 153, digit\_sum sera calculé comme suit : $(1^3 + 5^3 + 3^3)$, soit 153.
+        Enfin, la méthode renvoie True si digit\_sum est égal au nombre original self.num, ce qui indique que le nombre est un nombre Armstrong. Dans le cas contraire, elle renvoie False.
+    Le programme prend ensuite en compte la saisie d'un nombre par l'utilisateur en utilisant int(input("Enter a Number : ")) et le stocke dans la variable num.
+    Une instance de la classe ArmstrongChecker est créée avec le nombre fourni num comme argument, et l'instance est stockée dans la variable checker.
+    Le programme vérifie ensuite si le nombre est un nombre Armstrong en appelant la méthode is\_armstrong() de l'objet checker.
+    Si le nombre est un nombre d'Armstrong (c'est-à-dire que la méthode renvoie True), il imprime un message indiquant que le nombre est un nombre d'Armstrong. Dans le cas contraire, un message indiquant que le nombre n'est pas un nombre d'Armstrong s'affiche.
+
+Le programme vérifie si un nombre donné est un nombre d'Armstrong en utilisant la définition du nombre d'Armstrong (un nombre est un nombre d'Armstrong si la somme de ses chiffres élevée à la puissance du nombre de chiffres est égale au nombre original). Pour ce faire, il encapsule la logique dans une classe appelée ArmstrongChecker.
+        \end{solution}
+        
+
+        \question
+        Écrire un programme python pour l'héritage multi-niveaux
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q721.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce programme Python définit une hiérarchie de classes avec un héritage à plusieurs niveaux en Python. Voici un aperçu des classes et de leurs relations :
+
+    Personne (classe de base) : Cette classe possède un constructeur \_\_init\_\_ qui initialise les attributs nom et âge. Elle possède également une méthode display\_info qui imprime le nom et l'âge.
+    Étudiant (classe intermédiaire) : Cette classe hérite de Person et ajoute un nouvel attribut student\_id. Elle possède son propre constructeur, qui prend en paramètre le nom, l'âge et l'identifiant de l'étudiant. Le constructeur de la classe Student appelle le constructeur de la classe Person en utilisant super() pour définir le nom et l'âge. Elle possède également une méthode display\_student\_info, qui appelle la méthode display\_info de la classe Person et ajoute les informations relatives à l'identifiant de l'étudiant.
+    GraduateStudent (classe dérivée) : Cette classe hérite de la classe Student et ajoute un nouvel attribut research\_topic. Elle possède son propre constructeur, qui prend en paramètre le nom, l'âge, l'identifiant de l'étudiant et le sujet de la recherche. Le constructeur de la classe GraduateStudent appelle le constructeur de la classe Student en utilisant super() pour définir le nom, l'âge et l'identifiant de l'étudiant. Il possède également une méthode display\_graduate\_info, qui appelle la méthode display\_student\_info de la classe Student et ajoute les informations research\_topic.
+
+Vous créez une instance de la classe GraduateStudent avec le nom "Alice", l'âge de 25 ans, le numéro d'étudiant "STU001" et le sujet de recherche "Machine Learning". Vous appelez ensuite la méthode display\_graduate\_info sur l'objet graduate\_student, qui imprime toutes les informations de la classe de base Person, de la classe Student et de la classe GraduateStudent, y compris le sujet de recherche.
+        \end{solution}
+        
+
+        \question
+        Ecrire un programme python pour vérifier le nombre de palindromes en utilisant une approche orientée objet.
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q722.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Le programme Python PalindromeChecker est conçu pour vérifier si un nombre donné est un palindrome. Voici une explication du fonctionnement du programme :
+
+    class PalindromeChecker : Il s'agit d'une classe qui définit un vérificateur de palindromes. Elle possède deux méthodes :
+        \_\_init\_\_(self, num) : Il s'agit de la méthode du constructeur qui initialise l'objet avec le nombre num.
+        is\_palindrome(self) : Cette méthode vérifie si le nombre est un palindrome. Pour ce faire, elle convertit d'abord le nombre en une chaîne de caractères (num\_str). Ensuite, elle inverse la chaîne en utilisant le découpage (reversed\_str = num\_str[::-1] ) et vérifie si la chaîne inversée est égale à la chaîne originale. Si c'est le cas, il renvoie True, ce qui indique que le nombre est un palindrome ; sinon, il renvoie False.
+    num = int(input("Enter a Number : ")) : Cette ligne de code invite l'utilisateur à saisir un nombre et convertit la saisie de l'utilisateur en un nombre entier, qui est stocké dans la variable num.
+    checker = PalindromeChecker(num) : Cette ligne crée une instance de la classe PalindromeChecker avec le nombre saisi par l'utilisateur. La valeur num est transmise comme argument au constructeur, initialisant l'attribut num de l'objet checker.
+    if checker.is\_palindrome(): : Cette instruction conditionnelle vérifie si la méthode is\_palindrome de l'objet checker renvoie True. Si c'est le cas, cela signifie que le nombre saisi est un palindrome et un message indiquant que le nombre est un palindrome s'affiche. Dans le cas contraire, un message indiquant que le nombre n'est pas un palindrome est imprimé.
+    Le programme imprime alors "{num} est un nombre palindrome" ou "{num} n'est pas un nombre palindrome" en fonction du résultat de la méthode is\_palindrome.
+
+Voici comment fonctionne le programme :
+
+    L'utilisateur est invité à saisir un nombre.
+    Le programme crée une instance de la classe PalindromeChecker avec le nombre saisi.
+    Il vérifie si le nombre saisi est un palindrome à l'aide de la méthode is\_palindrome.
+    En fonction du résultat, il imprime un message indiquant si le nombre est un palindrome ou non.
+
+Ce programme démontre le concept d'utilisation d'une classe pour encapsuler la fonctionnalité permettant de vérifier si un nombre est un palindrome, ce qui rend le code plus organisé et réutilisable.
+        \end{solution}
+        
+
+        \question
+        Écrire un programme pour le programme d'enregistrement de la taille des étudiants pour une école en Python
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q723.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Le code Python définit une classe appelée SchoolHeightRecords qui vous permet de gérer les enregistrements de taille des élèves. Voici la décomposition du code :
+
+    La classe SchoolHeightRecords est définie avec les méthodes suivantes :
+        \_\_init\_\_ : Initialise un dictionnaire vide appelé student\_records pour stocker les noms des élèves et leurs tailles correspondantes.
+        add\_student : Ajoute la taille d'un nouvel élève au dictionnaire student\_records.
+        remove\_student : Supprime l'enregistrement d'un élève du dictionnaire student\_records en fournissant le nom de l'élève.
+        find\_student\_height : Permet d'obtenir la taille d'un élève en fournissant son nom. Si l'élève n'est pas trouvé, cette fonction renvoie None.
+        display\_records : Affiche tous les enregistrements de la taille des élèves stockés dans le dictionnaire.
+    Une instance de la classe SchoolHeightRecords est créée avec la variable school\_records.
+    Un menu est affiché à l'utilisateur avec les options suivantes :
+        1. Ajouter la taille de l'élève
+        2. Supprimer la taille de l'élève
+        3. Trouver la taille d'un élève
+        4. Afficher tous les enregistrements
+        5. Quitter
+    Le programme entre dans une boucle où l'utilisateur est invité à saisir son choix.
+    En fonction du choix de l'utilisateur, la méthode correspondante de l'instance SchoolHeightRecords est appelée pour effectuer l'opération souhaitée. L'utilisateur peut ajouter, supprimer, rechercher ou afficher des relevés de taille d'élèves, ou quitter le programme.
+    Si l'utilisateur fournit un choix non valide, il en est informé par le message "Choix non valide" et est invité à réessayer.
+
+Le code vous permet de gérer de manière interactive les enregistrements de taille des élèves et il continuera à fonctionner jusqu'à ce que l'utilisateur choisisse de quitter le programme (option 5).
+
+Il convient de noter que les tailles sont stockées sous forme de chaînes de caractères dans le dictionnaire student\_records. Si vous devez effectuer des opérations numériques avec les tailles, vous devez les convertir en entiers ou en flottants avant de les utiliser dans les calculs.
+        \end{solution}
+        
+
+        \question
+        Ecrire un programme python pour gérer l'enregistrement d'un magasin de téléphonie (mobile shop) en utilisant la classe
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q724.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Le code Python définit deux classes : Phone et PhoneStore, qui permettent de gérer l'inventaire des téléphones d'un magasin. Voici la décomposition du code :
+
+    La classe Phone représente des téléphones individuels. Chaque téléphone possède des attributs pour sa marque, son modèle et son prix. La méthode \_\_init\_\_ initialise ces attributs lorsqu'un nouvel objet téléphone est créé.
+    La classe PhoneStore représente l'inventaire des téléphones d'un magasin. Elle possède les méthodes suivantes :
+        \_\_init\_\_ : Initialise une liste vide appelée inventaire pour stocker les objets téléphone.
+        add\_phone : Ajoute un objet téléphone à la liste d'inventaire.
+        remove\_phone : Supprime un téléphone de l'inventaire en fonction de sa marque et de son modèle. Si le téléphone est trouvé et supprimé, un message de réussite est affiché ; sinon, un message "not found" (introuvable) est affiché.
+        find\_phone : Recherche un téléphone dans l'inventaire en fonction de sa marque et de son modèle. S'il est trouvé, il renvoie l'objet téléphone ; sinon, il renvoie None.
+        display\_inventory : Affiche l'inventaire actuel des téléphones, y compris la marque, le modèle et le prix.
+    Une instance de la classe PhoneStore est créée avec la variable phone\_store.
+    Un menu est affiché à l'utilisateur avec les options suivantes :
+        1. Ajouter un téléphone à l'inventaire
+        2. Supprimer un téléphone de l'inventaire
+        3. Trouver un téléphone dans l'inventaire
+        4. Afficher l'inventaire
+        5. Quitter
+    Le programme entre dans une boucle où l'utilisateur est invité à saisir son choix (sous forme de chaîne de caractères).
+    En fonction du choix de l'utilisateur, la méthode correspondante de l'instance PhoneStore est appelée pour effectuer l'opération souhaitée. L'utilisateur peut ajouter, supprimer, rechercher ou afficher l'inventaire des téléphones, ou quitter le programme.
+    Si l'utilisateur fournit un choix non valide, il est averti par le message "Choix non valide" et invité à réessayer.
+
+Le code convertit les entrées de marque et de modèle en majuscules à l'aide de la méthode .capitalize() avant de les stocker dans les objets téléphone et lors de la recherche dans l'inventaire. Cela permet de s'assurer que la correspondance entre les majuscules et les minuscules est utilisée lors de l'ajout, de la suppression ou de la recherche de téléphones.
+
+Le code vous permet de gérer de manière interactive l'inventaire des téléphones d'un magasin et continuera à fonctionner jusqu'à ce que l'utilisateur choisisse de quitter (option 5).
+        \end{solution}
+        
+
+        \question
+        Écrire un programme python pour additionner deux distances en utilisant les concepts de classe et d'objet
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q725.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce programme Python définit une classe Distance qui représente une distance en kilomètres, mètres et centimètres. La classe fournit des méthodes permettant d'additionner deux distances et d'afficher une distance dans un format lisible par l'homme. Voici une explication du programme :
+
+    classe Distance : Il s'agit de la classe principale représentant une distance. Elle possède les méthodes suivantes :
+        \_\_init\_\_(self, km=0, m=0, cm=0) : Le constructeur initialise l'objet avec des valeurs optionnelles pour les kilomètres (0 par défaut), les mètres (0 par défaut) et les centimètres (0 par défaut).
+        add(self, other\_distance) : Cette méthode prend en paramètre un autre objet Distance, ajoute les composantes correspondantes (kilomètres, mètres et centimètres) et renvoie un nouvel objet Distance.
+        display(self) : Cette méthode renvoie une chaîne de caractères formatée représentant la distance.
+    Le programme invite ensuite l'utilisateur à saisir deux distances : une pour la distance1 et une pour la distance2. L'utilisateur est invité à saisir la distance en kilomètres, en mètres et en centimètres pour chacune d'entre elles.
+    Les objets Distance distance1 et distance2 sont créés avec les valeurs fournies par l'utilisateur.
+    La méthode add est appelée sur distance1, en passant distance2 comme paramètre. Il en résulte un nouvel objet Distance result\_distance qui représente la somme des deux distances d'entrée.
+    Le programme affiche le résultat en appelant la méthode display sur distance\_résultat, qui fournit la somme des deux distances dans un format lisible par l'homme.
+
+Lorsque vous exécutez ce programme, il vous permet de saisir deux distances, puis de calculer et d'afficher la somme de ces distances. Le programme se charge d'ajuster les unités si nécessaire, en veillant à ce que le résultat soit affiché correctement en termes de kilomètres, de mètres et de centimètres.
+        \end{solution}
+        
+
+        \question
+        Ecrire un programme python pour trouver la personne la plus âgée de deux personnes en utilisant la classe et l'objet.
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q726.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce programme Python définit une classe Person et une fonction find\_elder pour trouver la personne la plus âgée parmi deux individus donnés en fonction de leur âge. Voici une explication du programme :
+
+    classe Personne : Il s'agit de la classe Personne avec un constructeur \_\_init\_\_ qui initialise deux attributs, le nom et l'âge. Elle représente une personne avec un nom et un âge.
+    def find\_elder(personne1, personne2) : Cette fonction prend deux objets Person, person1 et person2, comme paramètres. Elle compare leurs âges et renvoie la personne la plus âgée. Si les deux personnes ont le même âge, elle renvoie None.
+    Le programme crée deux objets Personne, personne1 et personne2, représentant deux individus avec leurs noms et âges respectifs.
+    La fonction find\_elder est appelée avec ces deux objets Personne et le résultat est stocké dans la variable elder.
+    Le programme vérifie ensuite si elder est None. Si c'est le cas, cela signifie que les deux personnes ont le même âge, et il imprime donc "Les deux personnes ont le même âge". Sinon, il imprime le nom et l'âge de la personne la plus âgée.
+
+Lorsque vous exécutez ce programme, il détermine laquelle des deux personnes est la plus âgée en fonction de leur âge et imprime le message correspondant. Si les deux personnes ont le même âge, il indiquera que les deux ont le même âge. Ce programme montre comment définir une classe, créer des objets et comparer leurs attributs pour prendre des décisions basées sur l'état de l'objet.
+        \end{solution}
+        
+
+        \question
+        Écrire un programme python pour le système de gestion bancaire
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q727.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Ce programme Python simule un système de gestion bancaire simple en utilisant la classe Bank. Il permet aux utilisateurs de créer des comptes, de déposer de l'argent, de retirer de l'argent, de vérifier les soldes et de quitter le programme. Voici une explication du programme :
+
+    classe Banque : Il s'agit de la classe principale représentant la banque. Elle possède les méthodes suivantes :
+        \_\_init\_\_(self) : Le constructeur initialise un dictionnaire de comptes vide pour stocker les informations relatives aux comptes.
+        create\_account(self, account\_number, account\_holder, initial\_balance) : Cette méthode crée un nouveau compte et le stocke dans le dictionnaire des comptes. Elle vérifie qu'il n'y a pas de duplication de numéro de compte et que le solde initial n'est pas négatif.
+        deposit(self, account\_number, amount) : Cette méthode permet d'effectuer des dépôts sur un compte existant, en mettant à jour le solde du compte.
+        withdraw(self, account\_number, amount) : Cette méthode permet d'effectuer des retraits sur un compte existant, en mettant à jour le solde du compte. Elle vérifie également que le solde est suffisant et que les montants des retraits ne sont pas négatifs.
+        check\_balance(self, account\_number) : Cette méthode vérifie le solde d'un compte existant et renvoie le nom et le solde du titulaire du compte sous la forme d'une chaîne formatée.
+    Le programme crée un objet Banque nommé banque.
+    Le programme présente un menu à l'utilisateur avec les options suivantes : créer un compte, déposer de l'argent, retirer de l'argent, vérifier le solde et quitter.
+    Dans une boucle, le programme lit le choix de l'utilisateur et effectue l'opération sélectionnée :
+        Pour "Créer un compte", il recueille les détails du compte et appelle la méthode create\_account.
+        Pour "Déposer de l'argent", il recueille le numéro de compte et le montant du dépôt et appelle la méthode de dépôt.
+        Pour "Retirer de l'argent", il collecte le numéro de compte et le montant du retrait et appelle la méthode de retrait.
+        Pour "Vérifier le solde", il collecte le numéro de compte et appelle la méthode check\_balance.
+        Pour "Quitter", il quitte le programme.
+    Le programme assure la validation des entrées et fournit un retour d'information approprié à l'utilisateur.
+
+Lorsque vous exécutez ce programme, il vous permet de simuler un système de gestion bancaire de base en créant des comptes, en déposant de l'argent, en retirant de l'argent et en vérifiant les soldes. Il utilise la classe Banque pour gérer les comptes et les opérations sur les comptes.
+        \end{solution}
+        
+
+        \question
+        Ecrire un programme python pour obtenir les détails de l'étudiant en entrée et imprimer le résultat après la mise à jour des notes.
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q728.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Le programme Python pour un système simple de gestion des étudiants. Il vous permet de saisir les coordonnées des étudiants, de mettre à jour les notes des étudiants et d'imprimer les coordonnées des étudiants. Voici un aperçu du fonctionnement du code :
+
+    classe Student : Cette classe définit une classe nommée Student, qui représente le système de gestion des étudiants.
+    \_\_init\_\_(self) : Le constructeur initialise un dictionnaire vide appelé student\_details en tant que variable d'instance.
+    @property input\_student\_details(self) : Il s'agit d'une méthode de propriété qui vous permet de saisir les détails de l'étudiant. Elle invite l'utilisateur à saisir le numéro de rôle, le nom de l'étudiant et ses notes. Les détails sont stockés dans le dictionnaire student\_details sous la clé roll number.
+    update\_student\_marks(self) : Cette méthode permet de mettre à jour les notes d'un élève. Elle invite l'utilisateur à saisir le numéro de rôle de l'élève à mettre à jour, puis les nouvelles notes. Si l'élève est trouvé dans le dictionnaire student\_details, ses notes sont mises à jour.
+    print\_student\_details(self) : Cette méthode permet d'imprimer les détails d'un étudiant spécifique. Elle invite l'utilisateur à saisir le numéro de rôle de l'étudiant et, si l'étudiant est trouvé, son numéro de rôle, son nom et ses notes sont imprimés.
+    Le programme crée une instance de la classe Étudiant appelée obj.
+    Le code entre dans une boucle while qui affiche un menu avec quatre options : saisir les coordonnées de l'élève, mettre à jour les notes de l'élève, imprimer les coordonnées de l'élève et quitter.
+    L'utilisateur est invité à saisir son choix (1 à 4) et, en fonction de ce choix, l'une des méthodes de l'instance obj est appelée.
+    Si l'utilisateur choisit l'option 4, le programme sort de la boucle et se termine.
+    Si l'utilisateur saisit un choix non valide, un message d'erreur s'affiche.
+        \end{solution}
+        
+
+        \question
+        Ecrire un programme python pour les tableaux d'objets
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q729.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Le programme Python définit une classe d'étudiants et crée une liste (étudiants) pour stocker les instances de la classe d'étudiants. Il montre également comment accéder aux attributs d'un étudiant et les modifier. Voici la décomposition du code :
+
+    classe Étudiant : Cette classe définit une classe appelée Student, qui représente un étudiant avec des attributs tels que le numéro de rôle, le nom et les notes.
+    \_\_init\_\_(self, roll\_number, name, marks) : La méthode du constructeur initialise un objet Student avec le numéro de rôle, le nom et les notes fournis.
+    \_\_str\_\_(self) : Cette méthode spéciale renvoie une représentation sous forme de chaîne de caractères de l'objet Étudiant, affichant le numéro de rôle, le nom et les notes.
+    étudiants = [] : Cette méthode crée une liste vide pour stocker les objets Étudiant.
+    Trois étudiants sont créés et ajoutés à la liste des étudiants à l'aide de la méthode append. Chaque étudiant a un numéro de rôle, un nom et des notes uniques.
+    Une boucle for itère sur la liste des étudiants et imprime les détails de chaque étudiant à l'aide de la méthode \_\_str\_\_.
+    Elle montre ensuite comment accéder aux attributs d'un étudiant spécifique et les modifier. Dans ce cas, il sélectionne le premier étudiant de la liste, modifie son nom et ses notes, et imprime les informations mises à jour.
+        \end{solution}
+        
+
+        \question
+        Ecrire un programme python pour rechercher des objets dans un tableau d'objets en utilisant l'ID
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q730.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Le programme définit une classe Étudiant, crée une liste d'objets Étudiant et vous permet de rechercher un étudiant par son numéro d'identification. Voici la décomposition du code :
+
+    classe Étudiant : Cette classe représente un étudiant avec des attributs tels que l'identifiant de l'étudiant, le nom et le pourcentage.
+    \_\_init\_\_(self, student\_id, name, per) : Le constructeur initialise un objet Student avec l'identifiant, le nom et le pourcentage fournis.
+    \_\_str\_\_(self) : Cette méthode spéciale renvoie une représentation sous forme de chaîne de caractères de l'objet Étudiant, affichant l'identifiant, le nom et le pourcentage de l'étudiant.
+    Un tableau (liste) d'objets Étudiant est créé et initialisé avec les données de l'étudiant.
+    search\_student\_by\_id(student\_id) : Cette fonction permet de rechercher un étudiant à partir de son numéro d'identification. Elle parcourt la liste des étudiants et renvoie le premier objet étudiant correspondant à l'identifiant spécifié, ou Aucun si aucune correspondance n'est trouvée.
+    Le code imprime tous les identifiants des étudiants de la liste à l'aide d'une boucle for.
+    L'utilisateur est invité à saisir l'identifiant de l'étudiant à rechercher.
+    La fonction search\_student\_by\_id est appelée avec l'identifiant fourni par l'utilisateur et, si un étudiant correspondant à cet identifiant est trouvé, il est imprimé avec un message "Étudiant trouvé". Si aucun étudiant correspondant n'est trouvé, un message "Étudiant non trouvé" s'affiche.
+        \end{solution}
+        
+
+        \question
+        Écrire un programme python pour l'initialisation du constructeur
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q731.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Le programme définit une classe Étudiant et crée trois instances de la classe, chacune représentant un étudiant différent. Il affiche ensuite les détails de chaque étudiant à l'aide de la méthode display\_details. Voici la décomposition du code :
+
+    classe Étudiant : Cette classe définit un étudiant avec des attributs tels que le numéro de rôle, le nom et le pourcentage.
+    \_\_init\_\_(self, roll\_number, name, percent) : Le constructeur initialise un objet Student avec le numéro de rôle, le nom et le pourcentage fournis.
+    display\_details(self) : Cette méthode permet d'afficher les détails d'un étudiant, y compris son numéro de rôle, son nom et son pourcentage.
+    Trois instances de la classe Étudiant (s1, s2 et s3) sont créées et initialisées avec des données différentes pour chaque étudiant.
+    Le code affiche ensuite les détails de chaque étudiant en appelant la méthode display\_details pour chaque instance.
+
+Voici ce que fait le code :
+
+    Il crée trois objets étudiants avec des données différentes.
+    Il imprime les détails de chaque élève à l'aide de la méthode display\_details, en affichant leur numéro de rôle, leur nom et leur pourcentage.
+        \end{solution}
+        
+
+        \question
+        Ecrire un programme python pour paramétrer un constructeur et un destructeur.
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q732.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Le programme définit une classe Étudiant avec un constructeur et un destructeur. Il crée trois instances de la classe, affiche leurs détails, puis supprime explicitement ces instances pour démontrer la fonctionnalité du destructeur. Voici la décomposition du code :
+
+    classe Étudiant : Cette classe définit un étudiant avec des attributs tels que le numéro de rôle, le nom et le pourcentage.
+    \_\_init\_\_(self, roll\_number, name, per) : Le constructeur initialise un objet Student avec le numéro de rôle, le nom et le pourcentage fournis.
+    display\_details(self) : Cette méthode est utilisée pour imprimer les détails d'un étudiant, y compris son numéro de rôle, son nom et son pourcentage.
+    del\_\_(self) : Cette méthode spéciale est le destructeur. Elle est automatiquement appelée lorsqu'une instance de la classe est supprimée. Dans ce cas, elle imprime un message indiquant le numéro de rôle de l'étudiant supprimé.
+    Trois instances de la classe Étudiant (s1, s2 et s3) sont créées et initialisées avec des données différentes pour chaque étudiant.
+    Le code affiche les détails de chaque étudiant en appelant la méthode display\_details pour chaque instance.
+    Les instances sont explicitement supprimées à l'aide de l'instruction del, qui déclenche la méthode du destructeur \_\_del\_\_.
+
+Voici ce que fait le code :
+
+    Il crée trois objets étudiants avec des détails différents.
+    Il imprime les détails de chaque étudiant à l'aide de la méthode display\_details.
+    Il supprime explicitement chaque objet élève, ce qui déclenche le destructeur et imprime un message indiquant que l'élève est supprimé.
+        \end{solution}
+        
+
+        \question
+        Ecrire un programme python pour ajouter des objets '+' en utilisant l'opérateur
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q733.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Le programme python définit une classe ComplexNumber qui représente les nombres complexes. Elle permet de créer des objets de type nombre complexe, de les afficher sous forme de chaînes de caractères et d'effectuer l'addition de deux nombres complexes à l'aide de l'opérateur +. Voici la décomposition du code :
+
+    classe ComplexNumber : Cette classe représente un nombre complexe avec les attributs real et imag, qui représentent respectivement les parties réelle et imaginaire.
+    \_\_init\_\_(self, real, imag) : Le constructeur initialise un objet ComplexNumber avec les parties réelle et imaginaire fournies.
+    \_\_str\_\_(self) : Cette méthode spéciale renvoie une représentation sous forme de chaîne de caractères du nombre complexe au format "a + bi" où "a" est la partie réelle, "b" la partie imaginaire et "i" l'unité imaginaire.
+    \_\_add\_\_(self, other) : Cette méthode spéciale surcharge l'opérateur +, ce qui permet d'additionner deux nombres complexes. Elle additionne les parties réelle et imaginaire séparément et renvoie un nouvel objet ComplexNumber représentant la somme.
+    Deux objets de nombres complexes, complex1 et complex2, sont créés avec des parties réelles et imaginaires différentes.
+    Le code utilise l'opérateur + pour additionner complex1 et complex2, ce qui produit un nouvel objet ComplexNumber appelé result.
+    L'instruction print affiche le résultat de l'addition, qui est la somme des nombres complexes.
+
+Voici ce que fait le code :
+
+    Il crée deux objets nombres complexes avec des parties réelles et imaginaires différentes.
+    Il additionne ces nombres complexes à l'aide de l'opérateur +, qui appelle la méthode \_\_add\_\_.
+    Il imprime le résultat de l'addition.
+        \end{solution}
+        
+
+        \question
+        Ecrire un programme python pour comparer deux objets en utilisant l'opérateur '>'.
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q734.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Le programme python définit une classe Number qui représente un nombre. Il permet de créer des objets Number, de les afficher sous forme de chaînes et d'effectuer une comparaison supérieure à l'aide de l'opérateur >. Voici la décomposition du code :
+
+    classe Number : Cette classe représente un nombre avec une valeur d'attribut.
+    \_\_init\_\_(self, value) : Le constructeur initialise un objet Number avec la valeur fournie.
+    \_\_str\_\_(self) : Cette méthode spéciale renvoie une représentation sous forme de chaîne de caractères du nombre.
+    \_\_gt\_\_(self, other) : Cette méthode spéciale surcharge l'opérateur > (plus grand que), ce qui permet de comparer deux objets Number. Elle vérifie si la valeur de l'objet courant est supérieure à la valeur de l'autre objet.
+    Deux objets Number, number1 et number2, sont créés avec des valeurs différentes.
+    Le code compare number1 et number2 en utilisant l'opérateur > dans une expression et stocke le résultat dans la variable res.
+    En fonction du résultat, le code imprime un message indiquant si nombre1 est supérieur à nombre2.
+
+Voici ce que fait le code :
+
+    Il crée deux objets Number avec des valeurs différentes.
+    Il compare les deux nombres à l'aide de l'opérateur >.
+    Il imprime un message basé sur le résultat de la comparaison.
+        \end{solution}
+        
+
+        \question
+        Écrire un programme python pour passer des objets en tant qu'arguments et renvoyer des objets à partir d'une fonction
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q735.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Le programme python définit une classe MyClass et une fonction process\_object. La fonction prend en argument un objet de la classe MyClass, modifie l'objet en doublant sa valeur et renvoie l'objet modifié. Voici la décomposition du code :
+
+    classe MaClasse : Cette classe représente un objet avec une valeur d'attribut.
+    \_\_init\_\_(self, value) : Le constructeur initialise un objet MyClass avec la valeur fournie.
+    def process\_object(obj) : Cette fonction prend un objet obj comme argument, double l'attribut value de l'objet, puis renvoie l'objet modifié.
+    Une instance de MyClass est créée et my\_obj est initialisé avec une valeur de 10.
+    La fonction process\_object est appelée avec mon\_obj comme argument. Elle modifie mon\_obj en doublant son attribut value, et l'objet modifié est renvoyé et assigné à result\_obj.
+    Le code imprime l'attribut de valeur de l'objet original (mon\_obj) et de l'objet modifié (résultat\_obj).
+
+Voici ce que fait le code :
+
+    Il crée un objet MyClass avec une valeur initiale de 10.
+    Il appelle la fonction process\_object, qui modifie l'objet en doublant sa valeur.
+    Il imprime l'attribut value de l'objet original et de l'objet modifié.
+        \end{solution}
+        
+
+        \question
+        Ecrire un programme python pour illustrer le fonctionnement des décorateurs
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q736.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            L'utilisation d'un décorateur en Python. Un décorateur est une fonction qui enveloppe une autre fonction pour lui ajouter des fonctionnalités. Dans ce code, vous avez défini une fonction décorateur my\_decorator, qui enveloppe la fonction msg. Voici la décomposition du code :
+
+    def my\_decorator(func) : Il s'agit de la fonction décoratrice. Elle prend une fonction func en argument et définit une fonction interne appelée wrapper. La fonction wrapper ajoute un comportement avant et après l'appel de func.
+    def wrapper() : Il s'agit de la fonction interne du décorateur. Elle ajoute un comportement avant et après l'appel de la fonction originale func.
+    À l'intérieur de la fonction wrapper, des instructions d'impression indiquent que quelque chose se passe avant et après l'appel de la fonction d'origine.
+    return wrapper : La fonction decorator renvoie la fonction wrapper.
+    @my\_decorator : Il s'agit d'une syntaxe de décorateur, indiquant que la fonction msg est décorée avec mon\_décorateur. Cela signifie que lorsque vous appelez msg, elle sera enveloppée par la fonction wrapper définie dans mon\_décorateur.
+    def msg() : Il s'agit de la fonction à décorer. Elle imprime simplement "Hello world !".
+    Lorsque vous appelez msg(), vous appelez en fait la fonction décorée. Le décorateur my\_decorator enveloppe msg, de sorte qu'il imprime les messages supplémentaires avant et après l'impression de "Hello world !
+
+La fonction msg est décorée par le décorateur my\_decorator, de sorte que lorsque vous appelez msg(), elle affiche "Quelque chose se passe avant l'appel de la fonction", puis "Hello world !", et enfin "Quelque chose se passe après l'appel de la fonction". Cela montre comment les décorateurs peuvent ajouter un comportement aux fonctions sans modifier leur code source.
+        \end{solution}
+        
+
+        \question
+        Ecrire un programme python pour illustrer le fonctionnement de la méthode abstraite
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q737.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            L'utilisation des classes de base abstraites et de l'héritage en Python. Voici la décomposition du code :
+
+    from abc import ABC, abstractmethod : Cette ligne importe la classe ABC (Abstract Base Class) et le décorateur abstractmethod du module abc. La classe ABC est utilisée pour créer des classes de base abstraites, et le décorateur abstractmethod est utilisé pour déclarer des méthodes abstraites dans ces classes.
+    classe Shape(ABC) : Cette classe définit une classe de base abstraite Shape qui hérite de la classe ABC. Elle possède une zone de méthodes abstraites.
+    @abstractmethod : Ce décorateur est utilisé pour déclarer la méthode area comme une méthode abstraite. Les méthodes abstraites doivent être implémentées par toute sous-classe concrète de la classe Shape.
+    classe Circle(Forme) : Cette classe définit une sous-classe Circle de la classe Shape. Elle implémente la méthode area pour calculer la surface d'un cercle en fonction du rayon.
+    classe Rectangle(Forme) : Cette classe définit une autre sous-classe Rectangle de la classe Shape. Elle met en œuvre la méthode area pour calculer la surface d'un rectangle en fonction de sa longueur et de sa largeur.
+    Les instances des classes Cercle et Rectangle sont créées en invitant l'utilisateur à saisir les dimensions requises.
+    La méthode area est appelée sur les objets Circle et Rectangle pour calculer et imprimer les surfaces du cercle et du rectangle, respectivement.
+
+Voici ce que fait le code :
+
+    Il définit une classe de base abstraite Shape avec une méthode area abstraite.
+    Il crée deux sous-classes concrètes, Circle et Rectangle, qui héritent de Shape et implémentent la méthode area.
+    Elle invite l'utilisateur à saisir les dimensions d'un cercle et d'un rectangle.
+    Il calcule et imprime les aires du cercle et du rectangle à l'aide des méthodes d'aire respectives.
+        \end{solution}
+        
+
+        \question
+        Ecrire un programme python pour convertir les heures en jours
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q738.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Le programme python définit une classe HoursToDaysConverter, qui est utilisée pour convertir un nombre d'heures en jours. Voici la décomposition du code :
+
+    class HoursToDaysConverter : Cette classe représente un convertisseur permettant de convertir des heures en jours. Elle possède une méthode \_\_init\_\_ pour initialiser l'attribut hours et une méthode convert\_to\_days pour effectuer la conversion.
+    Dans le bloc try, le code tente d'obtenir le nombre d'heures de l'utilisateur à l'aide de la fonction input. Il convertit l'entrée de l'utilisateur en un nombre flottant et l'affecte à la variable hours\_input. Si l'utilisateur saisit une valeur non valide (qui n'est pas un nombre), une exception ValueError est levée et un message d'erreur est imprimé.
+    Si l'utilisateur saisit un nombre d'heures valide, une instance de la classe HoursToDaysConverter est créée à partir de la variable hours\_input et la méthode convert\_to\_days est appelée pour effectuer la conversion.
+    Le résultat, qui est le nombre de jours, est stocké dans la variable days\_result.
+    Enfin, le code imprime le nombre original d'heures saisi par l'utilisateur et le nombre équivalent de jours basé sur la conversion.
+
+Voici ce que fait le code :
+
+    Il prend le nombre d'heures saisi par l'utilisateur et tente de le convertir en un nombre flottant.
+    Si l'entrée est valide, il convertit le nombre d'heures en jours à l'aide de la classe HoursToDaysConverter.
+    Il affiche ensuite le nombre d'heures original et le nombre de jours équivalent.
+        \end{solution}
+        
+
+        \question
+        Écrire un programme python pour rechercher des objets dans un tableau d'objets à l'aide de la méthode filter().
+        \par
+        \begin{solution}
+            \renewcommand{\nomfichier}{q739.py}
+            \pythonfile{\chemincode \nomfichier}[][\nomfichier]
+            Le programme python définit une classe Personne et une liste d'objets Personne. Il utilise ensuite la fonction filter() pour filtrer les personnes de la liste qui ont plus de 25 ans. Voici la décomposition du code :
+
+    classe Personne : Cette classe définit une personne avec des attributs de nom et d'âge.
+    Le code crée une liste d'objets Personne, les personnes, avec des noms et des âges différents.
+    def is\_older\_than\_25(person) : Cette fonction définit un critère de filtrage. Elle renvoie True si l'âge de la personne est supérieur à 25 ; sinon, elle renvoie False.
+    filter(is\_older\_than\_25, people) : La fonction filter() prend la fonction is\_older\_than\_25 et la liste des personnes, et renvoie un itérable contenant uniquement les objets Person pour lesquels la fonction is\_older\_than\_25 renvoie True.
+    liste\_personnes\_filtrées = liste(personnes\_filtrées) : Cette ligne convertit l'itérable filtré en liste. Bien que cette conversion soit facultative, elle est effectuée ici pour faciliter la lecture en boucle des résultats filtrés à plusieurs reprises.
+    Le code parcourt ensuite la liste filtrée et imprime le nom et l'âge des personnes âgées de plus de 25 ans.
+
+Voici ce que fait le code :
+
+    Il définit une classe Personne pour représenter les personnes avec leur nom et leur âge.
+    Il crée une liste d'objets Personne.
+    Il utilise la fonction filter() pour filtrer et extraire les personnes âgées de plus de 25 ans.
+    Il convertit le résultat du filtrage en une liste (facultatif).
+    Il affiche les noms et les âges des personnes âgées de plus de 25 ans.
+        \end{solution}
+        
