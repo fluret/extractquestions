@@ -12,14 +12,14 @@ Exemple de sortie
             Le code que vous avez fourni est écrit en Python et utilise une compréhension de liste pour créer une liste appelée squares qui contient les carrés des nombres de 1 à 10. Voici une explication pas à pas du code :\par
 
 \begin{itemize}
-\item     carrés = [x**2 for x in range(1, 11)] : Cette ligne de code initialise une variable nommée carrés et lui affecte le résultat d'une compréhension de liste.
+\item     squares = [x**2 for x in range(1, 11)] : Cette ligne de code initialise une variable nommée carrés et lui affecte le résultat d'une compréhension de liste.
 
 \begin{itemize}
 \item         for x in range(1, 11) : Cette partie met en place une boucle qui parcourt les nombres de 1 à 10 (inclus). La fonction range(1, 11) génère une séquence de nombres commençant par 1 et se terminant par 10.
 \item         x**2 : pour chaque valeur de x dans la plage, cette expression calcule le carré de x.
 \item{}    [x**2 for x in range(1, 11)]  : Il s'agit de la compréhension de la liste elle-même. Elle parcourt les nombres de l'intervalle spécifié (1 à 10) et, pour chaque nombre, calcule son carré. Les carrés obtenus sont rassemblés dans une nouvelle liste.
 \end{itemize}
-    \item print(carrés) : Cette ligne de code imprime simplement la liste des carrés sur la console.
+    \item print(squares) : Cette ligne de code imprime simplement la liste des carrés sur la console.
 \end{itemize}
         \end{solution}
         
@@ -91,7 +91,7 @@ Voici un exemple de phrase.
             Ce code Python analyse une phrase et crée une liste appelée word\_lengths en utilisant une compréhension de liste pour stocker les longueurs de chaque mot dans la phrase. Voici comment fonctionne le code :\par
 
 \begin{itemize}
-\item     sentence = "Ceci est un exemple de phrase" : Cette ligne initialise une variable nommée sentence et lui attribue la valeur "Ceci est un exemple de phrase".
+\item     sentence = "Ceci est un exemple de phrase" : Cette ligne initialise une variable nommée sentence et lui attribue la valeur "This is a sample sentence".
 \item     word\_lengths = [len(word) for word in sentence.split()] : Cette ligne de code initialise une variable nommée word\_lengths et lui affecte le résultat d'une compréhension de liste.
 
 \begin{itemize}
@@ -100,8 +100,8 @@ Voici un exemple de phrase.
 \item         len(word) : Pour chaque mot de la liste, cette expression calcule la longueur du mot à l'aide de la fonction len().
 \item{}         [len(word) for word in sentence.split()] : Il s'agit de la compréhension de la liste elle-même. Elle parcourt la liste de mots et, pour chaque mot, calcule sa longueur et l'inclut dans la nouvelle liste.
 \end{itemize}
-\item    print(phrase) : Cette ligne de code imprime la phrase originale sur la console.
-\item    print(longueur\_des\_mots) : Cette ligne de code imprime la liste des longueurs de mots sur la console.
+\item    print(sentence) : Cette ligne de code imprime la phrase originale sur la console.
+\item    print(word\_lengths) : Cette ligne de code imprime la liste des longueurs de mots sur la console.
  \end{itemize}
         \end{solution}
         
@@ -148,11 +148,11 @@ Exemple de résultat
  \item    lowercase\_letters = [chr(x) for x in range(ord('a'), ord('z')+1)] : Cette ligne de code initialise une variable nommée lowercase\_letters et lui affecte le résultat d'une compréhension de liste.
 
  \begin{itemize}
- \item        range(ord('a'), ord('z')+1) : Cette partie du code génère une plage de valeurs entières correspondant aux points de code Unicode des lettres minuscules de l'alphabet anglais. ord('a') renvoie le point de code Unicode de la lettre 'a', et ord('z') renvoie le point de code Unicode de la lettre 'z'. L'ajout de 1 permet de s'assurer que la lettre 'z' est incluse dans la plage.
- \item         chr(x) : Pour chaque entier x de la plage, cette expression le convertit en caractère à l'aide de la fonction chr(). chr(x) renvoie le caractère correspondant au point de code Unicode x.
- \item{}         [chr(x) for x in range(ord('a'), ord('z')+1)] : Il s'agit de la compréhension de la liste elle-même. Elle parcourt la gamme des points de code Unicode pour les lettres minuscules et convertit chaque point de code en son caractère correspondant. Ces caractères (lettres minuscules) sont rassemblés dans une nouvelle liste.
+ \item        range(ord('a'), ord('z')+1) : Cette partie du code génère une plage de valeurs entières correspondant aux valeurs Unicode des lettres minuscules de l'alphabet anglais. ord('a') renvoie la valeur Unicode de la lettre 'a', et ord('z') renvoie la valeur Unicode de la lettre 'z'. L'ajout de 1 permet de s'assurer que la lettre 'z' est incluse dans la plage.
+ \item         chr(x) : Pour chaque entier x de la plage, cette expression le convertit en caractère à l'aide de la fonction chr(). chr(x) renvoie le caractère correspondant à la valeur Unicode de x.
+ \item{}         [chr(x) for x in range(ord('a'), ord('z')+1)] : Il s'agit de la compréhension de la liste elle-même. Elle parcourt la gamme des valeurs Unicode pour les lettres minuscules et convertit chaque valeur en son caractère correspondant. Ces caractères (lettres minuscules) sont rassemblés dans une nouvelle liste.
  \end{itemize}
- \item   print(lettres minuscules) : Cette ligne de code imprime la liste des lettres minuscules sur la console. 
+ \item   print(lowercase\_letters) : Cette ligne de code imprime la liste des lettres minuscules sur la console. 
  \end{itemize}
         \end{solution}
         
@@ -173,11 +173,11 @@ Exemple de sortie
 \item     uppercase\_letters = [chr(x) for x in range(ord('A'), ord('Z')+1)] : Cette ligne de code initialise une variable nommée uppercase\_letters et lui affecte le résultat d'une compréhension de liste.
 
  \begin{itemize}
- \item        range(ord('A'), ord('Z')+1) : Cette partie du code génère une plage de valeurs entières correspondant aux points de code Unicode des lettres majuscules de l'alphabet anglais. ord('A') renvoie le point de code Unicode de la lettre 'A', et ord('Z') renvoie le point de code Unicode de la lettre 'Z'. En ajoutant 1, on s'assure que la lettre 'Z' est incluse dans la plage.
- \item         chr(x) : Pour chaque entier x de la plage, cette expression le convertit en caractère à l'aide de la fonction chr(). chr(x) renvoie le caractère correspondant au point de code Unicode x.
- \item{}         [chr(x) for x in range(ord('A'), ord('Z')+1)] : Il s'agit de la compréhension de la liste elle-même. Elle parcourt la gamme des points de code Unicode pour les lettres majuscules et convertit chaque point de code en son caractère correspondant. Ces caractères (lettres majuscules) sont rassemblés dans une nouvelle liste.
+ \item        range(ord('A'), ord('Z')+1) : Cette partie du code génère une plage de valeurs entières correspondant aux valeurs Unicode des lettres majuscules de l'alphabet anglais. ord('A') renvoie la valeur Unicode de la lettre 'A', et ord('Z') renvoie la valeur Unicode de la lettre 'Z'. En ajoutant 1, on s'assure que la lettre 'Z' est incluse dans la plage.
+ \item         chr(x) : Pour chaque entier x de la plage, cette expression le convertit en caractère à l'aide de la fonction chr(). chr(x) renvoie le caractère correspondant à la valeur Unicode de x.
+ \item{}         [chr(x) for x in range(ord('A'), ord('Z')+1)] : Il s'agit de la compréhension de la liste elle-même. Elle parcourt la gamme des valeurs Unicode pour les lettres majuscules et convertit chacune d'elle en son caractère correspondant. Ces caractères (lettres majuscules) sont rassemblés dans une nouvelle liste.
  \end{itemize}
-\item    print(lettres\_majuscules) : Cette ligne de code imprime la liste des lettres majuscules sur la console.
+\item    print(uppercase\_letters) : Cette ligne de code imprime la liste des lettres majuscules sur la console.
  \end{itemize}
         \end{solution}
         
@@ -219,11 +219,16 @@ Exemple de résultat
             \pythonfile{\chemincode \nomfichier}[][\nomfichier]
             Ce code Python crée une liste appelée common\_multiples en utilisant une compréhension de liste pour trouver et stocker les nombres de 1 à 100 qui sont des multiples de 3 et de 5. Voici comment fonctionne le code :
 
-    common\_multiples = [x for x in range(1, 101) if x \% 3 == 0 and x \% 5 == 0] : Cette ligne de code initialise une variable nommée common\_multiples et lui affecte le résultat d'une compréhension de liste.
-        for x in range(1, 101) : Cette partie met en place une boucle qui parcourt les nombres de 1 à 100 (inclus). La fonction range(1, 101) génère une séquence de nombres commençant par 1 et se terminant par 100.
-        if x \% 3 == 0 and x \% 5 == 0 : cette condition vérifie si la valeur actuelle de x est un multiple de 3 et de 5. L'opérateur \% calcule le reste lorsque x est divisé par 3 et 5. Si le reste est égal à 0 pour les deux divisions, cela signifie que x est un multiple de 3 et de 5.
-        [x for x in range(1, 101) if x \% 3 == 0 and x \% 5 == 0] : Il s'agit de la compréhension de la liste elle-même. Elle parcourt les nombres de l'intervalle spécifié (1 à 100) et, pour chaque nombre qui est un multiple de 3 et de 5, l'inclut dans la nouvelle liste.
-    print(common\_multiples) : Cette ligne de code imprime la liste common\_multiples sur la console.
+\begin{itemize}
+	\item     common\_multiples = [x for x in range(1, 101) if x \% 3 == 0 and x \% 5 == 0] : Cette ligne de code initialise une variable nommée common\_multiples et lui affecte le résultat d'une compréhension de liste.
+
+       \begin{itemize}
+       	\item  for x in range(1, 101) : Cette partie met en place une boucle qui parcourt les nombres de 1 à 100 (inclus). La fonction range(1, 101) génère une séquence de nombres commençant par 1 et se terminant par 100.
+       	\item         if x \% 3 == 0 and x \% 5 == 0 : cette condition vérifie si la valeur actuelle de x est un multiple de 3 et de 5. L'opérateur \% calcule le reste lorsque x est divisé par 3 et 5. Si le reste est égal à 0 pour les deux divisions, cela signifie que x est un multiple de 3 et de 5.
+       	\item{}         [x for x in range(1, 101) if x \% 3 == 0 and x \% 5 == 0] : Il s'agit de la compréhension de la liste elle-même. Elle parcourt les nombres de l'intervalle spécifié (1 à 100) et, pour chaque nombre qui est un multiple de 3 et de 5, l'inclut dans la nouvelle liste.
+       \end{itemize}
+    \item print(common\_multiples) : Cette ligne de code imprime la liste common\_multiples sur la console.
+   \end{itemize}
         \end{solution}
         
 
@@ -240,14 +245,18 @@ Exemple de résultat
             \renewcommand{\nomfichier}{q509.py}
             \pythonfile{\chemincode \nomfichier}[][\nomfichier]
             Ce code Python prend une liste de mots, inverse chaque mot de la liste et stocke les mots inversés dans une nouvelle liste appelée mots\_inversés. Voici comment fonctionne ce code :
+\begin{itemize}
+	\item     words = ["apple", "banana", "cherry"] : Cette ligne initialise une variable nommée words et lui affecte une liste contenant trois mots : "apple", "banana" et "cherry".
+	\item     reversed\_words = [mot[::-1] pour word dans words] : Cette ligne de code initialise une variable nommée reversed\_words et lui affecte le résultat de la compréhension d'une liste.
 
-    mots = ["pomme", "banane", "cerise"] : Cette ligne initialise une variable nommée words et lui affecte une liste contenant trois mots : "pomme", "banane" et "cerise".
-    mots\_inversés = [mot[::-1] pour mot dans mots] : Cette ligne de code initialise une variable nommée mots\_inversés et lui affecte le résultat de la compréhension d'une liste.
-        for word in words : Cette partie met en place une boucle qui parcourt chaque mot de la liste des mots.
-        word[::-1] : Pour chaque mot de la liste, cette expression utilise le découpage ([::-1]) pour inverser les caractères du mot. La notation de tranche [::-1] inverse l'ordre des caractères dans une chaîne.
-        [mot[::-1] pour mot dans mots] : Il s'agit de la compréhension de la liste elle-même. Elle parcourt les mots de la liste words et, pour chaque mot, l'inverse et inclut le mot inversé dans la nouvelle liste.
-    print(mots) : Cette ligne de code imprime la liste de mots originale sur la console.
-    print(mots\_inversés) : Cette ligne de code affiche la liste des mots inversés sur la console.
+      \begin{itemize}
+      	\item   for word in words : Cette partie met en place une boucle qui parcourt chaque mot de la liste des mots.
+      	\item         word[::-1] : Pour chaque mot de la liste, cette expression utilise un slice ([::-1]) pour inverser les caractères du mot. La notation de tranche [::-1] inverse l'ordre des caractères dans une chaîne.
+      	\item{}         [word[::-1] for word in words] : Il s'agit de la compréhension de  liste elle-même. Elle parcourt les mots de la liste words et, pour chaque mot, l'inverse et inclut le mot inversé dans la nouvelle liste.
+      \end{itemize}
+    \item print(words) : Cette ligne de code imprime la liste de mots originale sur la console.
+    \item print(reversed\_words) : Cette ligne de code affiche la liste des mots inversés sur la console.
+    \end{itemize}
         \end{solution}
         
 
@@ -261,17 +270,22 @@ Exemple de sortie
         \begin{solution}
             \renewcommand{\nomfichier}{q510.py}
             \pythonfile{\chemincode \nomfichier}[][\nomfichier]
-            Le code Python fourni définit une fonction is\_prime(n) qui vérifie si un entier donné n est un nombre premier ou non. Elle crée ensuite une liste appelée nombres\_premiers en utilisant une compréhension de liste pour trouver et stocker les nombres premiers entre 1 et 50. Voici comment fonctionne le code :
-
-    def is\_prime(n) : Cette ligne définit une fonction nommée is\_prime qui prend un entier n comme argument.
-        if n <= 1: : Cette ligne vérifie si n est inférieur ou égal à 1. Si n est inférieur ou égal à 1, la fonction renvoie False, car 1 et tout nombre négatif ne sont pas premiers.
-        for i in range(2, int(n**0.5) + 1): : Cette ligne met en place une boucle qui itère de 2 à la racine carrée de n (incluse) en utilisant la fonction range(). La vérification jusqu'à la racine carrée est une optimisation visant à réduire le nombre de divisions nécessaires pour déterminer la primalité.
-        if n \% i == 0: : À l'intérieur de la boucle, cette ligne vérifie si n est divisible par la valeur actuelle de i. Si c'est le cas, cela signifie que n n'est pas premier, et la fonction renvoie donc False.
-        Si aucune des conditions ci-dessus n'est remplie, cela signifie que n n'est divisible par aucun nombre de la plage, et la fonction renvoie donc True, indiquant que n est un nombre premier.
-    nombres\_premiers = [x for x in range(1, 51) if is\_prime(x)] : Cette ligne de code initialise une variable nommée nombres\_premiers et lui affecte le résultat d'une compréhension de liste.
-        for x in range(1, 51) : Cette partie met en place une boucle qui parcourt les nombres de 1 à 50 (inclus). La fonction range(1, 51) génère une séquence de nombres commençant par 1 et se terminant par 50.
-        if is\_prime(x) : Cette condition vérifie si la valeur actuelle de x est un nombre premier en appelant la fonction is\_prime(). Si c'est le cas, elle l'inclut dans la liste des nombres premiers.
-    print(nombres\_premiers) : Cette ligne de code imprime la liste des nombres premiers sur la console.
+            Le code Python fourni définit une fonction is\_prime(n) qui vérifie si un entier donné n est un nombre premier ou non. Elle crée ensuite une liste appelée prime\_numbers en utilisant une compréhension de liste pour trouver et stocker les nombres premiers entre 1 et 50. Voici comment fonctionne le code :
+\begin{itemize}
+    \item def is\_prime(n) : Cette ligne définit une fonction nommée is\_prime qui prend un entier n comme argument.
+\begin{itemize}
+	\item         if n <= 1 : Cette ligne vérifie si n est inférieur ou égal à 1. Si n est inférieur ou égal à 1, la fonction renvoie False, car 1 et tout nombre négatif ne sont pas premiers.
+	\item         for i in range(2, int(n**0.5) + 1): : Cette ligne met en place une boucle qui itère de 2 à la racine carrée de n (incluse) en utilisant la fonction range(). La vérification jusqu'à la racine carrée est une optimisation visant à réduire le nombre de divisions nécessaires pour déterminer la primalité.
+	\item         if n \% i == 0: : À l'intérieur de la boucle, cette ligne vérifie si n est divisible par la valeur actuelle de i. Si c'est le cas, cela signifie que n n'est pas premier, et la fonction renvoie donc False.
+	\item         Si aucune des conditions ci-dessus n'est remplie, cela signifie que n n'est divisible par aucun nombre de la plage, et la fonction renvoie donc True, indiquant que n est un nombre premier.
+\end{itemize}
+    \item prime\_numbers = [x for x in range(1, 51) if is\_prime(x)] : Cette ligne de code initialise une variable nommée prime\_numbers et lui affecte le résultat d'une compréhension de liste.
+        \begin{itemize}
+        	\item for x in range(1, 51) : Cette partie met en place une boucle qui parcourt les nombres de 1 à 50 (inclus). La fonction range(1, 51) génère une séquence de nombres commençant par 1 et se terminant par 50.
+        	\item         if is\_prime(x) : Cette condition vérifie si la valeur actuelle de x est un nombre premier en appelant la fonction is\_prime(). Si c'est le cas, elle l'inclut dans la liste des nombres premiers.
+        \end{itemize}
+    \item print(prime\_numbers) : Cette ligne de code imprime la liste des nombres premiers sur la console.
+   \end{itemize}
         \end{solution}
         
 
@@ -287,11 +301,15 @@ Exemple de résultat
             \pythonfile{\chemincode \nomfichier}[][\nomfichier]
             Ce code Python crée une liste appelée result en utilisant une compréhension de liste pour calculer le carré des nombres pairs et le cube des nombres impairs dans l'intervalle de -5 à 5. Voici comment le code fonctionne :
 
-    result = [x**2 if x \% 2 == 0 else x**3 for x in range(-5, 6)] : Cette ligne de code initialise une variable nommée result et lui affecte le résultat d'une compréhension de liste.
-        for x in range(-5, 6) : Cette partie met en place une boucle qui parcourt les nombres de -5 à 5 (inclus). La fonction range(-5, 6) génère une séquence de nombres commençant par -5 et se terminant par 5.
-        x**2 if x \% 2 == 0 else x**3 : Pour chaque valeur de x dans l'intervalle, cette expression calcule le carré (x**2) ou le cube (x**3) du nombre selon que x est pair (x \% 2 == 0) ou impair.
-        [x**2 if x \% 2 == 0 else x**3 for x in range(-5, 6)] : Il s'agit de la compréhension de la liste elle-même. Elle parcourt les nombres de l'intervalle spécifié (-5 à 5) et, pour chaque nombre, calcule son carré ou son cube selon qu'il est pair ou impair. Les résultats sont rassemblés dans une nouvelle liste.
-    print(result) : Cette ligne de code imprime la liste des résultats sur la console.
+  \begin{itemize}
+  	\item   result = [x**2 if x \% 2 == 0 else x**3 for x in range(-5, 6)] : Cette ligne de code initialise une variable nommée result et lui affecte le résultat d'une compréhension de liste.
+  
+     \begin{itemize}
+     	\item    for x in range(-5, 6) : Cette partie met en place une boucle qui parcourt les nombres de -5 à 5 (inclus). La fonction range(-5, 6) génère une séquence de nombres commençant par -5 et se terminant par 5.
+     	\item         x**2 if x \% 2 == 0 else x**3 : Pour chaque valeur de x dans l'intervalle, cette expression calcule le carré (x**2) ou le cube (x**3) du nombre selon que x est pair (x \% 2 == 0) ou impair.
+     	\item{}         [x**2 if x \% 2 == 0 else x**3 for x in range(-5, 6)] : Il s'agit de la compréhension de la liste elle-même. Elle parcourt les nombres de l'intervalle spécifié (-5 à 5) et, pour chaque nombre, calcule son carré ou son cube selon qu'il est pair ou impair. Les résultats sont rassemblés dans une nouvelle liste.
+     \end{itemize}
+    \item print(result) : Cette ligne de code imprime la liste des résultats sur la console.\end{itemize}
         \end{solution}
         
 
@@ -309,13 +327,18 @@ Exemple de sortie
             \pythonfile{\chemincode \nomfichier}[][\nomfichier]
             Ce code Python crée une liste appelée word\_lengths en utilisant une compréhension de liste pour associer chaque mot de la liste des mots à sa longueur correspondante (nombre de caractères). Voici comment fonctionne le code :
 
-    mots = ["pomme", "banane", "cerise"] : Cette ligne initialise une variable nommée words et lui affecte une liste contenant trois mots : "pomme", "banane" et "cerise".
-    word\_lengths = [(word, len(word)) for word in words] : Cette ligne de code initialise une variable nommée word\_lengths et lui affecte le résultat de la compréhension d'une liste.
-        for word in words : Cette partie met en place une boucle qui parcourt chaque mot de la liste des mots.
-        (mot, len(mot)) : Pour chaque mot de la liste, cette expression crée un tuple contenant deux éléments : le mot original et la longueur du mot len(word).
-        [(mot, len(mot)) pour mot dans mots] : Il s'agit de la compréhension de la liste elle-même. Elle parcourt les mots de la liste words et, pour chaque mot, l'associe à sa longueur et inclut cette paire (tuple) dans la nouvelle liste.
-    print(words) : Cette ligne de code imprime la liste de mots originale sur la console.
-    print(word\_lengths) : Cette ligne de code affiche la liste des mots\_longueurs sur la console.
+ \begin{itemize}
+ 	\item    words = ["apple", "banana", "cherry"] : Cette ligne initialise une variable nommée words et lui affecte une liste contenant trois mots : "apple", "banana" et "cherry".
+ 	\item     word\_lengths = [(word, len(word)) for word in words] : Cette ligne de code initialise une variable nommée word\_lengths et lui affecte le résultat de la compréhension d'une liste.
+ 
+    \begin{itemize}
+    	\item     for word in words : Cette partie met en place une boucle qui parcourt chaque mot de la liste des mots.
+    	\item         (word, len(word)) : Pour chaque mot de la liste, cette expression crée un tuple contenant deux éléments : le mot original et la longueur du mot len(word).
+    	\item{}         [(word, len(word)) for word in words] : Il s'agit de la compréhension de la liste elle-même. Elle parcourt les mots de la liste words et, pour chaque mot, l'associe à sa longueur et inclut cette paire (tuple) dans la nouvelle liste.
+    \end{itemize}
+    \item print(words) : Cette ligne de code imprime la liste de mots originale sur la console.
+    \item print(word\_lengths) : Cette ligne de code affiche la liste des word\_lengths sur la console.
+    \end{itemize}
         \end{solution}
         
 
@@ -333,13 +356,18 @@ Exemple de sortie
             \pythonfile{\chemincode \nomfichier}[][\nomfichier]
             Ce code Python crée une liste appelée first\_chars en utilisant une compréhension de liste pour extraire le premier caractère de chaque mot de la liste words. Voici comment fonctionne ce code :
 
-    words = ["apple", "banana", "cherry"] : Cette ligne initialise une variable nommée words et lui assigne une liste contenant trois mots : "pomme", "banane" et "cerise".
-    first\_chars = [word[0] for word in words] : Cette ligne de code initialise une variable nommée first\_chars et lui affecte le résultat de la compréhension d'une liste.
-        for word in words : Cette partie met en place une boucle qui parcourt chaque mot de la liste des mots.
-        word[0] : Pour chaque mot de la liste, cette expression récupère le premier caractère du mot en utilisant l'indexation [0]. Cette indexation permet d'extraire le caractère situé à la position 0 de la chaîne, qui est le premier caractère.
-        [mot[0] pour mot dans mots] : Il s'agit de la compréhension de la liste elle-même. Elle parcourt les mots de la liste des mots et, pour chaque mot, extrait son premier caractère et l'inclut dans la nouvelle liste.
-    print(words) : Cette ligne de code imprime la liste de mots originale sur la console.
-    print(first\_chars) : Cette ligne de code imprime la liste first\_chars sur la console.
+   \begin{itemize}
+   	\item  words = ["apple", "banana", "cherry"] : Cette ligne initialise une variable nommée words et lui assigne une liste contenant trois mots : "apple", "banana" et "cherry".
+   	\item     first\_chars = [word[0] for word in words] : Cette ligne de code initialise une variable nommée first\_chars et lui affecte le résultat de la compréhension d'une liste.
+   
+       \begin{itemize}
+       	\item  for word in words : Cette partie met en place une boucle qui parcourt chaque mot de la liste des mots.
+       	\item         word[0] : Pour chaque mot de la liste, cette expression récupère le premier caractère du mot en utilisant l'indexation [0]. Cette indexation permet d'extraire le caractère situé à la position 0 de la chaîne, qui est le premier caractère.
+       	\item{}         [word[0] for word in words] : Il s'agit de la compréhension de la liste elle-même. Elle parcourt les mots de la liste des mots et, pour chaque mot, extrait son premier caractère et l'inclut dans la nouvelle liste.
+       \end{itemize}
+    \item print(words) : Cette ligne de code imprime la liste de mots originale sur la console.
+    \item print(first\_chars) : Cette ligne de code imprime la liste first\_chars sur la console.
+    \end{itemize}
         \end{solution}
         
 
