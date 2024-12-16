@@ -73,6 +73,7 @@ def parse_question(question_text, translate):
 
     # Échapper les caractères spéciaux après la traduction
     title = escape_latex(title)
+    expli = escape_latex(expli)
     hints = escape_latex(hints)
 
     return title, hints, solution, expli
