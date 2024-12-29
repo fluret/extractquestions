@@ -5,7 +5,7 @@ import re
 import deepl
 
 # Remplacez 'your-api-key' par votre clé API DeepL
-auth_key = "8cd95243-eac5-4e4f-bf24-4784da7f4d19:fx"
+auth_key ="" 
 translator = deepl.Translator(auth_key)
 
 
